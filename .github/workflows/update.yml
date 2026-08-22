@@ -26,14 +26,38 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      # 웹으로 파일을 올리다 보면 폴더 하나가 통째로 빠지기 쉽다.
+      # 그러면 한참 뒤에 알 수 없는 에러로 죽으므로, 시작할 때 먼저 확인한다.
+      - name: 필요한 파일 확인
+        run: |
+          missing=0
+          for f in scraper.py check.py build.py template.html requirements.txt \
+                   adapters/__init__.py adapters/common.py adapters/kleague.py adapters/kfa.py; do
+            if [ ! -f "$f" ]; then
+              echo "::error::저장소에 이 파일이 없습니다 → $f"
+              missing=1
+            fi
+          done
+          if [ ! -f matches.json ]; then
+            echo "::notice::matches.json 이 없습니다. 첫 실행이라면 정상입니다."
+          fi
+          if [ "$missing" = "1" ]; then
+            echo ""
+            echo "지금 저장소에 올라와 있는 것:"
+            find . -path ./.git -prune -o -print | sed 's|^\./||' | sort | head -40
+            exit 1
+          fi
+          echo "파일 확인 완료"
+
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
 
-      - run: pip install -r requirements.txt
+      - name: 라이브러리 설치
+        run: pip install -r requirements.txt
 
       # 저장소에 들어 있는 matches.json 이 '직전 상태' 역할을 한다.
       # 원본 사이트가 잠깐 죽어도 그 대회만 직전 값으로 버티고 나머지는 갱신된다.
@@ -46,22 +70,6 @@ jobs:
       - name: 페이지 빌드
         run: python build.py
 
-      # 하루 한 번만 커밋한다.
-      # 직전 상태를 보관하는 목적이자, GitHub 이 "60일간 저장소 활동이 없으면
-      # 예약 워크플로를 자동으로 꺼버리는" 규칙에 걸리지 않게 하는 장치다.
-      - name: 데이터 커밋
-        if: github.event_name != 'schedule' || github.event.schedule == '0 21 * * *'
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add matches.json
-          if git diff --cached --quiet; then
-            echo "변경 없음 — 커밋 생략"
-          else
-            git commit -m "데이터 갱신 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M') [skip ci]"
-            git push
-          fi
-
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -69,20 +77,61 @@ jobs:
       - uses: actions/deploy-pages@v4
         id: deploy
 
+      # 하루 한 번만 커밋한다.
+      # 직전 상태를 보관하는 목적이자, GitHub 이 "60일간 저장소 활동이 없으면
+      # 예약 워크플로를 자동으로 꺼버리는" 규칙에 걸리지 않게 하는 장치다.
+      # 여기서 실패해도 배포는 이미 끝났으므로 작업 전체를 실패시키지 않는다.
+      - name: 데이터 커밋
+        if: github.event_name != 'schedule' || github.event.schedule == '0 21 * * *'
+        continue-on-error: true
+        run: |
+          # matches.json 은 매 실행이 통째로 새로 쓰므로 rebase 하면 반드시 충돌한다.
+          # 우리 쪽이 항상 최신이므로, 원격 위로 HEAD 만 옮기고 우리 파일을 다시 얹는다.
+          BRANCH="${GITHUB_REF_NAME:-main}"
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for i in 1 2 3; do
+            git add matches.json
+            if git diff --cached --quiet; then
+              echo "밀어넣을 변경이 없습니다 — 커밋 생략"
+              exit 0
+            fi
+            git commit -q -m "데이터 갱신 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M') [skip ci]"
+
+            if git push origin "HEAD:${BRANCH}"; then
+              echo "커밋 완료 (시도 ${i})"
+              exit 0
+            fi
+
+            # 실행이 겹치면(손으로 돌린 것 + 푸시로 돌아간 것 등) 다른 쪽이 먼저 밀어넣어
+            # push 가 거절된다. 원격을 당겨 그 위로 옮겨 타고 우리 파일을 다시 올린다.
+            echo "다른 실행이 먼저 밀어넣었습니다. 원격 위에 다시 얹습니다. (${i}/3)"
+            git fetch -q origin "${BRANCH}" || break
+            git reset -q --soft "origin/${BRANCH}"      # 작업트리의 matches.json 은 그대로 둔다
+          done
+
+          echo "::warning::데이터 커밋을 밀어넣지 못했습니다. 페이지 배포는 정상입니다."
+          echo "::warning::권한 문제라면 Settings → Actions → General →"
+          echo "::warning::Workflow permissions 를 'Read and write permissions' 로 바꾸세요."
+
       - name: 결과 요약
         if: always()
+        continue-on-error: true
         run: |
-          python - <<'PY' >> $GITHUB_STEP_SUMMARY
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
           import json, pathlib
-          p = pathlib.Path("matches.json")
           print("### 갱신 결과\n")
+          p = pathlib.Path("matches.json")
           if not p.exists():
-              print("matches.json 이 만들어지지 않았습니다."); raise SystemExit
-          d = json.loads(p.read_text(encoding="utf-8"))
-          print(f"- 기준 시각 **{d['generatedAt']}**")
-          print(f"- 총 **{len(d['matches'])}경기**\n")
-          print("| 대회 | 경기 수 | 상태 |")
-          print("|---|---:|---|")
-          for l in d["leagues"]:
-              print(f"| {l['name']} | {l['count']} | {l['status']} |")
+              print("`matches.json` 이 만들어지지 않았습니다. 위 단계의 로그를 확인하세요.")
+          else:
+              d = json.loads(p.read_text(encoding="utf-8"))
+              print(f"- 기준 시각 **{d['generatedAt']}**")
+              print(f"- 총 **{len(d['matches'])}경기**\n")
+              print("| 대회 | 경기 수 | 상태 |")
+              print("|---|---:|---|")
+              for l in d["leagues"]:
+                  print(f"| {l['name']} | {l['count']} | {l['status']} |")
           PY
