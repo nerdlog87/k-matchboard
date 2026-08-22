@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--HEAD_START-->
+<title>K1–K4 매치보드</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+/* 리그별 색(--lg-*)은 데이터에 들어 있는 등록부를 읽어 런타임에 주입한다.
+   리그를 추가해도 이 스타일시트는 손댈 필요가 없다. */
+:root{
+  --bg:#EFF2EE; --surface:#FFFFFF; --surface-2:#F6F9F5; --raise:0 1px 2px rgba(22,29,25,.06);
+  --ink:#161D19; --ink-2:#46534B; --muted:#78857C;
+  --line:#DCE3DA; --line-strong:#C2CDC0;
+  --live:#B93028; --sat:#26346F; --win:#0F6F5F; --focus:#26346F;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1411; --surface:#161E1A; --surface-2:#1C2620; --raise:0 1px 2px rgba(0,0,0,.4);
+    --ink:#E9EFEA; --ink-2:#AEBAB2; --muted:#7F8D85;
+    --line:#27312B; --line-strong:#3B4740;
+    --live:#E4675C; --sat:#8B9CE8; --win:#43C4A9; --focus:#8B9CE8;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1411; --surface:#161E1A; --surface-2:#1C2620; --raise:0 1px 2px rgba(0,0,0,.4);
+  --ink:#E9EFEA; --ink-2:#AEBAB2; --muted:#7F8D85;
+  --line:#27312B; --line-strong:#3B4740;
+  --live:#E4675C; --sat:#8B9CE8; --win:#43C4A9; --focus:#8B9CE8;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
+
+/* ─────────── 상단 마스트헤드 ─────────── */
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+.masthead{border-bottom:1px solid var(--line);background:var(--surface)}
+.masthead .wrap{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-top:14px;padding-bottom:12px}
+.wordmark{font-family:"Black Han Sans","Gothic A1",sans-serif;font-size:26px;letter-spacing:.01em;line-height:1;margin:0}
+.wordmark .dash{color:var(--muted)}
+.tagline{color:var(--muted);font-size:12.5px;letter-spacing:.02em;margin-left:auto}
+.tagline b{color:var(--ink-2);font-weight:700}
+
+/* ─────────── 날짜 내비 ─────────── */
+.datebar{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.datebar .wrap{display:flex;align-items:center;gap:10px;padding-top:10px;padding-bottom:10px}
+.navbtn{width:34px;height:34px;border:1px solid var(--line-strong);border-radius:8px;
+  display:grid;place-items:center;color:var(--ink-2);background:var(--surface);flex:none}
+.navbtn:hover{background:var(--surface-2);color:var(--ink)}
+.navbtn svg{width:16px;height:16px}
+.bigdate{display:flex;align-items:baseline;gap:8px;min-width:0;overflow:hidden}
+.dtools{display:flex;gap:8px;flex:none}
+.bigdate .d{font-family:"Black Han Sans",sans-serif;font-size:22px;line-height:1.1;white-space:nowrap}
+.bigdate .w{font-size:13px;color:var(--muted);white-space:nowrap}
+.bigdate .w.sat{color:var(--sat)} .bigdate .w.sun{color:var(--live)}
+.spacer{flex:1}
+.ghost{border:1px solid var(--line-strong);border-radius:8px;padding:6px 11px;font-size:13px;
+  color:var(--ink-2);background:var(--surface);white-space:nowrap}
+.ghost:hover{background:var(--surface-2);color:var(--ink)}
+input[type=date].ghost{padding:5px 8px}
+
+/* ─────────── 주간 스트립 ─────────── */
+.strip{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;padding-bottom:10px}
+.day{border:1px solid transparent;border-radius:10px;padding:6px 2px 5px;text-align:center;background:var(--surface-2)}
+.day:hover{border-color:var(--line-strong)}
+.day .wd{font-size:10.5px;color:var(--muted);letter-spacing:.06em}
+.day .dd{font-size:16px;font-weight:700;line-height:1.3}
+.day .dots{display:flex;justify-content:center;gap:3px;height:5px;margin-top:3px}
+.day .dots i{width:5px;height:5px;border-radius:50%;display:block}
+.day.sel{background:var(--ink);border-color:var(--ink)}
+.day.sel .wd,.day.sel .dd{color:var(--bg)}
+.day.today .dd{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px}
+.day.sat .wd{color:var(--sat)} .day.sun .wd{color:var(--live)}
+.day.sel.sat .wd,.day.sel.sun .wd{color:var(--bg)}
+
+/* ─────────── 종목 · 필터 ─────────── */
+.sports{display:flex;gap:6px;flex-wrap:wrap;padding-top:14px;align-items:center}
+.sport{border:1px solid var(--line-strong);border-radius:8px;padding:5px 13px;font-size:13.5px;
+  font-weight:700;color:var(--muted);background:var(--surface)}
+.sport.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:14px 0 4px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.chip{border:1px solid var(--line-strong);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700;
+  color:var(--muted);background:var(--surface);display:flex;align-items:center;gap:6px}
+.chip i{width:8px;height:8px;border-radius:2px;display:block;background:currentColor;opacity:.35}
+.chip.on{color:var(--tier);border-color:var(--tier);background:var(--tier-soft)}
+.chip.on i{opacity:1}
+.chipsep{width:1px;align-self:stretch;background:var(--line-strong);margin:2px 4px}
+.chip.cup{border-style:dashed}   /* 컵대회는 리그와 성격이 달라 테두리로 구분한다 */
+.tabs{display:flex;gap:2px;margin-left:auto;border:1px solid var(--line-strong);border-radius:9px;padding:2px;background:var(--surface)}
+.tab{padding:5px 12px;border-radius:7px;font-size:13px;color:var(--muted);font-weight:700}
+.tab.on{background:var(--ink);color:var(--bg)}
+
+/* ─────────── 경기 리스트 ─────────── */
+main{padding:8px 0 64px}
+.tiergroup{margin-top:18px}
+.tierhead{display:flex;align-items:center;gap:8px;padding-bottom:7px;border-bottom:2px solid var(--tier);margin-bottom:2px}
+.tierhead h2{margin:0;font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--tier)}
+.tierhead .sp{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.06em}
+.tierhead .n{font-size:12px;color:var(--muted)}
+
+.match{display:grid;grid-template-columns:60px 1fr auto;gap:0 14px;align-items:center;
+  padding:13px 14px 13px 12px;background:var(--surface);border:1px solid var(--line);
+  border-left:3px solid var(--tier);border-radius:2px 10px 10px 2px;margin-top:8px;box-shadow:var(--raise)}
+.match .kick{text-align:center}
+.match .kick .t{font-family:"JetBrains Mono",monospace;font-size:16px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.match .kick .r{font-size:10.5px;color:var(--muted);letter-spacing:.04em}
+.teams{min-width:0}
+.teams .row{display:flex;align-items:center;gap:7px;line-height:1.45}
+.teams .nm{font-weight:700;font-size:15.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.teams .row.dim .nm{color:var(--ink-2);font-weight:500}
+.homeflag{font-size:9.5px;font-weight:800;letter-spacing:.06em;color:var(--tier);
+  border:1px solid var(--tier);border-radius:3px;padding:0 3px;line-height:14px;flex:none}
+.venue{display:flex;align-items:center;gap:5px;margin-top:6px;font-size:12.5px;color:var(--muted)}
+.venue svg{width:12px;height:12px;flex:none;opacity:.7}
+.venue a{text-decoration:none;border-bottom:1px dotted var(--line-strong)}
+.venue a:hover{color:var(--ink);border-bottom-color:currentColor}
+.venue .bc{padding-left:7px;margin-left:2px;border-left:1px solid var(--line);opacity:.85}
+
+.score{text-align:right;font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums}
+.score .g{font-size:20px;font-weight:700;line-height:1.35;display:block}
+.score .g.lose{color:var(--muted);font-weight:400}
+.score .pend{font-size:11px;color:var(--muted);letter-spacing:.06em;font-family:"Gothic A1",sans-serif}
+.score .note{display:inline-block;max-width:104px;line-height:1.35;color:var(--tier);font-weight:700}
+
+/* ─────────── 달력 뷰 ─────────── */
+.calhead{display:flex;align-items:center;gap:10px;margin:18px 0 10px}
+.calhead h2{font-family:"Black Han Sans",sans-serif;font-size:20px;margin:0}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.cal .wdh{text-align:center;font-size:11px;color:var(--muted);letter-spacing:.08em;padding-bottom:2px}
+.cal .wdh.sat{color:var(--sat)} .cal .wdh.sun{color:var(--live)}
+.cell{min-height:74px;border:1px solid var(--line);border-radius:8px;background:var(--surface);
+  padding:5px 6px;text-align:left;display:flex;flex-direction:column;gap:3px}
+.cell.blank{background:transparent;border-color:transparent}
+.cell:not(.blank):hover{border-color:var(--line-strong);background:var(--surface-2)}
+.cell .n{font-size:12px;font-weight:700;color:var(--ink-2)}
+.cell.today .n{background:var(--ink);color:var(--bg);border-radius:4px;padding:0 4px;align-self:flex-start}
+.cell .bars{display:flex;flex-direction:column;gap:2px}
+.cell .bar{font-size:10px;font-weight:700;letter-spacing:.02em;border-radius:3px;padding:1px 4px;
+  display:flex;justify-content:space-between;gap:4px}
+
+/* ─────────── 팀별 뷰 ─────────── */
+.teampick{display:flex;align-items:center;gap:8px;margin:18px 0 4px;flex-wrap:wrap}
+select.ghost{padding:6px 9px;max-width:100%}
+.tline{display:grid;grid-template-columns:78px 1fr auto;gap:0 12px;align-items:center;
+  padding:10px 12px;border-bottom:1px solid var(--line)}
+.tline:hover{background:var(--surface-2)}
+.tline .dt{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.tline .op{font-size:14.5px}
+.tline .op .ha{font-size:10px;font-weight:800;color:var(--muted);letter-spacing:.06em;margin-right:5px}
+.tline .op .lg{font-size:10px;font-weight:800;color:var(--tier);letter-spacing:.04em;margin-left:6px}
+.tline .vn{font-size:12px;color:var(--muted);margin-top:2px}
+.tline .rs{font-family:"JetBrains Mono",monospace;font-size:14px;font-weight:700;text-align:right;white-space:nowrap}
+.tline .rs.w{color:var(--win)} .tline .rs.l{color:var(--live)} .tline .rs.d{color:var(--muted)}
+.tline .rs.up{font-family:"Gothic A1",sans-serif;font-size:11px;font-weight:400;color:var(--muted)}
+
+.empty{text-align:center;padding:52px 20px;color:var(--muted);
+  border:1px dashed var(--line-strong);border-radius:12px;margin-top:20px}
+.empty .big{font-family:"Black Han Sans",sans-serif;font-size:19px;color:var(--ink-2);margin-bottom:5px}
+.empty button{color:var(--focus);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+footer{border-top:1px solid var(--line);margin-top:40px;padding:18px 0 40px;font-size:12px;color:var(--muted)}
+footer .wrap{display:flex;flex-direction:column;gap:6px}
+footer .row{display:flex;gap:14px;flex-wrap:wrap;align-items:baseline}
+footer b{color:var(--ink-2)}
+footer .pending{color:var(--muted)}
+footer .pending b{color:var(--ink-2)}
+
+@media (max-width:600px){
+  .wordmark{font-size:22px}
+  .tagline{width:100%;margin-left:0;order:3}
+  .datebar .wrap{flex-wrap:wrap}
+  .spacer{display:none}
+  .bigdate{flex:1 1 auto}
+  .dtools{order:5;flex-basis:100%;width:100%}
+  .dtools #todayBtn{flex:none}
+  .dtools #datePick{flex:1 1 auto;min-width:0}
+  .tabs{order:-1;margin-left:0;width:100%}
+  .tab{flex:1;text-align:center}
+  .match{grid-template-columns:52px 1fr auto;gap:0 10px;padding:11px 11px 11px 10px}
+  .teams .nm{font-size:14.5px}
+  .cell{min-height:60px}
+  .cell .bar{font-size:9px;padding:1px 3px}
+  .tline{grid-template-columns:66px 1fr auto;gap:0 8px}
+  .chipsep{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<!--HEAD_END-->
+</head>
+<body>
+<!--BODY_START-->
+<header class="masthead">
+  <div class="wrap">
+    <h1 class="wordmark">K1<span class="dash">–</span>K4 매치보드</h1>
+    <div class="tagline"><b id="seasonLabel"></b> · <span id="countLabel"></span></div>
+  </div>
+</header>
+
+<div class="datebar">
+  <div class="wrap">
+    <button class="navbtn" id="prevDay" aria-label="이전 날짜">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="bigdate"><span class="d" id="bigDate"></span><span class="w" id="bigWd"></span></div>
+    <span class="spacer"></span>
+    <div class="dtools">
+      <button class="ghost" id="todayBtn">오늘</button>
+      <input type="date" class="ghost" id="datePick" aria-label="날짜 선택">
+    </div>
+    <button class="navbtn" id="nextDay" aria-label="다음 날짜">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+  <div class="wrap"><div class="strip" id="strip"></div></div>
+</div>
+
+<div class="wrap">
+  <div class="sports" id="sports"></div>
+  <div class="tools">
+    <div class="chips" id="chips"></div>
+    <div class="tabs" id="tabs">
+      <button class="tab on" data-view="day">날짜</button>
+      <button class="tab" data-view="month">달력</button>
+      <button class="tab" data-view="team">팀별</button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" id="main"></main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span>출처 <b>한국프로축구연맹</b>(K리그1·2, 코리아컵, ACL) · <b>대한축구협회</b>(K3·K4)</span>
+      <span>데이터 기준 <b id="genAt"></b> KST</span>
+      <span>경기 시간·장소는 변경될 수 있습니다.</span>
+    </div>
+    <div class="row pending" id="pending"></div>
+  </div>
+</footer>
+
+<script>
+const DATA = /*__MATCHES__*/{"season":2026,"generatedAt":"","sports":[],"leagues":[],"matches":[]}/*__END__*/;
+
+const WD = ["일","월","화","수","목","금","토"];
+const PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+
+/* ── 리그 등록부: 색·순서·종목이 전부 데이터에서 온다 ── */
+const REG = DATA.leagues || [];
+const LG = Object.fromEntries(REG.map(l => [l.name, l]));
+const LIVE = REG.filter(l => l.count > 0);                       // 실제로 경기가 있는 대회
+const SPORTS = [...new Set(LIVE.map(l => l.sport))];
+const MULTISPORT = SPORTS.length > 1;
+
+/* 리그 색을 CSS 변수로 주입한다. 세 가지 테마 상태를 모두 덮는다. */
+(function injectColors(){
+  const vars = mode => REG.map(l => `--lg-${l.slug}:${l.color[mode]};--lg-${l.slug}-soft:${l.soft[mode]};`).join("");
+  const el = document.createElement("style");
+  el.textContent =
+    `:root{${vars("light")}}\n` +
+    `@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){${vars("dark")}}}\n` +
+    `:root[data-theme="dark"]{${vars("dark")}}`;
+  document.head.appendChild(el);
+})();
+
+/* ── 날짜 유틸: 문자열(YYYY-MM-DD) 기준으로만 다룬다 ── */
+const iso = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const toDate = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y, m-1, d); };
+const shift = (s,n) => { const d = toDate(s); d.setDate(d.getDate()+n); return iso(d); };
+const TODAY = iso(new Date());
+
+const byDate = {};
+for (const m of DATA.matches) (byDate[m.date] ||= []).push(m);
+const ALL_DATES = Object.keys(byDate).sort();
+
+const openingDate = byDate[TODAY] ? TODAY
+  : (ALL_DATES.find(d => d >= TODAY) || ALL_DATES[ALL_DATES.length-1] || TODAY);
+
+const state = {
+  date: openingDate,
+  view: "day",
+  sport: MULTISPORT ? null : (SPORTS[0] || null),   // null = 전 종목
+  off: new Set(),                                   // 꺼둔 리그 이름
+  team: null
+};
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const vars = name => `--tier:var(--lg-${LG[name].slug});--tier-soft:var(--lg-${LG[name].slug}-soft)`;
+const mapLink = v => `https://map.naver.com/p/search/${encodeURIComponent(v)}`;
+const shown = () => LIVE.filter(l => !state.sport || l.sport === state.sport);
+const visible = m => (!state.sport || m.sport === state.sport) && !state.off.has(m.league);
+
+/* ─────────── 헤더 ─────────── */
+function renderHeader(){
+  $("#seasonLabel").textContent = `${DATA.season} 시즌`;
+  const sports = MULTISPORT ? `${SPORTS.length}개 종목 · ` : "";
+  $("#countLabel").textContent =
+    `${DATA.matches.length.toLocaleString("ko")}경기 · ${sports}${LIVE.length}개 대회`;
+  $("#genAt").textContent = DATA.generatedAt ? DATA.generatedAt.slice(0,16).replace("T"," ") : "-";
+
+  // 비어 있거나 최신이 아닌 대회는 숨기지 말고 이유를 밝힌다.
+  const day = s => s ? `${Number(s.slice(5,7))}월 ${Number(s.slice(8,10))}일` : "이전";
+  const notes = REG.map(l => {
+    if (l.status === "stale")
+      return `⚠ <b>${esc(l.name)}</b> — 원본에서 못 받아와 ${day(l.fetchedAt)} 자료를 보여주고 있습니다.`;
+    if (l.status === "offseason")
+      return `❄ <b>${esc(l.name)}</b> — 비시즌입니다. ${day(l.fetchedAt)}까지의 일정만 있습니다.`;
+    if (l.count === 0)
+      return `<b>${esc(l.name)}</b> — ${esc(l.note || "현재 등록된 경기가 없습니다.")}`;
+    return null;
+  }).filter(Boolean);
+  $("#pending").innerHTML = notes.map(n => `<span>${n}</span>`).join("");
+}
+
+function renderSports(){
+  const box = $("#sports");
+  if (!MULTISPORT){ box.style.display = "none"; return; }
+  box.style.display = "";
+  const btn = (label, val) =>
+    `<button class="sport${state.sport === val ? " on" : ""}" data-sport="${val === null ? "" : esc(val)}">${esc(label)}</button>`;
+  box.innerHTML = btn("전체", null) + SPORTS.map(s => btn(s, s)).join("");
+}
+
+function renderChips(){
+  const box = $("#chips");
+  if (state.view === "team"){ box.style.display = "none"; return; }
+  box.style.display = "";
+  let last = null, html = "";
+  for (const l of shown()){
+    if (last !== null && l.group !== last) html += `<span class="chipsep"></span>`;
+    last = l.group;
+    const on = !state.off.has(l.name);
+    html += `<button class="chip${on?" on":""}${l.group==="컵대회"?" cup":""}" style="${vars(l.name)}" data-lg="${esc(l.name)}"
+      aria-pressed="${on}" title="${esc(l.name)} ${l.count}경기"><i></i>${esc(l.name)}</button>`;
+  }
+  box.innerHTML = html;
+}
+
+function renderStrip(){
+  const start = shift(state.date, -3);
+  let html = "";
+  for (let i = 0; i < 7; i++){
+    const d = shift(start, i), dt = toDate(d), w = dt.getDay();
+    const kinds = [...new Set((byDate[d] || []).filter(visible).map(m => LG[m.league].slug))];
+    html += `<button class="day${d===state.date?" sel":""}${d===TODAY?" today":""}${w===6?" sat":""}${w===0?" sun":""}" data-d="${d}">
+      <div class="wd">${WD[w]}</div><div class="dd">${dt.getDate()}</div>
+      <div class="dots">${kinds.map(k=>`<i style="background:var(--lg-${k})"></i>`).join("")}</div></button>`;
+  }
+  $("#strip").innerHTML = html;
+
+  const dt = toDate(state.date), w = dt.getDay();
+  $("#bigDate").textContent = `${dt.getMonth()+1}월 ${dt.getDate()}일`;
+  const wd = $("#bigWd");
+  wd.textContent = `${WD[w]}요일${state.date===TODAY?" · 오늘":""}`;
+  wd.className = "w" + (w===6?" sat":w===0?" sun":"");
+  $("#datePick").value = state.date;
+}
+
+/* ─────────── 날짜 뷰 ─────────── */
+function viewDay(){
+  const list = (byDate[state.date] || []).filter(visible);
+  if (!list.length){
+    const next = ALL_DATES.find(d => d > state.date && (byDate[d]||[]).some(visible));
+    return `<div class="empty"><div class="big">이 날은 경기가 없습니다</div>
+      <div>${state.off.size || state.sport ? "지금 선택한 리그 기준입니다." : ""}</div>
+      ${next ? `<p><button data-goto="${next}">다음 경기일 ${toDate(next).getMonth()+1}월 ${toDate(next).getDate()}일로 이동</button></p>` : ""}</div>`;
+  }
+  let html = "";
+  for (const l of shown()){
+    const ms = list.filter(m => m.league === l.name).sort((a,b) => a.time.localeCompare(b.time));
+    if (!ms.length) continue;
+    html += `<section class="tiergroup" style="${vars(l.name)}">
+      <div class="tierhead">${MULTISPORT && !state.sport ? `<span class="sp">${esc(l.sport)}</span>` : ""}
+        <h2>${esc(l.name)}</h2><span class="n">${ms.length}경기</span></div>
+      ${ms.map(matchCard).join("")}</section>`;
+  }
+  return html;
+}
+
+function matchCard(m){
+  const done = m.finished && m.homeGoal !== null;
+  const hw = done && m.homeGoal > m.awayGoal, aw = done && m.awayGoal > m.homeGoal;
+  return `<article class="match">
+    <div class="kick"><div class="t">${esc(m.time || "--:--")}</div><div class="r">${m.round ? "R"+m.round : ""}</div></div>
+    <div class="teams">
+      <div class="row${done && aw ? " dim" : ""}"><span class="homeflag">홈</span><span class="nm">${esc(m.home)}</span></div>
+      <div class="row${done && hw ? " dim" : ""}"><span class="nm">${esc(m.away)}</span></div>
+      <div class="venue">${PIN}<a href="${mapLink(m.venue)}" target="_blank" rel="noopener">${esc(m.venue || "장소 미정")}</a>${
+        m.broadcast ? `<span class="bc">${esc(m.broadcast)}</span>` : ""}</div>
+    </div>
+    <div class="score">${m.note
+      ? `<span class="pend note">${esc(m.note)}</span>`
+      : done
+        ? `<span class="g${aw?" lose":""}">${m.homeGoal}</span><span class="g${hw?" lose":""}">${m.awayGoal}</span>`
+        : `<span class="pend">경기 예정</span>`}</div>
+  </article>`;
+}
+
+/* ─────────── 달력 뷰 ─────────── */
+function viewMonth(){
+  const cur = toDate(state.date), y = cur.getFullYear(), mo = cur.getMonth();
+  const first = new Date(y, mo, 1), days = new Date(y, mo+1, 0).getDate();
+  let cells = "";
+  for (let i = 0; i < first.getDay(); i++) cells += `<div class="cell blank"></div>`;
+  for (let d = 1; d <= days; d++){
+    const key = `${y}-${String(mo+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+    const list = (byDate[key] || []).filter(visible);
+    const bars = shown().filter(l => list.some(m => m.league === l.name)).map(l => {
+      const n = list.filter(m => m.league === l.name).length;
+      return `<span class="bar" style="background:var(--lg-${l.slug}-soft);color:var(--lg-${l.slug})">${esc(shortName(l.name))}<b>${n}</b></span>`;
+    }).join("");
+    cells += `<button class="cell${key===TODAY?" today":""}" data-goto="${key}" data-back="day">
+      <span class="n">${d}</span><span class="bars">${bars}</span></button>`;
+  }
+  return `<div class="calhead">
+      <button class="navbtn" data-mon="-1" aria-label="이전 달"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <h2>${y}년 ${mo+1}월</h2>
+      <button class="navbtn" data-mon="1" aria-label="다음 달"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    <div class="cal">${WD.map((w,i)=>`<div class="wdh${i===6?" sat":i===0?" sun":""}">${w}</div>`).join("")}${cells}</div>`;
+}
+// 달력 칸은 좁아서 리그 이름을 줄인다. "K리그1"->"K1", "ACL 엘리트"->"ACL"
+const shortName = n => n.replace("리그","").replace(" 엘리트","").replace("코리아컵","코리아컵").slice(0,5);
+
+/* ─────────── 팀별 뷰 ─────────── */
+function viewTeam(){
+  const groups = LIVE.map(l => {
+    const t = new Set();
+    for (const m of DATA.matches) if (m.league === l.name){ t.add(m.home); t.add(m.away); }
+    return {league: l.name, teams: [...t].sort((a,b) => a.localeCompare(b,"ko"))};
+  }).filter(g => g.teams.length);
+
+  const opts = groups.map(g => `<optgroup label="${esc(g.league)}">${
+    g.teams.map(t => `<option value="${esc(t)}"${state.team===t?" selected":""}>${esc(t)}</option>`).join("")}</optgroup>`).join("");
+  const head = `<div class="teampick">
+      <label for="teamSel" style="font-size:13px;color:var(--muted)">구단 선택</label>
+      <select class="ghost" id="teamSel"><option value="">— 구단을 고르세요 —</option>${opts}</select>
+    </div>`;
+  if (!state.team) return head + `<div class="empty"><div class="big">구단을 고르면 시즌 전 경기가 나옵니다</div><div>리그와 컵대회를 한 줄로 이어서 봅니다.</div></div>`;
+
+  const ms = DATA.matches.filter(m => m.home === state.team || m.away === state.team);
+  const lines = ms.map(m => {
+    const home = m.home === state.team, opp = home ? m.away : m.home;
+    const dt = toDate(m.date), done = m.finished && m.homeGoal !== null;
+    let rs = `<span class="rs up">예정</span>`;
+    if (m.note) rs = `<span class="rs up">${esc(m.note)}</span>`;
+    else if (done){
+      const my = home ? m.homeGoal : m.awayGoal, th = home ? m.awayGoal : m.homeGoal;
+      rs = `<span class="rs ${my>th?"w":my<th?"l":"d"}">${my} : ${th}</span>`;
+    }
+    return `<div class="tline" style="${vars(m.league)}">
+      <div><div class="dt">${m.date.slice(5).replace("-",".")} ${WD[dt.getDay()]}</div>
+        <div class="dt" style="opacity:.7">${esc(m.time)}</div></div>
+      <div><div class="op"><span class="ha">${home?"홈":"원정"}</span>${esc(opp)}<span class="lg">${esc(m.league)}</span></div>
+        <div class="vn">${esc(m.venue)}</div></div>
+      ${rs}</div>`;
+  }).join("");
+
+  const res = ms.filter(m => m.finished && m.homeGoal !== null);
+  const w = res.filter(m => (m.home===state.team) === (m.homeGoal > m.awayGoal) && m.homeGoal !== m.awayGoal).length;
+  const d = res.filter(m => m.homeGoal === m.awayGoal).length;
+  const l = res.length - w - d;
+  return head + `<div class="tierhead" style="${vars(ms[0].league)};margin:14px 0 0">
+      <h2>${esc(state.team)}</h2><span class="n">${ms.length}경기 · ${w}승 ${d}무 ${l}패 · 잔여 ${ms.length-res.length}</span></div>${lines}`;
+}
+
+/* ─────────── 렌더 ─────────── */
+function render(){
+  renderSports(); renderStrip(); renderChips();
+  $(".datebar").style.display = state.view === "team" ? "none" : "";
+  $("#sports").style.display = (MULTISPORT && state.view !== "team") ? "" : "none";
+  document.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", t.dataset.view === state.view));
+  $("#main").innerHTML = state.view === "day" ? viewDay() : state.view === "month" ? viewMonth() : viewTeam();
+}
+
+/* ─────────── 이벤트 ─────────── */
+document.addEventListener("click", e => {
+  const sport = e.target.closest("[data-sport]");
+  if (sport){ state.sport = sport.dataset.sport || null; state.off.clear(); return render(); }
+
+  const chip = e.target.closest(".chip");
+  if (chip){
+    const lg = chip.dataset.lg;
+    state.off.has(lg) ? state.off.delete(lg) : state.off.add(lg);
+    if (state.off.size === shown().length) state.off.clear();   // 전부 끄면 전부 켠다
+    return render();
+  }
+  const tab = e.target.closest(".tab");
+  if (tab){ state.view = tab.dataset.view; return render(); }
+
+  const day = e.target.closest(".day");
+  if (day){ state.date = day.dataset.d; return render(); }
+
+  const goto = e.target.closest("[data-goto]");
+  if (goto){
+    state.date = goto.dataset.goto;
+    if (goto.dataset.back) state.view = "day";
+    window.scrollTo({top:0, behavior:"smooth"});
+    return render();
+  }
+  const mon = e.target.closest("[data-mon]");
+  if (mon){
+    const c = toDate(state.date);
+    c.setDate(1); c.setMonth(c.getMonth() + Number(mon.dataset.mon));
+    state.date = iso(c);
+    return render();
+  }
+  if (e.target.closest("#prevDay")){ state.date = shift(state.date,-1); return render(); }
+  if (e.target.closest("#nextDay")){ state.date = shift(state.date, 1); return render(); }
+  if (e.target.closest("#todayBtn")){ state.date = TODAY; state.view = "day"; return render(); }
+});
+
+document.addEventListener("change", e => {
+  if (e.target.id === "datePick" && e.target.value){ state.date = e.target.value; render(); }
+  if (e.target.id === "teamSel"){ state.team = e.target.value || null; render(); }
+});
+
+document.addEventListener("keydown", e => {
+  if (e.target.matches("input,select,textarea")) return;
+  if (e.key === "ArrowLeft"){ state.date = shift(state.date,-1); render(); }
+  if (e.key === "ArrowRight"){ state.date = shift(state.date, 1); render(); }
+});
+
+renderHeader();
+render();
+</script>
+<!--BODY_END-->
+</body>
+</html>
