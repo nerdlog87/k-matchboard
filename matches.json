@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-08-23T08:30:53+09:00",
+ "generatedAt": "2026-08-23T08:55:01+09:00",
  "sports": [
   "축구"
  ],
@@ -22,7 +22,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T08:30:01+09:00"
+   "fetchedAt": "2026-08-23T08:54:09+09:00"
   },
   {
    "name": "K리그2",
@@ -41,7 +41,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T08:30:09+09:00"
+   "fetchedAt": "2026-08-23T08:54:17+09:00"
   },
   {
    "name": "코리아컵",
@@ -60,7 +60,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-08-23T08:30:16+09:00"
+   "fetchedAt": "2026-08-23T08:54:25+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -79,7 +79,7 @@
    "count": 11,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T08:30:21+09:00"
+   "fetchedAt": "2026-08-23T08:54:29+09:00"
   },
   {
    "name": "ACL 2",
@@ -98,7 +98,7 @@
    "count": 2,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T08:30:24+09:00"
+   "fetchedAt": "2026-08-23T08:54:32+09:00"
   },
   {
    "name": "K3리그",
@@ -117,7 +117,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T08:30:39+09:00"
+   "fetchedAt": "2026-08-23T08:54:47+09:00"
   },
   {
    "name": "K4리그",
@@ -136,7 +136,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T08:30:53+09:00"
+   "fetchedAt": "2026-08-23T08:55:01+09:00"
   }
  ],
  "homepages": {
@@ -193,12 +193,12 @@
    "date": "2026-02-11",
    "time": "19:00",
    "round": null,
-   "home": "강원",
-   "away": "상하이 하이강",
-   "venue": "춘천 송암",
+   "home": "울산",
+   "away": "멜버른 시티 FC",
+   "venue": "울산 문수",
    "finished": true,
-   "homeGoal": 0,
-   "awayGoal": 0,
+   "homeGoal": 1,
+   "awayGoal": 2,
    "broadcast": "",
    "attendance": 0,
    "note": ""
@@ -209,12 +209,12 @@
    "date": "2026-02-11",
    "time": "19:00",
    "round": null,
-   "home": "울산",
-   "away": "멜버른 시티 FC",
-   "venue": "울산 문수",
+   "home": "강원",
+   "away": "상하이 하이강",
+   "venue": "춘천 송암",
    "finished": true,
-   "homeGoal": 1,
-   "awayGoal": 2,
+   "homeGoal": 0,
+   "awayGoal": 0,
    "broadcast": "",
    "attendance": 0,
    "note": ""
@@ -257,9 +257,9 @@
    "date": "2026-02-18",
    "time": "19:00",
    "round": null,
-   "home": "멜버른 시티 FC",
-   "away": "강원",
-   "venue": "멜버른 스타디움",
+   "home": "상하이 하이강",
+   "away": "울산",
+   "venue": "푸둥 아레나",
    "finished": true,
    "homeGoal": 0,
    "awayGoal": 0,
@@ -273,9 +273,9 @@
    "date": "2026-02-18",
    "time": "19:00",
    "round": null,
-   "home": "상하이 하이강",
-   "away": "울산",
-   "venue": "푸둥 아레나",
+   "home": "멜버른 시티 FC",
+   "away": "강원",
+   "venue": "멜버른 스타디움",
    "finished": true,
    "homeGoal": 0,
    "awayGoal": 0,
