@@ -44,12 +44,40 @@ for m in MS:
     if not m["finished"]:
         check(m["homeGoal"] is None, f"미종료인데 점수가 있음: {tag}")
     if m["date"] > date.today().isoformat():
-        check(not m["finished"], f"미래 경기인데 종료 표시: {tag}")
+        # 취소처럼 미리 확정되는 결과는 note 로 표시되므로 예외로 둔다.
+        check(not m["finished"] or bool(m["note"]), f"미래 경기인데 종료 표시: {tag}")
 
 # 3. 같은 팀끼리 붙는 경기 (원본 오류) 는 설명이 달려 있어야 한다
 for m in MS:
     if m["home"] == m["away"]:
         check(bool(m["note"]), f"홈·원정이 같은데 설명 없음: {m['date']} {m['league']} {m['home']}")
+
+# 3-2. 말이 되는 값인가 — 구조만 맞고 내용이 엉뚱한 경우를 잡는다.
+#      (KBO 어댑터 첫 판에서 점수 '11' 과 'vs' 가 팀 이름으로 들어왔는데
+#       구조 검사만으로는 전부 통과해버렸다. 그래서 아래를 추가했다.)
+JUNK = {"vs", "-", "VS", "v"}
+for m in MS:
+    n = f"{m['league']} {m['date']} {m['home']} vs {m['away']}"
+    for who in (m["home"], m["away"]):
+        check(not who.isdigit(), f"팀 이름이 숫자다 — 파싱이 어긋났다: {who!r} ({n})")
+        check(who not in JUNK, f"팀 이름이 이상하다: {who!r} ({n})")
+        check(1 <= len(who) <= 30, f"팀 이름 길이가 이상하다: {who!r} ({n})")
+
+for l in REG:
+    if l["count"] == 0:
+        continue
+    ms = [m for m in MS if m["league"] == l["name"]]
+    teams = {t for m in ms for t in (m["home"], m["away"])}
+    # 리그는 참가팀이 정해져 있다. 팀이 폭발적으로 많으면 파싱이 깨진 것이다.
+    if l["group"] == "리그":
+        check(len(teams) <= 40,
+              f"{l['name']} 팀이 {len(teams)}개나 된다 — 파싱이 깨졌을 가능성: {sorted(teams)[:12]}")
+    # 홈경기가 하나도 없는 팀이 있으면 홈·원정 판별이 틀어진 것이다.
+    home_only = {t for m in ms for t in (m["home"],)}
+    away_only = {t for m in ms for t in (m["away"],)}
+    if len(teams) <= 40:
+        check(not (teams - home_only), f"{l['name']} 홈경기가 없는 팀: {sorted(teams - home_only)}", hard=False)
+        check(not (teams - away_only), f"{l['name']} 원정경기가 없는 팀: {sorted(teams - away_only)}", hard=False)
 
 # 4. 중복
 dup = [k for k, n in Counter((m["league"], m["date"], m["time"], m["home"], m["away"])

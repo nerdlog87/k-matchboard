@@ -6,8 +6,8 @@ COMPETITIONS 리스트를 노출한 뒤, 아래 MODULES 에 추가하면 된다.
 수집기 본체(scraper.py)는 손댈 필요가 없다.
 """
 
-from . import kfa, kleague
+from . import kbo, kfa, kleague
 
-MODULES = [kleague, kfa]
+MODULES = [kleague, kfa, kbo]
 
 COMPETITIONS = [c for m in MODULES for c in m.COMPETITIONS]

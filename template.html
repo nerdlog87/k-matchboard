@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--HEAD_START-->
-<title>K1–K4 매치보드</title>
+<title>경기 있는 날</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
@@ -46,9 +46,10 @@ a{color:inherit}
 /* ─────────── 상단 마스트헤드 ─────────── */
 .wrap{max-width:960px;margin:0 auto;padding:0 16px}
 .masthead{border-bottom:1px solid var(--line);background:var(--surface)}
-.masthead .wrap{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-top:14px;padding-bottom:12px}
+.masthead .wrap{display:flex;align-items:baseline;gap:6px 12px;flex-wrap:wrap;padding-top:14px;padding-bottom:12px}
 .wordmark{font-family:"Black Han Sans","Gothic A1",sans-serif;font-size:26px;letter-spacing:.01em;line-height:1;margin:0}
 .wordmark .dash{color:var(--muted)}
+.sub{margin:0;font-size:13px;color:var(--muted);letter-spacing:-.01em}
 .tagline{color:var(--muted);font-size:12.5px;letter-spacing:.02em;margin-left:auto}
 .tagline b{color:var(--ink-2);font-weight:700}
 
@@ -189,6 +190,8 @@ footer .pending b{color:var(--ink-2)}
   .tabs{order:-1;margin-left:0;width:100%}
   .tab{flex:1;text-align:center}
   .match{grid-template-columns:52px 1fr auto;gap:0 10px;padding:11px 11px 11px 10px}
+  .venue{flex-wrap:wrap}
+  .venue .bc{flex-basis:100%;border-left:0;padding-left:17px;margin-left:0;margin-top:1px}
   .teams .nm{font-size:14.5px}
   .cell{min-height:60px}
   .cell .bar{font-size:9px;padding:1px 3px}
@@ -203,8 +206,9 @@ footer .pending b{color:var(--ink-2)}
 <!--BODY_START-->
 <header class="masthead">
   <div class="wrap">
-    <h1 class="wordmark">K1<span class="dash">–</span>K4 매치보드</h1>
+    <h1 class="wordmark">경기 있는 날</h1>
     <div class="tagline"><b id="seasonLabel"></b> · <span id="countLabel"></span></div>
+    <p class="sub">한국에서 볼 수 있는 경기를 날짜별로</p>
   </div>
 </header>
 

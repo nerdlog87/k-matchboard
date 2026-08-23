@@ -99,3 +99,63 @@ https://<깃허브아이디>.github.io/k-matchboard/matches.json
   요청조차 보내지 않고 기존 일정을 그대로 둡니다. 개막일이 되면 알아서 다시 들어옵니다.
 - **사용량** — 한 번에 3~4분, 하루 2번이면 월 200분 남짓입니다.
   Public 저장소는 Actions 가 무제한 무료라 요금 걱정은 없습니다.
+
+---
+
+## 실패했을 때
+
+### 어느 단계에서 죽었는지 먼저 봅니다
+
+**Actions** 탭 → 빨간 ✗ 가 붙은 실행 클릭 → 왼쪽 **update** 클릭.
+단계 목록이 쭉 나오는데, **빨간 ✗ 가 붙은 줄**을 펼치면 진짜 이유가 나옵니다.
+
+> `Process completed with exit code 1` 은 "무언가 실패했다"는 말일 뿐,
+> 그 자체로는 원인이 아닙니다. 그 위의 단계 이름과 로그를 봐야 합니다.
+
+### 자주 나오는 것들
+
+| 증상 | 원인 | 해결 |
+|---|---|---|
+| `저장소에 이 파일이 없습니다 → adapters/...` | 웹 업로드에서 폴더가 빠짐 | 그 파일만 다시 올리기 (아래 참고) |
+| `Could not open requirements file` | `requirements.txt` 미업로드 | 올리기 |
+| `ModuleNotFoundError: No module named 'adapters'` | `adapters` 폴더 미업로드 | 올리기 |
+| `Get Pages site failed` | Pages 를 안 켬 | Settings → Pages → Source 를 **GitHub Actions** 로 |
+| `Permission to ... denied` / `403` | 워크플로 쓰기 권한 없음 | Settings → Actions → General → Workflow permissions → **Read and write permissions** |
+| `Node.js 20 is deprecated` | 경고일 뿐, 에러 아님 | 무시해도 되고, 최신 워크플로 파일로 바꾸면 사라집니다 |
+
+### 빠진 파일 다시 올리기
+
+폴더 안 파일 하나만 올릴 때는 **Add file → Create new file** 로
+경로를 직접 치는 쪽이 확실합니다. 예를 들어
+
+```
+adapters/kleague.py
+```
+
+이렇게 입력하면 `adapters` 폴더가 자동으로 생기고, 내용은 복사해 붙여넣으면 됩니다.
+`adapters/__init__.py`, `adapters/common.py`, `adapters/kleague.py`, `adapters/kfa.py`,
+`adapters/kbo.py` **다섯 개 전부** 있어야 합니다.
+
+### 지금 저장소에 뭐가 올라가 있는지 확인
+
+저장소 첫 화면에서 파일 목록을 보면 됩니다. 이만큼 있어야 정상입니다.
+
+```
+.github/workflows/update.yml
+adapters/__init__.py
+adapters/common.py
+adapters/kbo.py
+adapters/kfa.py
+adapters/kleague.py
+.gitignore
+README.md
+SETUP.md
+build.py
+check.py
+matches.json
+requirements.txt
+scraper.py
+template.html
+```
+
+`dist/` 는 없는 게 맞습니다. 실행할 때마다 자동으로 만들어집니다.
