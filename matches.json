@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-08-23T09:33:38+09:00",
+ "generatedAt": "2026-08-23T09:45:06+09:00",
  "sports": [
   "축구",
   "야구"
@@ -23,7 +23,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T08:12:48+09:00"
+   "fetchedAt": "2026-08-23T09:44:06+09:00"
   },
   {
    "name": "K리그2",
@@ -42,7 +42,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T08:12:56+09:00"
+   "fetchedAt": "2026-08-23T09:44:14+09:00"
   },
   {
    "name": "코리아컵",
@@ -61,7 +61,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-08-23T08:13:07+09:00"
+   "fetchedAt": "2026-08-23T09:44:22+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -80,7 +80,7 @@
    "count": 11,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T08:13:12+09:00"
+   "fetchedAt": "2026-08-23T09:44:27+09:00"
   },
   {
    "name": "ACL 2",
@@ -99,7 +99,7 @@
    "count": 2,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T08:13:15+09:00"
+   "fetchedAt": "2026-08-23T09:44:30+09:00"
   },
   {
    "name": "K3리그",
@@ -118,7 +118,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T08:13:33+09:00"
+   "fetchedAt": "2026-08-23T09:44:45+09:00"
   },
   {
    "name": "K4리그",
@@ -137,7 +137,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T08:13:48+09:00"
+   "fetchedAt": "2026-08-23T09:44:58+09:00"
   },
   {
    "name": "KBO 리그",
@@ -156,7 +156,7 @@
    "count": 675,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-23T09:33:38+09:00"
+   "fetchedAt": "2026-08-23T09:45:06+09:00"
   }
  ],
  "homepages": {
@@ -277,9 +277,9 @@
    "date": "2026-02-18",
    "time": "19:00",
    "round": null,
-   "home": "멜버른 시티 FC",
-   "away": "강원",
-   "venue": "멜버른 스타디움",
+   "home": "상하이 하이강",
+   "away": "울산",
+   "venue": "푸둥 아레나",
    "finished": true,
    "homeGoal": 0,
    "awayGoal": 0,
@@ -293,9 +293,9 @@
    "date": "2026-02-18",
    "time": "19:00",
    "round": null,
-   "home": "상하이 하이강",
-   "away": "울산",
-   "venue": "푸둥 아레나",
+   "home": "멜버른 시티 FC",
+   "away": "강원",
+   "venue": "멜버른 스타디움",
    "finished": true,
    "homeGoal": 0,
    "awayGoal": 0,
