@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-08-24T06:10:55+09:00",
+ "generatedAt": "2026-08-25T06:18:24+09:00",
  "sports": [
   "축구",
   "야구"
@@ -23,7 +23,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-24T06:09:59+09:00"
+   "fetchedAt": "2026-08-25T06:17:20+09:00"
   },
   {
    "name": "K리그2",
@@ -42,7 +42,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-24T06:10:06+09:00"
+   "fetchedAt": "2026-08-25T06:17:28+09:00"
   },
   {
    "name": "코리아컵",
@@ -61,7 +61,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-08-24T06:10:13+09:00"
+   "fetchedAt": "2026-08-25T06:17:36+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -80,7 +80,7 @@
    "count": 11,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-24T06:10:17+09:00"
+   "fetchedAt": "2026-08-25T06:17:42+09:00"
   },
   {
    "name": "ACL 2",
@@ -99,7 +99,7 @@
    "count": 2,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-24T06:10:19+09:00"
+   "fetchedAt": "2026-08-25T06:17:44+09:00"
   },
   {
    "name": "K3리그",
@@ -118,7 +118,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-24T06:10:34+09:00"
+   "fetchedAt": "2026-08-25T06:18:00+09:00"
   },
   {
    "name": "K4리그",
@@ -137,7 +137,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-24T06:10:47+09:00"
+   "fetchedAt": "2026-08-25T06:18:15+09:00"
   },
   {
    "name": "KBO 리그",
@@ -156,7 +156,7 @@
    "count": 675,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-24T06:10:55+09:00"
+   "fetchedAt": "2026-08-25T06:18:24+09:00"
   }
  ],
  "homepages": {
@@ -277,9 +277,9 @@
    "date": "2026-02-18",
    "time": "19:00",
    "round": null,
-   "home": "멜버른 시티 FC",
-   "away": "강원",
-   "venue": "멜버른 스타디움",
+   "home": "상하이 하이강",
+   "away": "울산",
+   "venue": "푸둥 아레나",
    "finished": true,
    "homeGoal": 0,
    "awayGoal": 0,
@@ -293,9 +293,9 @@
    "date": "2026-02-18",
    "time": "19:00",
    "round": null,
-   "home": "상하이 하이강",
-   "away": "울산",
-   "venue": "푸둥 아레나",
+   "home": "멜버른 시티 FC",
+   "away": "강원",
+   "venue": "멜버른 스타디움",
    "finished": true,
    "homeGoal": 0,
    "awayGoal": 0,
@@ -20731,7 +20731,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "BALL TV",
    "attendance": 0,
    "note": ""
   },
@@ -20747,7 +20747,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "MAXPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -20907,7 +20907,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "IB SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -20923,7 +20923,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "JTBC SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -20939,7 +20939,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "ENA SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -20955,7 +20955,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "GOLF&PBA",
    "attendance": 0,
    "note": ""
   },
@@ -20971,7 +20971,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "생활체육TV",
    "attendance": 0,
    "note": ""
   },
@@ -20987,7 +20987,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "BALL TV",
    "attendance": 0,
    "note": ""
   },
@@ -21003,7 +21003,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "MAXPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21019,7 +21019,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "더 라이프2",
    "attendance": 0,
    "note": ""
   },
@@ -21227,7 +21227,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "JTBC SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21243,7 +21243,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "ENA SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21259,7 +21259,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "생활체육TV",
    "attendance": 0,
    "note": ""
   },
@@ -21275,7 +21275,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "GOLF&PBA",
    "attendance": 0,
    "note": ""
   },
@@ -21291,7 +21291,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "JTBC SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21307,7 +21307,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "ENA SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21323,7 +21323,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "ENA SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21339,7 +21339,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "JTBC SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21355,7 +21355,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "GOLF&PBA",
    "attendance": 0,
    "note": ""
   },
@@ -21371,7 +21371,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "IB SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21419,7 +21419,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "JTBC SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21435,7 +21435,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "ENA SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21451,7 +21451,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "IB SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21467,7 +21467,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "생활체육TV",
    "attendance": 0,
    "note": ""
   },
@@ -21483,7 +21483,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "MAXPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21579,7 +21579,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "JTBC SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21595,7 +21595,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "BALL TV",
    "attendance": 0,
    "note": ""
   },
@@ -21611,7 +21611,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "MAXPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21627,7 +21627,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "JTBC SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21643,7 +21643,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "생활체육TV",
    "attendance": 0,
    "note": ""
   },
@@ -21659,7 +21659,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "IB SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21771,7 +21771,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "ENA SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21787,7 +21787,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "BALL TV",
    "attendance": 0,
    "note": ""
   },
@@ -21803,7 +21803,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "IB SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21819,7 +21819,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "IB SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21835,7 +21835,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "BALL TV",
    "attendance": 0,
    "note": ""
   },
@@ -21851,7 +21851,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "생활체육TV",
    "attendance": 0,
    "note": ""
   },
@@ -21883,7 +21883,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "JTBC SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21899,7 +21899,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "IB SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21915,7 +21915,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "MAXPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21931,7 +21931,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "ENA SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21947,7 +21947,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "JTBC SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -21963,7 +21963,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "생활체육TV",
    "attendance": 0,
    "note": ""
   },
@@ -21979,7 +21979,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "MAXPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -22011,7 +22011,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "ENA SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -22027,7 +22027,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "JTBC SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -22043,7 +22043,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "IB SPORTS",
    "attendance": 0,
    "note": ""
   },
@@ -22059,7 +22059,7 @@
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
-   "broadcast": "",
+   "broadcast": "BALL TV",
    "attendance": 0,
    "note": ""
   },
