@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-08-26T06:16:50+09:00",
+ "generatedAt": "2026-08-27T09:20:06+09:00",
  "sports": [
   "축구",
   "야구"
@@ -23,7 +23,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-26T06:15:56+09:00"
+   "fetchedAt": "2026-08-27T09:19:08+09:00"
   },
   {
    "name": "K리그2",
@@ -42,7 +42,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-26T06:16:02+09:00"
+   "fetchedAt": "2026-08-27T09:19:15+09:00"
   },
   {
    "name": "코리아컵",
@@ -61,7 +61,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-08-26T06:16:08+09:00"
+   "fetchedAt": "2026-08-27T09:19:22+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -80,7 +80,7 @@
    "count": 11,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-26T06:16:12+09:00"
+   "fetchedAt": "2026-08-27T09:19:27+09:00"
   },
   {
    "name": "ACL 2",
@@ -99,7 +99,7 @@
    "count": 2,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-26T06:16:15+09:00"
+   "fetchedAt": "2026-08-27T09:19:29+09:00"
   },
   {
    "name": "K3리그",
@@ -118,7 +118,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-26T06:16:29+09:00"
+   "fetchedAt": "2026-08-27T09:19:44+09:00"
   },
   {
    "name": "K4리그",
@@ -137,7 +137,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-26T06:16:42+09:00"
+   "fetchedAt": "2026-08-27T09:19:57+09:00"
   },
   {
    "name": "KBO 리그",
@@ -156,7 +156,7 @@
    "count": 780,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-26T06:16:50+09:00"
+   "fetchedAt": "2026-08-27T09:20:06+09:00"
   }
  ],
  "homepages": {
@@ -213,12 +213,12 @@
    "date": "2026-02-11",
    "time": "19:00",
    "round": null,
-   "home": "강원",
-   "away": "상하이 하이강",
-   "venue": "춘천 송암",
+   "home": "울산",
+   "away": "멜버른 시티 FC",
+   "venue": "울산 문수",
    "finished": true,
-   "homeGoal": 0,
-   "awayGoal": 0,
+   "homeGoal": 1,
+   "awayGoal": 2,
    "broadcast": "",
    "attendance": 0,
    "note": ""
@@ -229,12 +229,12 @@
    "date": "2026-02-11",
    "time": "19:00",
    "round": null,
-   "home": "울산",
-   "away": "멜버른 시티 FC",
-   "venue": "울산 문수",
+   "home": "강원",
+   "away": "상하이 하이강",
+   "venue": "춘천 송암",
    "finished": true,
-   "homeGoal": 1,
-   "awayGoal": 2,
+   "homeGoal": 0,
+   "awayGoal": 0,
    "broadcast": "",
    "attendance": 0,
    "note": ""
@@ -19560,9 +19560,9 @@
    "home": "LG",
    "away": "NC",
    "venue": "잠실야구장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 8,
+   "awayGoal": 0,
    "broadcast": "MBC SPORTS+",
    "attendance": null,
    "note": ""
@@ -19576,9 +19576,9 @@
    "home": "SSG",
    "away": "한화",
    "venue": "인천SSG랜더스필드",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 6,
+   "awayGoal": 1,
    "broadcast": "SPOTV",
    "attendance": null,
    "note": ""
@@ -19592,9 +19592,9 @@
    "home": "KIA",
    "away": "롯데",
    "venue": "광주기아챔피언스필드",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 16,
+   "awayGoal": 11,
    "broadcast": "SPOTV2",
    "attendance": null,
    "note": ""
@@ -19608,9 +19608,9 @@
    "home": "KT",
    "away": "두산",
    "venue": "수원KT위즈파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 5,
+   "awayGoal": 4,
    "broadcast": "SBS Sports",
    "attendance": null,
    "note": ""
@@ -19624,9 +19624,9 @@
    "home": "키움",
    "away": "삼성",
    "venue": "고척스카이돔",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 2,
+   "awayGoal": 12,
    "broadcast": "KBS N SPORTS",
    "attendance": null,
    "note": ""
@@ -19640,11 +19640,11 @@
    "home": "안양",
    "away": "인천",
    "venue": "안양 종합 운동장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 2,
+   "awayGoal": 1,
    "broadcast": "IB SPORTS",
-   "attendance": 0,
+   "attendance": 4596,
    "note": ""
   },
   {
@@ -19656,11 +19656,11 @@
    "home": "대전",
    "away": "울산",
    "venue": "대전 월드컵 경기장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 2,
+   "awayGoal": 1,
    "broadcast": "JTBC SPORTS",
-   "attendance": 0,
+   "attendance": 4077,
    "note": ""
   },
   {
@@ -19672,11 +19672,11 @@
    "home": "강원",
    "away": "광주",
    "venue": "강릉하이원아레나",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 2,
+   "awayGoal": 2,
    "broadcast": "ENA SPORTS",
-   "attendance": 0,
+   "attendance": 3836,
    "note": ""
   },
   {
