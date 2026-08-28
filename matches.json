@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-08-28T16:18:51+09:00",
+ "generatedAt": "2026-08-28T16:32:21+09:00",
  "sports": [
   "축구",
   "야구"
@@ -24,7 +24,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-28T16:17:47+09:00"
+   "fetchedAt": "2026-08-28T16:31:24+09:00"
   },
   {
    "name": "K리그2",
@@ -44,7 +44,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-28T16:17:55+09:00"
+   "fetchedAt": "2026-08-28T16:31:31+09:00"
   },
   {
    "name": "코리아컵",
@@ -64,7 +64,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-08-28T16:18:02+09:00"
+   "fetchedAt": "2026-08-28T16:31:37+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -84,7 +84,7 @@
    "count": 11,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-28T16:18:07+09:00"
+   "fetchedAt": "2026-08-28T16:31:41+09:00"
   },
   {
    "name": "ACL 2",
@@ -104,7 +104,7 @@
    "count": 2,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-28T16:18:10+09:00"
+   "fetchedAt": "2026-08-28T16:31:43+09:00"
   },
   {
    "name": "K3리그",
@@ -124,7 +124,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-28T16:18:26+09:00"
+   "fetchedAt": "2026-08-28T16:31:59+09:00"
   },
   {
    "name": "K4리그",
@@ -144,7 +144,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-28T16:18:41+09:00"
+   "fetchedAt": "2026-08-28T16:32:12+09:00"
   },
   {
    "name": "KBO 리그",
@@ -164,7 +164,7 @@
    "count": 780,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-28T16:18:51+09:00"
+   "fetchedAt": "2026-08-28T16:32:21+09:00"
   }
  ],
  "homepages": {
@@ -22295,12 +22295,12 @@
    "home": "롯데",
    "away": "LG",
    "venue": "사직야구장",
-   "finished": false,
+   "finished": true,
    "homeGoal": null,
    "awayGoal": null,
    "broadcast": "SPOTV",
    "attendance": null,
-   "note": "",
+   "note": "우천취소",
    "ticketUrl": "https://www.giantsclub.com",
    "ticketKind": "club"
   },
