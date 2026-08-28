@@ -79,6 +79,15 @@ for l in REG:
         check(not (teams - home_only), f"{l['name']} 홈경기가 없는 팀: {sorted(teams - home_only)}", hard=False)
         check(not (teams - away_only), f"{l['name']} 원정경기가 없는 팀: {sorted(teams - away_only)}", hard=False)
 
+# 3-3. 예매 링크가 링크답게 생겼는가
+for m in MS:
+    u, k = m.get("ticketUrl", ""), m.get("ticketKind", "")
+    if u:
+        check(u.startswith("http"), f"예매 링크가 이상하다: {u!r} ({m['league']} {m['date']})")
+        check(k in ("shop", "club"), f"예매 링크 종류가 이상하다: {k!r} ({m['league']} {m['date']})")
+    else:
+        check(not k, f"링크 없이 종류만 있다: {k!r} ({m['league']} {m['date']})")
+
 # 4. 중복
 dup = [k for k, n in Counter((m["league"], m["date"], m["time"], m["home"], m["away"])
                              for m in MS).items() if n > 1]

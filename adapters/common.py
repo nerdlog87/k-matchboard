@@ -57,7 +57,8 @@ class Competition:
 
 def match(*, competition: Competition, date, time_, home, away, venue,
           round_=None, finished=False, home_goal=None, away_goal=None,
-          broadcast="", attendance=None, note=""):
+          broadcast="", attendance=None, note="",
+          ticket_url="", ticket_kind=""):
     """모든 어댑터가 이 모양으로만 돌려준다. 종목이 뭐든 동일하다."""
     return {
         "sport": competition.sport,
@@ -74,4 +75,9 @@ def match(*, competition: Competition, date, time_, home, away, venue,
         "broadcast": broadcast,
         "attendance": attendance,
         "note": note,            # "원정팀몰수패", "폭염취소" 처럼 점수로 표현 못 하는 결과
+        # 예매. kind 는 링크가 어디로 데려가는지를 정직하게 구분한다.
+        #   "shop" = 그 경기를 파는 예매 페이지로 바로 간다
+        #   "club" = 구단 홈페이지로 간다 (거기서 예매 메뉴를 찾아야 한다)
+        "ticketUrl": ticket_url,
+        "ticketKind": ticket_kind,
     }

@@ -25,7 +25,8 @@ slim = {
     "matches": [
         {k: m[k] for k in
          ("sport", "league", "date", "time", "round", "home", "away", "venue",
-          "finished", "homeGoal", "awayGoal", "broadcast", "note")}
+          "finished", "homeGoal", "awayGoal", "broadcast", "note",
+          "ticketUrl", "ticketKind")}
         for m in data["matches"]
     ],
 }

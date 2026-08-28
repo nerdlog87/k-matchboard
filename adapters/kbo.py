@@ -54,6 +54,22 @@ _RELAY = {"".join(k.split()): v for k, v in RELAY.items()}
 _RELAY_KEYS = sorted(_RELAY, key=len, reverse=True)
 
 
+# KBO 응답에는 예매 칸이 아예 없다(빈 칸은 구분용). 그래서 구단 공식 홈페이지로 보낸다.
+# 10개 구단 전부 2026-08-23 에 실제로 열어보고 확인했다.
+CLUB_SITE = {
+    "LG": "https://www.lgtwins.com",
+    "두산": "https://www.doosanbears.com",
+    "KT": "https://www.ktwiz.co.kr",
+    "SSG": "https://www.ssglanders.com",
+    "NC": "https://www.ncdinos.com",
+    "삼성": "https://www.samsunglions.com",
+    "롯데": "https://www.giantsclub.com",
+    "KIA": "https://tigers.co.kr",
+    "한화": "https://www.hanwhaeagles.co.kr",
+    "키움": "https://www.heroesbaseball.co.kr",
+}
+
+
 def _text(html):
     return BeautifulSoup(html or "", "html.parser").get_text(" ", strip=True)
 
@@ -134,6 +150,8 @@ def _fetch(season, comp):
                 away_goal=int(goals[0]) if done else None,
                 broadcast=_relays(_cell(cells[-4])),
                 note=note,
+                ticket_url=CLUB_SITE.get(home, ""),
+                ticket_kind="club" if home in CLUB_SITE else "",
             ))
         time.sleep(0.3)
     return out

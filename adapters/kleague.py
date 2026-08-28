@@ -25,8 +25,12 @@ def _post(body):
     r = http(URL, method="POST", json=body, headers=HEADERS)
     data = (r.json() or {}).get("data") or {}
     for c in data.get("clubList") or []:
+        # 구단 목록은 '강원FC'(teamName) 인데 일정은 '강원'(teamNameShort) 으로 온다.
+        # 이름 표기를 전부 열쇠로 넣어 둬야 나중에 찾을 수 있다.
         if c.get("homepage"):
-            _clubs[c["teamName"]] = c["homepage"]
+            for key in (c.get("teamName"), c.get("teamNameShort"), c.get("teamNameFull")):
+                if key:
+                    _clubs[key] = c["homepage"]
     return data
 
 
@@ -44,6 +48,22 @@ def _etc_list(season, month):
     return _etc_cache[key]
 
 
+# 예매처 코드. I=인터파크, T=티켓링크, E=구단 자체.
+# 티켓링크 딥링크(facility.ticketlink.co.kr/.../seat?partnerNo=...)는
+# partnerNo 가 세션에 묶여 있어 밖에서 열면 "오류가 발생했습니다 (crypto)" 가 뜬다.
+# 그래서 인터파크만 바로 링크하고 나머지는 구단 홈페이지로 보낸다.
+INTERPARK = "https://tickets.interpark.com/goods/{}"
+
+
+def _ticket(g):
+    """(링크, 종류) 를 돌려준다. goodsCode 는 티켓이 풀린 경기에만 들어온다."""
+    goods, company = g.get("goodsCode"), g.get("company")
+    if goods and company == "I":
+        return INTERPARK.format(goods), "shop"
+    home = _clubs.get(g.get("homeTeamName") or "")
+    return (home, "club") if home else ("", "")
+
+
 def _rows(comp, games, meet_filter=None):
     out = []
     for g in games:
@@ -52,6 +72,7 @@ def _rows(comp, games, meet_filter=None):
         if meet_filter and meet_filter not in meet:
             continue
         finished = g.get("endYn") == "Y"
+        ticket_url, ticket_kind = _ticket(g)
         out.append(match(
             competition=comp,
             date=g["gameDate"].replace(".", "-"),
@@ -65,6 +86,8 @@ def _rows(comp, games, meet_filter=None):
             away_goal=g.get("awayGoal") if finished else None,
             broadcast=g.get("matchBCList") or "",
             attendance=g.get("audienceQty"),
+            ticket_url=ticket_url,
+            ticket_kind=ticket_kind,
         ))
     return out
 

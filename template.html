@@ -134,6 +134,16 @@ main{padding:8px 0 64px}
 .score .g.lose{color:var(--muted);font-weight:400}
 .score .pend{font-size:11px;color:var(--muted);letter-spacing:.06em;font-family:"Gothic A1",sans-serif}
 .score .note{display:inline-block;max-width:104px;line-height:1.35;color:var(--tier);font-weight:700}
+/* 예매 버튼. 링크가 어디로 가는지에 따라 생김새를 다르게 한다.
+   진한 것 = 그 경기 예매 페이지 / 흐린 것 = 구단 홈페이지 */
+.tkt{display:inline-block;margin-top:6px;padding:3px 10px;border-radius:999px;
+  font-family:"Gothic A1",sans-serif;font-size:11px;font-weight:800;letter-spacing:.02em;
+  text-decoration:none;white-space:nowrap;
+  color:var(--tier);border:1px solid var(--tier);background:var(--tier-soft)}
+.tkt:hover{color:var(--surface);background:var(--tier)}
+.tkt.club{color:var(--muted);border-color:var(--line-strong);background:var(--surface);font-weight:700}
+.tkt.club:hover{color:var(--ink);border-color:var(--ink-2);background:var(--surface-2)}
+.tline .tkt{margin-top:4px}
 
 /* ─────────── 달력 뷰 ─────────── */
 .calhead{display:flex;align-items:center;gap:10px;margin:18px 0 10px}
@@ -207,8 +217,8 @@ footer .pending b{color:var(--ink-2)}
 <header class="masthead">
   <div class="wrap">
     <h1 class="wordmark">경기 있는 날</h1>
-    <div class="tagline"><b id="seasonLabel"></b> · <span id="countLabel"></span></div>
     <p class="sub">한국에서 볼 수 있는 경기를 날짜별로</p>
+    <div class="tagline"><b id="seasonLabel"></b> · <span id="countLabel"></span></div>
   </div>
 </header>
 
@@ -250,6 +260,7 @@ footer .pending b{color:var(--ink-2)}
       <span>출처 <b>한국프로축구연맹</b>(K리그1·2, 코리아컵, ACL) · <b>대한축구협회</b>(K3·K4)</span>
       <span>데이터 기준 <b id="genAt"></b> KST</span>
       <span>경기 시간·장소는 변경될 수 있습니다.</span>
+      <span><b>예매</b>는 그 경기 판매 페이지로, <b>구단 홈</b>은 구단 홈페이지로 갑니다.</span>
     </div>
     <div class="row pending" id="pending"></div>
   </div>
@@ -394,6 +405,15 @@ function viewDay(){
   return html;
 }
 
+// 아직 안 한 경기에만 붙인다. 끝난 경기에 예매 버튼이 남아 있으면 헷갈린다.
+function ticketLink(m){
+  if (m.finished || !m.ticketUrl) return "";
+  const shop = m.ticketKind === "shop";
+  return `<a class="tkt${shop ? "" : " club"}" href="${esc(m.ticketUrl)}" target="_blank" rel="noopener"
+    title="${shop ? "이 경기 예매 페이지로 바로 갑니다" : "구단 홈페이지로 갑니다. 거기서 예매 메뉴를 찾으세요"}"
+    >${shop ? "예매" : "구단 홈"}</a>`;
+}
+
 function matchCard(m){
   const done = m.finished && m.homeGoal !== null;
   const hw = done && m.homeGoal > m.awayGoal, aw = done && m.awayGoal > m.homeGoal;
@@ -409,7 +429,7 @@ function matchCard(m){
       ? `<span class="pend note">${esc(m.note)}</span>`
       : done
         ? `<span class="g${aw?" lose":""}">${m.homeGoal}</span><span class="g${hw?" lose":""}">${m.awayGoal}</span>`
-        : `<span class="pend">경기 예정</span>`}</div>
+        : `<span class="pend">경기 예정</span><br>${ticketLink(m)}`}</div>
   </article>`;
 }
 
@@ -459,7 +479,8 @@ function viewTeam(){
   const lines = ms.map(m => {
     const home = m.home === state.team, opp = home ? m.away : m.home;
     const dt = toDate(m.date), done = m.finished && m.homeGoal !== null;
-    let rs = `<span class="rs up">예정</span>`;
+    const tk = ticketLink(m);
+    let rs = `<span class="rs up">예정${tk ? "<br>" + tk : ""}</span>`;
     if (m.note) rs = `<span class="rs up">${esc(m.note)}</span>`;
     else if (done){
       const my = home ? m.homeGoal : m.awayGoal, th = home ? m.awayGoal : m.homeGoal;
