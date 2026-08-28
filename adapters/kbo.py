@@ -159,6 +159,6 @@ def _fetch(season, comp):
 
 COMPETITIONS = [
     Competition(name="KBO 리그", sport="야구", slug="kbo",
-                color=("#457A23", "#6BA83C"), soft=("#EBF0E7", "#21321A"), badge="KBO",
+                color=("#3A4A9E", "#7987D0"), soft=("#E9EBF4", "#232B37"), badge="KBO",
                 fetch=_fetch, season=("03-01", "11-30")),
 ]

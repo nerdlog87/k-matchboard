@@ -102,9 +102,9 @@ def _rounds(key, max_round=45):
 
 COMPETITIONS = [
     Competition(name="K3리그", sport="축구", slug="k3",
-                color=("#C05A0E", "#D07A2A"), soft=("#F8EDE4", "#352816"), badge="K3",
+                color=("#7B3FBF", "#9A64E8"), soft=("#F0EAF8", "#2A243C"), badge="K3",
                 fetch=_rounds("k3"), season=("02-15", "12-10")),
     Competition(name="K4리그", sport="축구", slug="k4",
-                color=("#A62677", "#D45AA8"), soft=("#F5E7F0", "#36222F"), badge="K4",
+                color=("#2E7D32", "#55A85C"), soft=("#E8F1E8", "#1C3220"), badge="K4",
                 fetch=_rounds("k4"), season=("02-15", "12-10")),
 ]
