@@ -92,11 +92,19 @@ input[type=date].ghost{padding:5px 8px}
 .sport.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:14px 0 4px}
 .chips{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
-.chip{border:1px solid var(--line-strong);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700;
+/* 리그 모노그램 배지 — 엠블럼 대신 리그 색 원에 약칭을 넣는다 */
+.bdg{width:20px;height:20px;border-radius:50%;flex:none;display:inline-grid;place-items:center;
+  background:var(--tier);color:var(--badge-ink);font-family:"Black Han Sans","Gothic A1",sans-serif;
+  font-size:9px;font-weight:400;letter-spacing:0;font-style:normal;line-height:1}
+.bdg.s{width:17px;height:17px;font-size:8px}
+:root{--badge-ink:#FFFFFF}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--badge-ink:#0E1411}}
+:root[data-theme="dark"]{--badge-ink:#0E1411}
+.chip{border:1px solid var(--line-strong);border-radius:999px;padding:4px 12px 4px 5px;font-size:13px;font-weight:700;
   color:var(--muted);background:var(--surface);display:flex;align-items:center;gap:6px}
-.chip i{width:8px;height:8px;border-radius:2px;display:block;background:currentColor;opacity:.35}
+.chip .bdg{opacity:.35;filter:grayscale(.55)}      /* 꺼진 리그는 배지도 흐려진다 */
 .chip.on{color:var(--tier);border-color:var(--tier);background:var(--tier-soft)}
-.chip.on i{opacity:1}
+.chip.on .bdg{opacity:1;filter:none}
 .chipsep{width:1px;align-self:stretch;background:var(--line-strong);margin:2px 4px}
 .chip.cup{border-style:dashed}   /* 컵대회는 리그와 성격이 달라 테두리로 구분한다 */
 .tabs{display:flex;gap:2px;margin-left:auto;border:1px solid var(--line-strong);border-radius:9px;padding:2px;background:var(--surface)}
@@ -359,7 +367,7 @@ function renderChips(){
     last = l.group;
     const on = !state.off.has(l.name);
     html += `<button class="chip${on?" on":""}${l.group==="컵대회"?" cup":""}" style="${vars(l.name)}" data-lg="${esc(l.name)}"
-      aria-pressed="${on}" title="${esc(l.name)} ${l.count}경기"><i></i>${esc(l.name)}</button>`;
+      aria-pressed="${on}" title="${esc(l.name)} ${l.count}경기"><i class="bdg">${esc(l.badge||"")}</i>${esc(l.name)}</button>`;
   }
   box.innerHTML = html;
 }
@@ -399,7 +407,7 @@ function viewDay(){
     if (!ms.length) continue;
     html += `<section class="tiergroup" style="${vars(l.name)}">
       <div class="tierhead">${MULTISPORT && !state.sport ? `<span class="sp">${esc(l.sport)}</span>` : ""}
-        <h2>${esc(l.name)}</h2><span class="n">${ms.length}경기</span></div>
+        <i class="bdg s">${esc(l.badge||"")}</i><h2>${esc(l.name)}</h2><span class="n">${ms.length}경기</span></div>
       ${ms.map(matchCard).join("")}</section>`;
   }
   return html;

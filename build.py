@@ -23,7 +23,8 @@ slim = {
     "sports": data["sports"],
     "leagues": data["leagues"],
     "matches": [
-        {k: m[k] for k in
+        # 예매 필드가 아직 없는 데이터(구버전 수집분)도 빌드는 되게 .get 으로 읽는다
+        {k: m.get(k, "") for k in
          ("sport", "league", "date", "time", "round", "home", "away", "venue",
           "finished", "homeGoal", "awayGoal", "broadcast", "note",
           "ticketUrl", "ticketKind")}

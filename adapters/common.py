@@ -38,6 +38,7 @@ class Competition:
     slug: str                       # CSS 변수 키 ("k1")
     color: Tuple[str, str]          # (light, dark) 강조색
     soft: Tuple[str, str]           # (light, dark) 배경색
+    badge: str = ""                 # 원형 배지에 넣을 약칭 ("K1"). 비우면 slug 대문자.
     fetch: Callable[[int], List[dict]] = None
     group: str = "리그"             # "리그" | "컵대회"
     optional: bool = False          # 대진 미발표 등으로 0경기여도 정상인 대회

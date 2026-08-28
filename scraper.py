@@ -104,6 +104,7 @@ def collect(season, only=None, prev=None):
         registry.append({
             "name": comp.name, "sport": comp.sport, "slug": comp.slug,
             "group": comp.group, "note": comp.note,
+            "badge": comp.badge or comp.slug.upper(),
             "color": {"light": comp.color[0], "dark": comp.color[1]},
             "soft": {"light": comp.soft[0], "dark": comp.soft[1]},
             "count": len(got), "status": status, "error": error,
