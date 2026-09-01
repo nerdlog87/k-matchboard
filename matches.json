@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-09-01T09:11:03+09:00",
+ "generatedAt": "2026-09-02T07:55:34+09:00",
  "sports": [
   "축구",
   "야구"
@@ -24,7 +24,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-01T09:10:01+09:00"
+   "fetchedAt": "2026-09-02T07:53:01+09:00"
   },
   {
    "name": "K리그2",
@@ -44,7 +44,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-01T09:10:09+09:00"
+   "fetchedAt": "2026-09-02T07:53:09+09:00"
   },
   {
    "name": "코리아컵",
@@ -64,7 +64,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-09-01T09:10:17+09:00"
+   "fetchedAt": "2026-09-02T07:53:17+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -84,7 +84,7 @@
    "count": 11,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-01T09:10:22+09:00"
+   "fetchedAt": "2026-09-02T07:53:23+09:00"
   },
   {
    "name": "ACL 2",
@@ -101,10 +101,10 @@
     "light": "#EBF2F9",
     "dark": "#182F37"
    },
-   "count": 2,
+   "count": 8,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-01T09:10:24+09:00"
+   "fetchedAt": "2026-09-02T07:53:28+09:00"
   },
   {
    "name": "K3리그",
@@ -124,7 +124,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-01T09:10:40+09:00"
+   "fetchedAt": "2026-09-02T07:55:10+09:00"
   },
   {
    "name": "K4리그",
@@ -144,7 +144,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-01T09:10:54+09:00"
+   "fetchedAt": "2026-09-02T07:55:24+09:00"
   },
   {
    "name": "KBO 리그",
@@ -164,7 +164,7 @@
    "count": 782,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-01T09:11:03+09:00"
+   "fetchedAt": "2026-09-02T07:55:34+09:00"
   }
  ],
  "homepages": {
@@ -260,24 +260,6 @@
    "date": "2026-02-11",
    "time": "19:00",
    "round": null,
-   "home": "울산",
-   "away": "멜버른 시티 FC",
-   "venue": "울산 문수",
-   "finished": true,
-   "homeGoal": 1,
-   "awayGoal": 2,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "https://www.uhdfc.com/fc/greetings.php",
-   "ticketKind": "club"
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
-   "date": "2026-02-11",
-   "time": "19:00",
-   "round": null,
    "home": "강원",
    "away": "상하이 하이강",
    "venue": "춘천 송암",
@@ -288,6 +270,24 @@
    "attendance": 0,
    "note": "",
    "ticketUrl": "https://www.gangwon-fc.com",
+   "ticketKind": "club"
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
+   "date": "2026-02-11",
+   "time": "19:00",
+   "round": null,
+   "home": "울산",
+   "away": "멜버른 시티 FC",
+   "venue": "울산 문수",
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 2,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "https://www.uhdfc.com/fc/greetings.php",
    "ticketKind": "club"
   },
   {
@@ -332,9 +332,9 @@
    "date": "2026-02-18",
    "time": "19:00",
    "round": null,
-   "home": "상하이 하이강",
-   "away": "울산",
-   "venue": "푸둥 아레나",
+   "home": "멜버른 시티 FC",
+   "away": "강원",
+   "venue": "멜버른 스타디움",
    "finished": true,
    "homeGoal": 0,
    "awayGoal": 0,
@@ -350,9 +350,9 @@
    "date": "2026-02-18",
    "time": "19:00",
    "round": null,
-   "home": "멜버른 시티 FC",
-   "away": "강원",
-   "venue": "멜버른 스타디움",
+   "home": "상하이 하이강",
+   "away": "울산",
+   "venue": "푸둥 아레나",
    "finished": true,
    "homeGoal": 0,
    "awayGoal": 0,
@@ -22979,9 +22979,9 @@
    "home": "두산",
    "away": "LG",
    "venue": "잠실야구장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 3,
    "broadcast": "SPOTV",
    "attendance": null,
    "note": "",
@@ -22997,9 +22997,9 @@
    "home": "삼성",
    "away": "롯데",
    "venue": "대구삼성라이온즈파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 3,
+   "awayGoal": 0,
    "broadcast": "SBS Sports",
    "attendance": null,
    "note": "",
@@ -23015,9 +23015,9 @@
    "home": "KT",
    "away": "한화",
    "venue": "수원KT위즈파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 6,
+   "awayGoal": 1,
    "broadcast": "SPOTV2",
    "attendance": null,
    "note": "",
@@ -23033,9 +23033,9 @@
    "home": "NC",
    "away": "KIA",
    "venue": "창원NC파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 7,
+   "awayGoal": 2,
    "broadcast": "MBC SPORTS+",
    "attendance": null,
    "note": "",
@@ -23051,9 +23051,9 @@
    "home": "키움",
    "away": "SSG",
    "venue": "고척스카이돔",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 0,
+   "awayGoal": 4,
    "broadcast": "KBS N SPORTS",
    "attendance": null,
    "note": "",
@@ -23363,8 +23363,8 @@
    "broadcast": "MAXPORTS",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://www.pajufrontier.com/",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26002300",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -23543,8 +23543,8 @@
    "broadcast": "IB SPORTS",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://www.bfc1995.com",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26002677",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -23615,8 +23615,8 @@
    "broadcast": "생활체육TV",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://www.busanipark.com",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26002430",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -25146,6 +25146,24 @@
    "attendance": null,
    "note": "",
    "ticketUrl": "https://www.hanwhaeagles.co.kr",
+   "ticketKind": "club"
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 2",
+   "date": "2026-09-16",
+   "time": "19:00",
+   "round": null,
+   "home": "서울",
+   "away": "페르십 반둥",
+   "venue": "서울 월드컵",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "https://www.fcseoul.com/",
    "ticketKind": "club"
   },
   {
@@ -27508,6 +27526,24 @@
   },
   {
    "sport": "축구",
+   "league": "ACL 2",
+   "date": "2026-10-14",
+   "time": "16:45",
+   "round": null,
+   "home": "멜버른 빅토리 FC",
+   "away": "서울",
+   "venue": "멜버른 렉탱귤러 스타디움",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "",
+   "ticketKind": ""
+  },
+  {
+   "sport": "축구",
    "league": "K4리그",
    "date": "2026-10-17",
    "time": "14:00",
@@ -28048,6 +28084,24 @@
   },
   {
    "sport": "축구",
+   "league": "ACL 2",
+   "date": "2026-10-28",
+   "time": "21:15",
+   "round": null,
+   "home": "테꽁 비엣텔",
+   "away": "서울",
+   "venue": "항더이 스타디움",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "",
+   "ticketKind": ""
+  },
+  {
+   "sport": "축구",
    "league": "K3리그",
    "date": "2026-10-31",
    "time": "14:00",
@@ -28422,6 +28476,24 @@
    "attendance": 0,
    "note": "",
    "ticketUrl": "https://gimhaefc2008.com/",
+   "ticketKind": "club"
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 2",
+   "date": "2026-11-04",
+   "time": "19:00",
+   "round": null,
+   "home": "서울",
+   "away": "테꽁 비엣텔",
+   "venue": "서울 월드컵",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "https://www.fcseoul.com/",
    "ticketKind": "club"
   },
   {
@@ -28948,6 +29020,24 @@
   },
   {
    "sport": "축구",
+   "league": "ACL 2",
+   "date": "2026-11-25",
+   "time": "",
+   "round": null,
+   "home": "페르십 반둥",
+   "away": "서울",
+   "venue": "잘락 하루팟 스타디움",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "",
+   "ticketKind": ""
+  },
+  {
+   "sport": "축구",
    "league": "K리그2",
    "date": "2026-11-29",
    "time": "00:00",
@@ -29088,6 +29178,24 @@
    "attendance": 0,
    "note": "",
    "ticketUrl": "https://www.suwonfc.com",
+   "ticketKind": "club"
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 2",
+   "date": "2026-12-02",
+   "time": "19:00",
+   "round": null,
+   "home": "서울",
+   "away": "멜버른 빅토리",
+   "venue": "서울 월드컵",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "https://www.fcseoul.com/",
    "ticketKind": "club"
   }
  ]
