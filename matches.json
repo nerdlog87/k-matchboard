@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-08-31T08:03:08+09:00",
+ "generatedAt": "2026-09-01T09:11:03+09:00",
  "sports": [
   "축구",
   "야구"
@@ -24,7 +24,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-31T07:58:03+09:00"
+   "fetchedAt": "2026-09-01T09:10:01+09:00"
   },
   {
    "name": "K리그2",
@@ -44,7 +44,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-31T07:58:10+09:00"
+   "fetchedAt": "2026-09-01T09:10:09+09:00"
   },
   {
    "name": "코리아컵",
@@ -64,7 +64,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-08-31T07:58:18+09:00"
+   "fetchedAt": "2026-09-01T09:10:17+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -84,7 +84,7 @@
    "count": 11,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-31T07:58:23+09:00"
+   "fetchedAt": "2026-09-01T09:10:22+09:00"
   },
   {
    "name": "ACL 2",
@@ -104,7 +104,7 @@
    "count": 2,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-31T07:58:26+09:00"
+   "fetchedAt": "2026-09-01T09:10:24+09:00"
   },
   {
    "name": "K3리그",
@@ -122,9 +122,9 @@
     "dark": "#2A243C"
    },
    "count": 182,
-   "status": "stale",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='www.kfa.or.kr', port=443): Max retries exceeded with url: /competition/k3_2026.php?act=k3_round&chk_round=now&act_sub=k3&round=1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.kfa.or.kr', port=443) at 0x7f3f2b4df1d0>, 'Connection to www.kfa.or.kr timed out. (connect timeout=30)'))",
-   "fetchedAt": "2026-08-30T07:52:53+09:00"
+   "status": "ok",
+   "error": "",
+   "fetchedAt": "2026-09-01T09:10:40+09:00"
   },
   {
    "name": "K4리그",
@@ -142,9 +142,9 @@
     "dark": "#1C3220"
    },
    "count": 156,
-   "status": "stale",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='www.kfa.or.kr', port=443): Max retries exceeded with url: /competition/k4_2026.php?act=k4_round&chk_round=now&act_sub=k4&round=1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.kfa.or.kr', port=443) at 0x7f3f2b4dfa10>, 'Connection to www.kfa.or.kr timed out. (connect timeout=30)'))",
-   "fetchedAt": "2026-08-30T07:53:08+09:00"
+   "status": "ok",
+   "error": "",
+   "fetchedAt": "2026-09-01T09:10:54+09:00"
   },
   {
    "name": "KBO 리그",
@@ -164,7 +164,7 @@
    "count": 782,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-08-31T08:03:08+09:00"
+   "fetchedAt": "2026-09-01T09:11:03+09:00"
   }
  ],
  "homepages": {
@@ -260,24 +260,6 @@
    "date": "2026-02-11",
    "time": "19:00",
    "round": null,
-   "home": "강원",
-   "away": "상하이 하이강",
-   "venue": "춘천 송암",
-   "finished": true,
-   "homeGoal": 0,
-   "awayGoal": 0,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "https://www.gangwon-fc.com",
-   "ticketKind": "club"
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
-   "date": "2026-02-11",
-   "time": "19:00",
-   "round": null,
    "home": "울산",
    "away": "멜버른 시티 FC",
    "venue": "울산 문수",
@@ -288,6 +270,24 @@
    "attendance": 0,
    "note": "",
    "ticketUrl": "https://www.uhdfc.com/fc/greetings.php",
+   "ticketKind": "club"
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
+   "date": "2026-02-11",
+   "time": "19:00",
+   "round": null,
+   "home": "강원",
+   "away": "상하이 하이강",
+   "venue": "춘천 송암",
+   "finished": true,
+   "homeGoal": 0,
+   "awayGoal": 0,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "https://www.gangwon-fc.com",
    "ticketKind": "club"
   },
   {
@@ -22691,9 +22691,9 @@
    "home": "시흥시민축구단",
    "away": "포천시민축구단",
    "venue": "정왕스타디움",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 3,
+   "awayGoal": 2,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -22709,9 +22709,9 @@
    "home": "금산인삼FC",
    "away": "진주시민축구단",
    "venue": "금산군종합운동장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 1,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -22817,9 +22817,9 @@
    "home": "울산시민축구단",
    "away": "부산교통공사축구단",
    "venue": "울산종합운동장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 2,
+   "awayGoal": 1,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -22835,9 +22835,9 @@
    "home": "FC목포",
    "away": "여주FC",
    "venue": "목포국제축구센터",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 0,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -22853,9 +22853,9 @@
    "home": "세종SA축구단",
    "away": "서울중랑축구단",
    "venue": "세종시민운동장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 0,
+   "awayGoal": 5,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -23345,8 +23345,8 @@
    "broadcast": "BALL TV",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://chfc.kr/",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26001841",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -23633,8 +23633,8 @@
    "broadcast": "BALL TV",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://cheonancityfc.kr/",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26001943",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -27022,6 +27022,24 @@
   },
   {
    "sport": "축구",
+   "league": "K3리그",
+   "date": "2026-10-09",
+   "time": "14:00",
+   "round": 24,
+   "home": "양평FC",
+   "away": "울산시민축구단",
+   "venue": "물맑은양평종합운동장",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": null,
+   "note": "",
+   "ticketUrl": "",
+   "ticketKind": ""
+  },
+  {
+   "sport": "축구",
    "league": "K리그1",
    "date": "2026-10-09",
    "time": "14:00",
@@ -27137,24 +27155,6 @@
    "home": "서울중랑축구단",
    "away": "함안군민축구단",
    "venue": "중랑구립운동장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
-   "broadcast": "",
-   "attendance": null,
-   "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
-  },
-  {
-   "sport": "축구",
-   "league": "K3리그",
-   "date": "2026-10-10",
-   "time": "14:00",
-   "round": 24,
-   "home": "양평FC",
-   "away": "울산시민축구단",
-   "venue": "물맑은양평종합운동장",
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
