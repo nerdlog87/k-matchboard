@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-09-08T08:11:06+09:00",
+ "generatedAt": "2026-09-09T08:03:11+09:00",
  "sports": [
   "축구",
   "야구"
@@ -24,7 +24,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-08T08:05:57+09:00"
+   "fetchedAt": "2026-09-09T08:02:13+09:00"
   },
   {
    "name": "K리그2",
@@ -44,7 +44,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-08T08:06:04+09:00"
+   "fetchedAt": "2026-09-09T08:02:20+09:00"
   },
   {
    "name": "코리아컵",
@@ -64,7 +64,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-09-08T08:06:12+09:00"
+   "fetchedAt": "2026-09-09T08:02:26+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -84,7 +84,7 @@
    "count": 35,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-08T08:06:17+09:00"
+   "fetchedAt": "2026-09-09T08:02:31+09:00"
   },
   {
    "name": "ACL 2",
@@ -104,7 +104,7 @@
    "count": 14,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-08T08:06:22+09:00"
+   "fetchedAt": "2026-09-09T08:02:35+09:00"
   },
   {
    "name": "K3리그",
@@ -122,9 +122,9 @@
     "dark": "#2A243C"
    },
    "count": 182,
-   "status": "stale",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='www.kfa.or.kr', port=443): Max retries exceeded with url: /competition/k3_2026.php?act=k3_round&chk_round=now&act_sub=k3&round=1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.kfa.or.kr', port=443) at 0x7f092d8c29f0>, 'Connection to www.kfa.or.kr timed out. (connect timeout=30)'))",
-   "fetchedAt": "2026-09-07T07:30:44+09:00"
+   "status": "ok",
+   "error": "",
+   "fetchedAt": "2026-09-09T08:02:50+09:00"
   },
   {
    "name": "K4리그",
@@ -142,9 +142,9 @@
     "dark": "#1C3220"
    },
    "count": 156,
-   "status": "stale",
-   "error": "ConnectTimeout: HTTPSConnectionPool(host='www.kfa.or.kr', port=443): Max retries exceeded with url: /competition/k4_2026.php?act=k4_round&chk_round=now&act_sub=k4&round=1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.kfa.or.kr', port=443) at 0x7f092d8c3140>, 'Connection to www.kfa.or.kr timed out. (connect timeout=30)'))",
-   "fetchedAt": "2026-09-07T07:30:59+09:00"
+   "status": "ok",
+   "error": "",
+   "fetchedAt": "2026-09-09T08:03:03+09:00"
   },
   {
    "name": "KBO 리그",
@@ -164,7 +164,7 @@
    "count": 782,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-08T08:11:06+09:00"
+   "fetchedAt": "2026-09-09T08:03:11+09:00"
   }
  ],
  "homepages": {
@@ -242,24 +242,6 @@
    "date": "2026-02-09",
    "time": "19:00",
    "round": null,
-   "home": "대전",
-   "away": "가시마 앤틀러스",
-   "venue": "대전 월드컵",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "https://www.dhcfc.kr/",
-   "ticketKind": "club"
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
-   "date": "2026-02-09",
-   "time": "19:00",
-   "round": null,
    "home": "교토 상가",
    "away": "전북",
    "venue": "교토 스타디움",
@@ -271,6 +253,24 @@
    "note": "",
    "ticketUrl": "",
    "ticketKind": ""
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
+   "date": "2026-02-09",
+   "time": "19:00",
+   "round": null,
+   "home": "대전",
+   "away": "가시마 앤틀러스",
+   "venue": "대전 월드컵",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "https://www.dhcfc.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -24077,9 +24077,9 @@
    "home": "LG",
    "away": "키움",
    "venue": "잠실야구장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 3,
+   "awayGoal": 8,
    "broadcast": "MBC SPORTS+",
    "attendance": null,
    "note": "",
@@ -24095,9 +24095,9 @@
    "home": "삼성",
    "away": "KIA",
    "venue": "대구삼성라이온즈파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 6,
+   "awayGoal": 4,
    "broadcast": "SPOTV",
    "attendance": null,
    "note": "",
@@ -24113,9 +24113,9 @@
    "home": "KT",
    "away": "SSG",
    "venue": "수원KT위즈파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 3,
+   "awayGoal": 1,
    "broadcast": "SPOTV2",
    "attendance": null,
    "note": "",
@@ -24131,9 +24131,9 @@
    "home": "NC",
    "away": "롯데",
    "venue": "창원NC파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 3,
+   "awayGoal": 6,
    "broadcast": "SBS Sports",
    "attendance": null,
    "note": "",
@@ -24149,9 +24149,9 @@
    "home": "한화",
    "away": "두산",
    "venue": "대전한화생명볼파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 6,
+   "awayGoal": 1,
    "broadcast": "KBS N SPORTS",
    "attendance": null,
    "note": "",
@@ -24167,11 +24167,11 @@
    "home": "울산",
    "away": "서울",
    "venue": "울산 문수 축구경기장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 0,
    "broadcast": "JTBC SPORTS",
-   "attendance": 0,
+   "attendance": 7753,
    "note": "",
    "ticketUrl": "https://www.uhdfc.com/fc/greetings.php",
    "ticketKind": "club"
@@ -24185,11 +24185,11 @@
    "home": "인천",
    "away": "부천",
    "venue": "인천 축구 전용경기장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 2,
+   "awayGoal": 1,
    "broadcast": "ENA SPORTS",
-   "attendance": 0,
+   "attendance": 5794,
    "note": "",
    "ticketUrl": "https://www.incheonutd.com",
    "ticketKind": "club"
@@ -24569,8 +24569,8 @@
    "broadcast": "IB SPORTS",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://www.bfc1995.com",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26002678",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -24875,8 +24875,8 @@
    "broadcast": "IB SPORTS",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://www.dragons.co.kr",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26006640",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
