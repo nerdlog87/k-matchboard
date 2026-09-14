@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-09-14T07:43:13+09:00",
+ "generatedAt": "2026-09-15T08:34:11+09:00",
  "sports": [
   "축구",
   "야구"
@@ -24,7 +24,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-14T07:42:16+09:00"
+   "fetchedAt": "2026-09-15T08:33:14+09:00"
   },
   {
    "name": "K리그2",
@@ -44,7 +44,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-14T07:42:22+09:00"
+   "fetchedAt": "2026-09-15T08:33:21+09:00"
   },
   {
    "name": "코리아컵",
@@ -64,7 +64,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-09-14T07:42:28+09:00"
+   "fetchedAt": "2026-09-15T08:33:27+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -84,7 +84,7 @@
    "count": 35,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-14T07:42:33+09:00"
+   "fetchedAt": "2026-09-15T08:33:31+09:00"
   },
   {
    "name": "ACL 2",
@@ -104,7 +104,7 @@
    "count": 14,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-14T07:42:37+09:00"
+   "fetchedAt": "2026-09-15T08:33:36+09:00"
   },
   {
    "name": "K3리그",
@@ -124,7 +124,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-14T07:42:51+09:00"
+   "fetchedAt": "2026-09-15T08:33:50+09:00"
   },
   {
    "name": "K4리그",
@@ -144,7 +144,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-14T07:43:05+09:00"
+   "fetchedAt": "2026-09-15T08:34:03+09:00"
   },
   {
    "name": "KBO 리그",
@@ -164,7 +164,7 @@
    "count": 782,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-14T07:43:13+09:00"
+   "fetchedAt": "2026-09-15T08:34:11+09:00"
   }
  ],
  "homepages": {
@@ -25487,8 +25487,8 @@
    "broadcast": "리빙TV",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://www.dragons.co.kr",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26006642",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -25516,7 +25516,7 @@
    "round": 20,
    "home": "제천시민축구단",
    "away": "거제시민축구단",
-   "venue": "제천종합운동장",
+   "venue": "제천축구센터1구장",
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
@@ -25793,8 +25793,8 @@
    "broadcast": "생활체육TV",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://www.greenersfc.com/",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26002325",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -26882,24 +26882,6 @@
    "date": "2026-10-04",
    "time": "14:00",
    "round": null,
-   "home": "KT",
-   "away": "롯데",
-   "venue": "수원KT위즈파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
-   "broadcast": "",
-   "attendance": null,
-   "note": "",
-   "ticketUrl": "https://www.ktwiz.co.kr",
-   "ticketKind": "club"
-  },
-  {
-   "sport": "야구",
-   "league": "KBO 리그",
-   "date": "2026-10-04",
-   "time": "14:00",
-   "round": null,
    "home": "NC",
    "away": "SSG",
    "venue": "창원NC파크",
@@ -26947,6 +26929,24 @@
    "note": "",
    "ticketUrl": "",
    "ticketKind": ""
+  },
+  {
+   "sport": "야구",
+   "league": "KBO 리그",
+   "date": "2026-10-04",
+   "time": "17:00",
+   "round": null,
+   "home": "KT",
+   "away": "롯데",
+   "venue": "수원KT위즈파크",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": null,
+   "note": "",
+   "ticketUrl": "https://www.ktwiz.co.kr",
+   "ticketKind": "club"
   },
   {
    "sport": "야구",
@@ -28808,24 +28808,6 @@
    "date": "2026-11-03",
    "time": "19:00",
    "round": null,
-   "home": "가시와 레이솔",
-   "away": "대전",
-   "venue": "가시와 싸커스타디움",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
-   "date": "2026-11-03",
-   "time": "19:00",
-   "round": null,
    "home": "전북",
    "away": "조호르",
    "venue": "전주 월드컵",
@@ -28837,6 +28819,24 @@
    "note": "",
    "ticketUrl": "https://www.hyundai-motorsfc.com",
    "ticketKind": "club"
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
+   "date": "2026-11-03",
+   "time": "19:00",
+   "round": null,
+   "home": "가시와 레이솔",
+   "away": "대전",
+   "venue": "가시와 싸커스타디움",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "",
+   "ticketKind": ""
   },
   {
    "sport": "축구",
