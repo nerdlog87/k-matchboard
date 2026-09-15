@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-09-15T08:34:11+09:00",
+ "generatedAt": "2026-09-16T08:16:03+09:00",
  "sports": [
   "축구",
   "야구"
@@ -24,7 +24,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-15T08:33:14+09:00"
+   "fetchedAt": "2026-09-16T08:15:04+09:00"
   },
   {
    "name": "K리그2",
@@ -44,7 +44,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-15T08:33:21+09:00"
+   "fetchedAt": "2026-09-16T08:15:10+09:00"
   },
   {
    "name": "코리아컵",
@@ -64,7 +64,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-09-15T08:33:27+09:00"
+   "fetchedAt": "2026-09-16T08:15:16+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -84,7 +84,7 @@
    "count": 35,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-15T08:33:31+09:00"
+   "fetchedAt": "2026-09-16T08:15:21+09:00"
   },
   {
    "name": "ACL 2",
@@ -104,7 +104,7 @@
    "count": 14,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-15T08:33:36+09:00"
+   "fetchedAt": "2026-09-16T08:15:25+09:00"
   },
   {
    "name": "K3리그",
@@ -124,7 +124,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-15T08:33:50+09:00"
+   "fetchedAt": "2026-09-16T08:15:40+09:00"
   },
   {
    "name": "K4리그",
@@ -144,7 +144,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-15T08:34:03+09:00"
+   "fetchedAt": "2026-09-16T08:15:54+09:00"
   },
   {
    "name": "KBO 리그",
@@ -164,7 +164,7 @@
    "count": 782,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-15T08:34:11+09:00"
+   "fetchedAt": "2026-09-16T08:16:03+09:00"
   }
  ],
  "homepages": {
@@ -242,24 +242,6 @@
    "date": "2026-02-09",
    "time": "19:00",
    "round": null,
-   "home": "대전",
-   "away": "가시마 앤틀러스",
-   "venue": "대전 월드컵",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "https://www.dhcfc.kr/",
-   "ticketKind": "club"
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
-   "date": "2026-02-09",
-   "time": "19:00",
-   "round": null,
    "home": "교토 상가",
    "away": "전북",
    "venue": "교토 스타디움",
@@ -271,6 +253,24 @@
    "note": "",
    "ticketUrl": "",
    "ticketKind": ""
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
+   "date": "2026-02-09",
+   "time": "19:00",
+   "round": null,
+   "home": "대전",
+   "away": "가시마 앤틀러스",
+   "venue": "대전 월드컵",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "https://www.dhcfc.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -25121,9 +25121,9 @@
    "home": "삼성",
    "away": "롯데",
    "venue": "대구삼성라이온즈파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 7,
+   "awayGoal": 3,
    "broadcast": "SBS Sports",
    "attendance": null,
    "note": "",
@@ -25139,9 +25139,9 @@
    "home": "SSG",
    "away": "KIA",
    "venue": "인천SSG랜더스필드",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 6,
+   "awayGoal": 3,
    "broadcast": "MBC SPORTS+",
    "attendance": null,
    "note": "",
@@ -25157,9 +25157,9 @@
    "home": "NC",
    "away": "LG",
    "venue": "창원NC파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 2,
+   "awayGoal": 3,
    "broadcast": "SPOTV",
    "attendance": null,
    "note": "",
@@ -25175,9 +25175,9 @@
    "home": "한화",
    "away": "KT",
    "venue": "대전한화생명볼파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 3,
+   "awayGoal": 13,
    "broadcast": "SPOTV2 · KBS N SPORTS",
    "attendance": null,
    "note": "",
@@ -25469,8 +25469,8 @@
    "broadcast": "IB SPORTS",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://www.bfc1995.com",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26002679",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -25901,8 +25901,8 @@
    "broadcast": "리빙TV",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://seongnamfc.com/",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26002257",
+   "ticketKind": "shop"
   },
   {
    "sport": "야구",
