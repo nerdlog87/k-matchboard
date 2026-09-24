@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-09-24T08:17:11+09:00",
+ "generatedAt": "2026-09-25T08:37:59+09:00",
  "sports": [
   "축구",
   "야구"
@@ -24,7 +24,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-24T08:16:02+09:00"
+   "fetchedAt": "2026-09-25T08:36:55+09:00"
   },
   {
    "name": "K리그2",
@@ -44,7 +44,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-24T08:16:12+09:00"
+   "fetchedAt": "2026-09-25T08:37:03+09:00"
   },
   {
    "name": "코리아컵",
@@ -64,7 +64,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-09-24T08:16:20+09:00"
+   "fetchedAt": "2026-09-25T08:37:10+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -84,7 +84,7 @@
    "count": 35,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-24T08:16:25+09:00"
+   "fetchedAt": "2026-09-25T08:37:16+09:00"
   },
   {
    "name": "ACL 2",
@@ -104,7 +104,7 @@
    "count": 14,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-24T08:16:30+09:00"
+   "fetchedAt": "2026-09-25T08:37:20+09:00"
   },
   {
    "name": "K3리그",
@@ -124,7 +124,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-24T08:16:46+09:00"
+   "fetchedAt": "2026-09-25T08:37:36+09:00"
   },
   {
    "name": "K4리그",
@@ -144,7 +144,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-24T08:17:01+09:00"
+   "fetchedAt": "2026-09-25T08:37:50+09:00"
   },
   {
    "name": "KBO 리그",
@@ -164,7 +164,7 @@
    "count": 782,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-24T08:17:11+09:00"
+   "fetchedAt": "2026-09-25T08:37:59+09:00"
   }
  ],
  "homepages": {
@@ -368,6 +368,24 @@
    "date": "2026-02-16",
    "time": "19:00",
    "round": null,
+   "home": "감바 오사카",
+   "away": "대전",
+   "venue": "수이타 시티 풋볼 스타디움",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "",
+   "ticketKind": ""
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
+   "date": "2026-02-16",
+   "time": "19:00",
+   "round": null,
    "home": "전북",
    "away": "상하이 포트 FC",
    "venue": "전주 월드컵",
@@ -401,24 +419,6 @@
   {
    "sport": "축구",
    "league": "ACL 엘리트",
-   "date": "2026-02-16",
-   "time": "19:00",
-   "round": null,
-   "home": "감바 오사카",
-   "away": "대전",
-   "venue": "수이타 시티 풋볼 스타디움",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
    "date": "2026-02-17",
    "time": "19:00",
    "round": null,
@@ -440,9 +440,9 @@
    "date": "2026-02-18",
    "time": "19:00",
    "round": null,
-   "home": "상하이 포트 FC",
-   "away": "울산",
-   "venue": "푸둥 아레나",
+   "home": "멜버른 시티 FC",
+   "away": "강원",
+   "venue": "멜버른 스타디움",
    "finished": true,
    "homeGoal": 0,
    "awayGoal": 0,
@@ -458,9 +458,9 @@
    "date": "2026-02-18",
    "time": "19:00",
    "round": null,
-   "home": "멜버른 시티 FC",
-   "away": "강원",
-   "venue": "멜버른 스타디움",
+   "home": "상하이 포트 FC",
+   "away": "울산",
+   "venue": "푸둥 아레나",
    "finished": true,
    "homeGoal": 0,
    "awayGoal": 0,
@@ -26039,9 +26039,9 @@
    "home": "LG",
    "away": "롯데",
    "venue": "잠실야구장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 4,
+   "awayGoal": 6,
    "broadcast": "SPOTV",
    "attendance": null,
    "note": "",
@@ -26057,9 +26057,9 @@
    "home": "SSG",
    "away": "삼성",
    "venue": "인천SSG랜더스필드",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 4,
+   "awayGoal": 5,
    "broadcast": "KBS N SPORTS · SBS Sports",
    "attendance": null,
    "note": "",
@@ -26075,9 +26075,9 @@
    "home": "KT",
    "away": "NC",
    "venue": "수원KT위즈파크",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 3,
+   "awayGoal": 2,
    "broadcast": "SPOTV2 · MBC SPORTS+",
    "attendance": null,
    "note": "",
