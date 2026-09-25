@@ -29,6 +29,16 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/128.0",
       "Referer": "https://www.wkbl.or.kr/game/sch/schedule1.asp"}
 MONTHS = (8, 9, 10, 11, 12, 1, 2, 3, 4)      # 시즌이 걸치는 달
 
+# 구단 홈페이지 (wkbl.or.kr 티켓 안내 페이지에서 수집).
+# 하나은행은 자체 홈페이지가 없어서 링크를 달지 않는다.
+CLUB = {
+    "삼성생명": "http://www.samsungblueminx.com/",
+    "신한은행": "http://www.sbirds.com/",
+    "우리은행": "https://wooriwon.wooribank.com/basketball/main/bridge.php",
+    "BNK 썸": "http://bnksumbasket.com",
+    "KB스타즈": "http://www.kbstars.co.kr",
+}
+
 
 def _season_gu(season):
     r = http(f"{BASE}/game/sch/schedule1.asp", headers=UA)
@@ -73,6 +83,8 @@ def _rows(html, season, comp, note=""):
             time_=time_, home=home, away=away, venue=venue,
             finished=finished, home_goal=h_goal, away_goal=a_goal,
             note=note,
+            ticket_url=CLUB.get(home, ""),
+            ticket_kind="club" if home in CLUB else "",
         ))
     return out
 

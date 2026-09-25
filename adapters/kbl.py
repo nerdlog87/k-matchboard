@@ -31,6 +31,22 @@ HEADERS = {
 }
 
 
+# 구단 홈페이지 (kbl.or.kr SPA 번들의 팀 서브도메인 목록에서 추출).
+# 각 구단 사이트에 티켓 메뉴가 있다. 해체 구단(오리온·캐롯)은 뺐다.
+CLUB = {
+    "원주 DB":       "https://promy.kbl.or.kr/",
+    "서울 삼성":      "https://thunders.kbl.or.kr/",
+    "서울 SK":       "https://knights.kbl.or.kr/",
+    "창원 LG":       "https://sakers.kbl.or.kr/",
+    "고양 소노":      "https://skygunners.kbl.or.kr/",
+    "대구 한국가스공사": "https://pegasus.kbl.or.kr/",
+    "부산 KCC":      "https://egis.kbl.or.kr/",
+    "안양 정관장":     "https://kgc.kbl.or.kr/",
+    "수원 KT":       "https://sonicboom.kbl.or.kr/",
+    "울산 현대모비스":   "https://phoebus.kbl.or.kr/",
+}
+
+
 def _fetch(season, comp):
     # 시즌은 해를 넘긴다: 2026-27 시즌이면 2026-09 ~ 2027-05.
     r = http(API, headers=HEADERS, params={
@@ -49,11 +65,13 @@ def _fetch(season, comp):
         t = g.get("gameStart") or ""
         ended = bool(g.get("isEnded"))
         cat = g.get("seasonCategory")
+        home = g.get("tnameH") or ""
+        club = CLUB.get(home, "")
         out.append(match(
             competition=comp,
             date=f"{d[:4]}-{d[4:6]}-{d[6:8]}",
             time_=f"{t[:2]}:{t[2:4]}" if len(t) >= 4 else "",
-            home=g.get("tnameH") or "",
+            home=home,
             away=g.get("tnameA") or "",
             venue=g.get("stadiumnameF") or g.get("stadiumname") or "",
             round_=None,
@@ -62,6 +80,7 @@ def _fetch(season, comp):
             away_goal=g.get("scoreA") if ended else None,
             broadcast=g.get("tv") or "",
             note="" if cat == "R" else (g.get("seasonCategoryName") or ""),
+            ticket_url=club, ticket_kind="club" if club else "",
         ))
     return out
 

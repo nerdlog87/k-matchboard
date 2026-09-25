@@ -69,6 +69,10 @@ def _league(gender):
                 finished=finished,
                 home_goal=g.get("hspoint") if finished else None,
                 away_goal=g.get("aspoint") if finished else None,
+                # 연맹 통합 예매의 홈팀 필터 페이지. 경기별 딥링크는 판매 시작
+                # 전이라 검증할 수 없어서, 검증된 팀 단위 주소를 쓴다.
+                ticket_url=f"https://kovo.co.kr/tickets/single?tcode={g['hcode']}" if g.get("hcode") else "",
+                ticket_kind="shop" if g.get("hcode") else "",
             ))
         return out
     return fetch

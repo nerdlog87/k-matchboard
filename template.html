@@ -423,7 +423,7 @@ function ticketLink(m){
   if (m.finished || !m.ticketUrl) return "";
   const shop = m.ticketKind === "shop";
   return `<a class="tkt${shop ? "" : " club"}" href="${esc(m.ticketUrl)}" target="_blank" rel="noopener"
-    title="${shop ? "이 경기 예매 페이지로 바로 갑니다" : "구단 홈페이지로 갑니다. 거기서 예매 메뉴를 찾으세요"}"
+    title="${shop ? "예매 페이지로 갑니다" : "구단 홈페이지로 갑니다. 거기서 예매 메뉴를 찾으세요"}"
     >${shop ? "예매" : "구단 홈"}</a>`;
 }
 
@@ -438,10 +438,11 @@ function matchCard(m){
       <div class="venue">${PIN}<a href="${mapLink(m.venue)}" target="_blank" rel="noopener">${esc(m.venue || "장소 미정")}</a>${
         m.broadcast ? `<span class="bc">${esc(m.broadcast)}</span>` : ""}</div>
     </div>
-    <div class="score">${m.note
-      ? `<span class="pend note">${esc(m.note)}</span>`
-      : done
-        ? `<span class="g${aw?" lose":""}">${m.homeGoal}</span><span class="g${hw?" lose":""}">${m.awayGoal}</span>`
+    <div class="score">${done
+      ? `<span class="g${aw?" lose":""}">${m.homeGoal}</span><span class="g${hw?" lose":""}">${m.awayGoal}</span>${
+          m.note ? `<br><span class="pend note">${esc(m.note)}</span>` : ""}`
+      : m.note
+        ? `<span class="pend note">${esc(m.note)}</span><br>${ticketLink(m)}`
         : `<span class="pend">경기 예정</span><br>${ticketLink(m)}`}</div>
   </article>`;
 }
@@ -494,11 +495,11 @@ function viewTeam(){
     const dt = toDate(m.date), done = m.finished && m.homeGoal !== null;
     const tk = ticketLink(m);
     let rs = `<span class="rs up">예정${tk ? "<br>" + tk : ""}</span>`;
-    if (m.note) rs = `<span class="rs up">${esc(m.note)}</span>`;
-    else if (done){
+    if (done){
       const my = home ? m.homeGoal : m.awayGoal, th = home ? m.awayGoal : m.homeGoal;
       rs = `<span class="rs ${my>th?"w":my<th?"l":"d"}">${my} : ${th}</span>`;
     }
+    else if (m.note) rs = `<span class="rs up">${esc(m.note)}</span>`;
     return `<div class="tline" style="${vars(m.league)}">
       <div><div class="dt">${m.date.slice(5).replace("-",".")} ${WD[dt.getDay()]}</div>
         <div class="dt" style="opacity:.7">${esc(m.time)}</div></div>
