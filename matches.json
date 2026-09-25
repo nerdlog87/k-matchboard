@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-09-25T18:10:54+09:00",
+ "generatedAt": "2026-09-25T18:29:24+09:00",
  "sports": [
   "축구",
   "야구",
@@ -26,7 +26,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-25T18:09:39+09:00"
+   "fetchedAt": "2026-09-25T18:28:09+09:00"
   },
   {
    "name": "K리그2",
@@ -46,7 +46,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-25T18:09:47+09:00"
+   "fetchedAt": "2026-09-25T18:28:17+09:00"
   },
   {
    "name": "코리아컵",
@@ -66,7 +66,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-09-25T18:09:56+09:00"
+   "fetchedAt": "2026-09-25T18:28:22+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -86,7 +86,7 @@
    "count": 35,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-25T18:10:01+09:00"
+   "fetchedAt": "2026-09-25T18:28:27+09:00"
   },
   {
    "name": "ACL 2",
@@ -106,7 +106,7 @@
    "count": 14,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-25T18:10:06+09:00"
+   "fetchedAt": "2026-09-25T18:28:31+09:00"
   },
   {
    "name": "K3리그",
@@ -126,7 +126,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-25T18:10:22+09:00"
+   "fetchedAt": "2026-09-25T18:28:45+09:00"
   },
   {
    "name": "K4리그",
@@ -146,7 +146,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-25T18:10:37+09:00"
+   "fetchedAt": "2026-09-25T18:28:59+09:00"
   },
   {
    "name": "KBO 리그",
@@ -166,7 +166,7 @@
    "count": 782,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-25T18:10:47+09:00"
+   "fetchedAt": "2026-09-25T18:29:07+09:00"
   },
   {
    "name": "KBL",
@@ -186,7 +186,7 @@
    "count": 280,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-25T18:10:48+09:00"
+   "fetchedAt": "2026-09-25T18:29:08+09:00"
   },
   {
    "name": "WKBL",
@@ -206,7 +206,7 @@
    "count": 20,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-25T18:10:52+09:00"
+   "fetchedAt": "2026-09-25T18:29:22+09:00"
   },
   {
    "name": "V리그 남자부",
@@ -226,7 +226,7 @@
    "count": 126,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-25T18:10:54+09:00"
+   "fetchedAt": "2026-09-25T18:29:24+09:00"
   },
   {
    "name": "V리그 여자부",
@@ -246,7 +246,7 @@
    "count": 126,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-09-25T18:10:54+09:00"
+   "fetchedAt": "2026-09-25T18:29:24+09:00"
   }
  ],
  "homepages": {
@@ -324,24 +324,6 @@
    "date": "2026-02-09",
    "time": "19:00",
    "round": null,
-   "home": "대전",
-   "away": "가시마 앤틀러스",
-   "venue": "대전 월드컵",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "https://www.dhcfc.kr/",
-   "ticketKind": "club"
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
-   "date": "2026-02-09",
-   "time": "19:00",
-   "round": null,
    "home": "교토 상가",
    "away": "전북",
    "venue": "교토 스타디움",
@@ -353,6 +335,24 @@
    "note": "",
    "ticketUrl": "",
    "ticketKind": ""
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
+   "date": "2026-02-09",
+   "time": "19:00",
+   "round": null,
+   "home": "대전",
+   "away": "가시마 앤틀러스",
+   "venue": "대전 월드컵",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "https://www.dhcfc.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -450,6 +450,24 @@
    "date": "2026-02-16",
    "time": "19:00",
    "round": null,
+   "home": "감바 오사카",
+   "away": "대전",
+   "venue": "수이타 시티 풋볼 스타디움",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "",
+   "ticketKind": ""
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
+   "date": "2026-02-16",
+   "time": "19:00",
+   "round": null,
    "home": "전북",
    "away": "상하이 포트 FC",
    "venue": "전주 월드컵",
@@ -479,24 +497,6 @@
    "note": "",
    "ticketUrl": "https://www.steelers.co.kr",
    "ticketKind": "club"
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
-   "date": "2026-02-16",
-   "time": "19:00",
-   "round": null,
-   "home": "감바 오사카",
-   "away": "대전",
-   "venue": "수이타 시티 풋볼 스타디움",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
   },
   {
    "sport": "축구",
@@ -26127,8 +26127,8 @@
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "OPEN MATCH DAY",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -26145,8 +26145,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "OPEN MATCH DAY",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -26163,8 +26163,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "OPEN MATCH DAY",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "야구",
@@ -26235,8 +26235,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "OPEN MATCH DAY",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -26253,8 +26253,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "OPEN MATCH DAY",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "야구",
@@ -26325,8 +26325,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "OPEN MATCH DAY",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -26343,8 +26343,8 @@
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "OPEN MATCH DAY",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "야구",
@@ -26415,8 +26415,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "OPEN MATCH DAY",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -26433,8 +26433,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "OPEN MATCH DAY",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -26451,8 +26451,8 @@
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "OPEN MATCH DAY",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "야구",
@@ -26919,8 +26919,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -26937,8 +26937,8 @@
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "야구",
@@ -27081,8 +27081,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -27225,8 +27225,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "야구",
@@ -27351,8 +27351,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -27369,8 +27369,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "박신자컵",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "http://www.sbirds.com/",
+   "ticketKind": "club"
   },
   {
    "sport": "야구",
@@ -27405,8 +27405,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "박신자컵",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "http://www.kbstars.co.kr",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -27423,8 +27423,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "야구",
@@ -27531,8 +27531,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "박신자컵",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "http://www.samsungblueminx.com/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -27549,8 +27549,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -27585,8 +27585,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "박신자컵",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "http://bnksumbasket.com",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -27603,8 +27603,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "박신자컵",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://wooriwon.wooribank.com/basketball/main/bridge.php",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -27621,8 +27621,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "박신자컵",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "http://www.samsungblueminx.com/",
+   "ticketKind": "club"
   },
   {
    "sport": "야구",
@@ -27729,8 +27729,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -27891,8 +27891,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -27909,8 +27909,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "박신자컵",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "http://bnksumbasket.com",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -27927,8 +27927,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "박신자컵",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://wooriwon.wooribank.com/basketball/main/bridge.php",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -27963,8 +27963,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -28017,8 +28017,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -28071,8 +28071,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "박신자컵",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "http://bnksumbasket.com",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -28089,8 +28089,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -28179,8 +28179,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "박신자컵",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://wooriwon.wooribank.com/basketball/main/bridge.php",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -28287,8 +28287,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -28359,8 +28359,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -28557,8 +28557,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -28575,8 +28575,8 @@
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -28629,8 +28629,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -28647,8 +28647,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -28701,8 +28701,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -28755,8 +28755,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -28791,8 +28791,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -28809,8 +28809,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -28845,8 +28845,8 @@
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -28863,8 +28863,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -28917,8 +28917,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -29007,8 +29007,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -29025,8 +29025,8 @@
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -29115,8 +29115,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -29205,8 +29205,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -29223,8 +29223,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -29241,8 +29241,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -29259,8 +29259,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -29277,8 +29277,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -29295,8 +29295,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -29439,8 +29439,8 @@
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -29457,8 +29457,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -29511,8 +29511,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -29529,8 +29529,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -29601,8 +29601,8 @@
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -29673,8 +29673,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -29709,8 +29709,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -29763,8 +29763,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -29817,8 +29817,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -29835,8 +29835,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -29997,8 +29997,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -30015,8 +30015,8 @@
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -30069,8 +30069,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -30087,8 +30087,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -30105,8 +30105,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -30249,8 +30249,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -30267,8 +30267,8 @@
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -30321,8 +30321,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -30339,8 +30339,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -30357,8 +30357,8 @@
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -30411,8 +30411,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -30465,8 +30465,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -30483,8 +30483,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -30501,8 +30501,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -30555,8 +30555,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -30573,8 +30573,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -30591,8 +30591,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -30609,8 +30609,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -30627,8 +30627,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -30645,8 +30645,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -30681,8 +30681,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -30699,8 +30699,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -30717,8 +30717,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -30861,8 +30861,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -30879,8 +30879,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -30933,8 +30933,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -30951,8 +30951,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -30969,8 +30969,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -31149,8 +31149,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -31167,8 +31167,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -31221,8 +31221,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31239,8 +31239,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -31257,8 +31257,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -31293,8 +31293,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -31311,8 +31311,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -31329,8 +31329,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31347,8 +31347,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -31365,8 +31365,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -31383,8 +31383,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31401,8 +31401,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -31419,8 +31419,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -31437,8 +31437,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31455,8 +31455,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -31473,8 +31473,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -31491,8 +31491,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31509,8 +31509,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -31527,8 +31527,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -31545,8 +31545,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -31563,8 +31563,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31581,8 +31581,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -31599,8 +31599,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -31617,8 +31617,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -31635,8 +31635,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -31653,8 +31653,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31671,8 +31671,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -31689,8 +31689,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -31707,8 +31707,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -31725,8 +31725,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -31743,8 +31743,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31761,8 +31761,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -31779,8 +31779,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -31797,8 +31797,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31815,8 +31815,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -31833,8 +31833,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -31851,8 +31851,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -31869,8 +31869,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31887,8 +31887,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31905,8 +31905,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31923,8 +31923,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -31977,8 +31977,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -31995,8 +31995,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -32085,8 +32085,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32103,8 +32103,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -32193,8 +32193,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32211,8 +32211,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -32265,8 +32265,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32283,8 +32283,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -32319,8 +32319,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32337,8 +32337,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32355,8 +32355,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32373,8 +32373,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32391,8 +32391,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32409,8 +32409,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -32571,8 +32571,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32589,8 +32589,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -32625,8 +32625,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32643,8 +32643,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -32715,8 +32715,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32733,8 +32733,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -32751,8 +32751,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -32769,8 +32769,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -32787,8 +32787,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32805,8 +32805,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -32841,8 +32841,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -32859,8 +32859,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -32877,8 +32877,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32895,8 +32895,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -32913,8 +32913,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -32931,8 +32931,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -32949,8 +32949,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -32967,8 +32967,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -32985,8 +32985,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33003,8 +33003,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33021,8 +33021,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33039,8 +33039,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33057,8 +33057,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33075,8 +33075,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33093,8 +33093,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33111,8 +33111,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33129,8 +33129,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33147,8 +33147,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33165,8 +33165,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33183,8 +33183,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33201,8 +33201,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33219,8 +33219,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33237,8 +33237,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33255,8 +33255,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33273,8 +33273,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33291,8 +33291,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33309,8 +33309,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33327,8 +33327,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33345,8 +33345,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33363,8 +33363,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33381,8 +33381,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33399,8 +33399,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33417,8 +33417,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33435,8 +33435,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33453,8 +33453,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33471,8 +33471,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33489,8 +33489,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33507,8 +33507,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33525,8 +33525,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33543,8 +33543,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33561,8 +33561,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33579,8 +33579,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33597,8 +33597,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33615,8 +33615,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33633,8 +33633,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33651,8 +33651,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33669,8 +33669,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33687,8 +33687,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33705,8 +33705,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33723,8 +33723,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33741,8 +33741,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33759,8 +33759,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33777,8 +33777,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33795,8 +33795,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33813,8 +33813,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33831,8 +33831,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33849,8 +33849,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33867,8 +33867,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33885,8 +33885,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33903,8 +33903,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33921,8 +33921,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -33939,8 +33939,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -33957,8 +33957,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -33975,8 +33975,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -33993,8 +33993,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34011,8 +34011,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34029,8 +34029,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34047,8 +34047,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34065,8 +34065,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34083,8 +34083,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34101,8 +34101,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34119,8 +34119,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34137,8 +34137,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34155,8 +34155,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34173,8 +34173,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34191,8 +34191,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34209,8 +34209,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34227,8 +34227,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34245,8 +34245,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34263,8 +34263,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34281,8 +34281,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34299,8 +34299,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34317,8 +34317,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34335,8 +34335,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34353,8 +34353,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34371,8 +34371,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34389,8 +34389,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34407,8 +34407,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34425,8 +34425,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34443,8 +34443,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34461,8 +34461,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34479,8 +34479,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34497,8 +34497,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34515,8 +34515,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34533,8 +34533,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34551,8 +34551,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34569,8 +34569,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34587,8 +34587,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34605,8 +34605,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34623,8 +34623,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34641,8 +34641,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34659,8 +34659,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34677,8 +34677,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34695,8 +34695,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34713,8 +34713,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34731,8 +34731,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34749,8 +34749,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34767,8 +34767,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34785,8 +34785,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34803,8 +34803,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -34821,8 +34821,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34839,8 +34839,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34857,8 +34857,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34875,8 +34875,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34893,8 +34893,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34911,8 +34911,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34929,8 +34929,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -34947,8 +34947,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -34965,8 +34965,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -34983,8 +34983,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -35001,8 +35001,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -35019,8 +35019,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -35037,8 +35037,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35055,8 +35055,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -35073,8 +35073,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -35091,8 +35091,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -35109,8 +35109,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35127,8 +35127,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35145,8 +35145,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -35163,8 +35163,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -35181,8 +35181,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -35199,8 +35199,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35217,8 +35217,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35235,8 +35235,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -35253,8 +35253,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -35271,8 +35271,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -35289,8 +35289,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35307,8 +35307,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35325,8 +35325,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35343,8 +35343,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35361,8 +35361,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35379,8 +35379,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35397,8 +35397,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35415,8 +35415,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35433,8 +35433,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35451,8 +35451,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35469,8 +35469,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -35487,8 +35487,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -35505,8 +35505,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -35523,8 +35523,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -35541,8 +35541,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -35559,8 +35559,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -35577,8 +35577,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -35595,8 +35595,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -35613,8 +35613,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -35631,8 +35631,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35649,8 +35649,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -35667,8 +35667,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -35685,8 +35685,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -35703,8 +35703,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35721,8 +35721,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35739,8 +35739,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -35757,8 +35757,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -35775,8 +35775,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -35793,8 +35793,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35811,8 +35811,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35829,8 +35829,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -35847,8 +35847,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -35865,8 +35865,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -35883,8 +35883,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35901,8 +35901,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -35919,8 +35919,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -35937,8 +35937,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -35955,8 +35955,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35973,8 +35973,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -35991,8 +35991,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36009,8 +36009,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -36027,8 +36027,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36045,8 +36045,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36063,8 +36063,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36081,8 +36081,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36099,8 +36099,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36117,8 +36117,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36135,8 +36135,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36153,8 +36153,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36171,8 +36171,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36189,8 +36189,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36207,8 +36207,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36225,8 +36225,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -36243,8 +36243,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36261,8 +36261,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36279,8 +36279,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36297,8 +36297,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -36315,8 +36315,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36333,8 +36333,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -36351,8 +36351,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -36369,8 +36369,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36387,8 +36387,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -36405,8 +36405,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36423,8 +36423,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -36441,8 +36441,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36459,8 +36459,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -36477,8 +36477,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36495,8 +36495,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36513,8 +36513,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -36531,8 +36531,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36549,8 +36549,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -36567,8 +36567,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36585,8 +36585,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -36603,8 +36603,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36621,8 +36621,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -36639,8 +36639,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36657,8 +36657,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -36675,8 +36675,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36693,8 +36693,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -36711,8 +36711,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36729,8 +36729,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36747,8 +36747,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -36765,8 +36765,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36783,8 +36783,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -36801,8 +36801,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -36819,8 +36819,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36837,8 +36837,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -36855,8 +36855,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36873,8 +36873,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -36891,8 +36891,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36909,8 +36909,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -36927,8 +36927,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36945,8 +36945,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -36963,8 +36963,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -36981,8 +36981,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -36999,8 +36999,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -37017,8 +37017,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -37035,8 +37035,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -37053,8 +37053,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -37071,8 +37071,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37089,8 +37089,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -37107,8 +37107,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -37125,8 +37125,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -37143,8 +37143,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37161,8 +37161,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -37179,8 +37179,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -37197,8 +37197,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -37215,8 +37215,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37233,8 +37233,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37251,8 +37251,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37269,8 +37269,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37287,8 +37287,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37305,8 +37305,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37323,8 +37323,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37341,8 +37341,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37359,8 +37359,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37377,8 +37377,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37395,8 +37395,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37413,8 +37413,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37431,8 +37431,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37449,8 +37449,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37467,8 +37467,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37485,8 +37485,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37503,8 +37503,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37521,8 +37521,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37539,8 +37539,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37557,8 +37557,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37575,8 +37575,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37593,8 +37593,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37611,8 +37611,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37629,8 +37629,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -37647,8 +37647,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -37665,8 +37665,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -37683,8 +37683,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37701,8 +37701,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -37719,8 +37719,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -37737,8 +37737,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -37755,8 +37755,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37773,8 +37773,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -37791,8 +37791,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -37809,8 +37809,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -37827,8 +37827,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37845,8 +37845,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -37863,8 +37863,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -37881,8 +37881,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -37899,8 +37899,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -37917,8 +37917,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -37935,8 +37935,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -37953,8 +37953,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -37971,8 +37971,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -37989,8 +37989,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38007,8 +38007,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38025,8 +38025,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38043,8 +38043,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38061,8 +38061,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38079,8 +38079,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38097,8 +38097,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38115,8 +38115,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38133,8 +38133,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38151,8 +38151,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38169,8 +38169,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38187,8 +38187,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38205,8 +38205,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -38223,8 +38223,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38241,8 +38241,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38259,8 +38259,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38277,8 +38277,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -38295,8 +38295,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -38313,8 +38313,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38331,8 +38331,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38349,8 +38349,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38367,8 +38367,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -38385,8 +38385,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -38403,8 +38403,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38421,8 +38421,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38439,8 +38439,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38457,8 +38457,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38475,8 +38475,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38493,8 +38493,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38511,8 +38511,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38529,8 +38529,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38547,8 +38547,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38565,8 +38565,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38583,8 +38583,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38601,8 +38601,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38619,8 +38619,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -38637,8 +38637,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38655,8 +38655,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38673,8 +38673,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38691,8 +38691,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -38709,8 +38709,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38727,8 +38727,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38745,8 +38745,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38763,8 +38763,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -38781,8 +38781,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -38799,8 +38799,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -38817,8 +38817,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38835,8 +38835,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38853,8 +38853,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38871,8 +38871,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38889,8 +38889,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38907,8 +38907,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38925,8 +38925,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38943,8 +38943,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -38961,8 +38961,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -38979,8 +38979,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -38997,8 +38997,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1004",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -39015,8 +39015,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2004",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -39033,8 +39033,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39051,8 +39051,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -39069,8 +39069,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1005",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -39087,8 +39087,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2002",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -39105,8 +39105,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39123,8 +39123,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39141,8 +39141,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -39159,8 +39159,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1008",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -39177,8 +39177,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2003",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -39195,8 +39195,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39213,8 +39213,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39231,8 +39231,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sonicboom.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -39249,8 +39249,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1006",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -39267,8 +39267,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2006",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -39285,8 +39285,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -39303,8 +39303,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1001",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -39321,8 +39321,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2005",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -39339,8 +39339,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -39357,8 +39357,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1002",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -39375,8 +39375,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2008",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -39393,8 +39393,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -39411,8 +39411,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=1009",
+   "ticketKind": "shop"
   },
   {
    "sport": "배구",
@@ -39429,8 +39429,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kovo.co.kr/tickets/single?tcode=2001",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -39447,8 +39447,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39465,8 +39465,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39483,8 +39483,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://phoebus.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39501,8 +39501,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39519,8 +39519,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://thunders.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39537,8 +39537,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39555,8 +39555,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39573,8 +39573,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39591,8 +39591,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39609,8 +39609,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://kgc.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39627,8 +39627,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://egis.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39645,8 +39645,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39663,8 +39663,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39681,8 +39681,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://skygunners.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39699,8 +39699,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://sakers.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39717,8 +39717,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://promy.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39735,8 +39735,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://knights.kbl.or.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -39753,8 +39753,8 @@
    "broadcast": "",
    "attendance": null,
    "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
+   "ticketUrl": "https://pegasus.kbl.or.kr/",
+   "ticketKind": "club"
   }
  ]
 }
