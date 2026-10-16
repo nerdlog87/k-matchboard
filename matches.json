@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-10-16T08:23:22+09:00",
+ "generatedAt": "2026-10-17T08:06:20+09:00",
  "sports": [
   "축구",
   "야구",
@@ -26,7 +26,7 @@
    "count": 198,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-16T08:22:10+09:00"
+   "fetchedAt": "2026-10-17T08:05:08+09:00"
   },
   {
    "name": "K리그2",
@@ -46,7 +46,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-16T08:22:17+09:00"
+   "fetchedAt": "2026-10-17T08:05:15+09:00"
   },
   {
    "name": "코리아컵",
@@ -66,7 +66,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-10-16T08:22:25+09:00"
+   "fetchedAt": "2026-10-17T08:05:23+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -86,7 +86,7 @@
    "count": 35,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-16T08:22:30+09:00"
+   "fetchedAt": "2026-10-17T08:05:29+09:00"
   },
   {
    "name": "ACL 2",
@@ -106,7 +106,7 @@
    "count": 14,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-16T08:22:34+09:00"
+   "fetchedAt": "2026-10-17T08:05:33+09:00"
   },
   {
    "name": "K3리그",
@@ -126,7 +126,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-16T08:22:49+09:00"
+   "fetchedAt": "2026-10-17T08:05:48+09:00"
   },
   {
    "name": "K4리그",
@@ -146,7 +146,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-16T08:23:04+09:00"
+   "fetchedAt": "2026-10-17T08:06:02+09:00"
   },
   {
    "name": "KBO 리그",
@@ -166,7 +166,7 @@
    "count": 793,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-16T08:23:13+09:00"
+   "fetchedAt": "2026-10-17T08:06:10+09:00"
   },
   {
    "name": "KBL",
@@ -186,7 +186,7 @@
    "count": 369,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-16T08:23:15+09:00"
+   "fetchedAt": "2026-10-17T08:06:12+09:00"
   },
   {
    "name": "WKBL",
@@ -206,7 +206,7 @@
    "count": 105,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-16T08:23:21+09:00"
+   "fetchedAt": "2026-10-17T08:06:19+09:00"
   },
   {
    "name": "V리그 남자부",
@@ -226,7 +226,7 @@
    "count": 126,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-16T08:23:22+09:00"
+   "fetchedAt": "2026-10-17T08:06:20+09:00"
   },
   {
    "name": "V리그 여자부",
@@ -246,7 +246,7 @@
    "count": 126,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-16T08:23:22+09:00"
+   "fetchedAt": "2026-10-17T08:06:20+09:00"
   }
  ],
  "homepages": {
@@ -324,24 +324,6 @@
    "date": "2026-02-09",
    "time": "19:00",
    "round": null,
-   "home": "교토 상가",
-   "away": "전북",
-   "venue": "교토 스타디움",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
-   "date": "2026-02-09",
-   "time": "19:00",
-   "round": null,
    "home": "대전",
    "away": "가시마 앤틀러스",
    "venue": "대전 월드컵",
@@ -353,6 +335,24 @@
    "note": "",
    "ticketUrl": "https://www.dhcfc.kr/",
    "ticketKind": "club"
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
+   "date": "2026-02-09",
+   "time": "19:00",
+   "round": null,
+   "home": "교토 상가",
+   "away": "전북",
+   "venue": "교토 스타디움",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "",
+   "ticketKind": ""
   },
   {
    "sport": "축구",
@@ -28659,9 +28659,9 @@
    "home": "고양 소노",
    "away": "울산 현대모비스",
    "venue": "고양소노아레나",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 95,
+   "awayGoal": 82,
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
@@ -29827,14 +29827,14 @@
    "time": "14:00",
    "round": 25,
    "home": "평창유나이티드축구클럽",
-   "away": "평창유나이티드축구클럽",
+   "away": "평택시티즌FC",
    "venue": "진부면민체육공원",
    "finished": false,
    "homeGoal": null,
    "awayGoal": null,
    "broadcast": "",
    "attendance": null,
-   "note": "원본 표기 오류(상대팀 미확정)",
+   "note": "",
    "ticketUrl": "",
    "ticketKind": ""
   },
