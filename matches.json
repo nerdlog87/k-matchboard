@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-10-29T09:30:44+09:00",
+ "generatedAt": "2026-10-30T09:30:08+09:00",
  "sports": [
   "축구",
   "야구",
@@ -26,7 +26,7 @@
    "count": 228,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-29T09:29:38+09:00"
+   "fetchedAt": "2026-10-30T09:29:03+09:00"
   },
   {
    "name": "K리그2",
@@ -46,7 +46,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-29T09:29:45+09:00"
+   "fetchedAt": "2026-10-30T09:29:10+09:00"
   },
   {
    "name": "코리아컵",
@@ -66,7 +66,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-10-29T09:29:51+09:00"
+   "fetchedAt": "2026-10-30T09:29:16+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -86,7 +86,7 @@
    "count": 35,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-29T09:29:56+09:00"
+   "fetchedAt": "2026-10-30T09:29:20+09:00"
   },
   {
    "name": "ACL 2",
@@ -106,7 +106,7 @@
    "count": 14,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-29T09:30:00+09:00"
+   "fetchedAt": "2026-10-30T09:29:24+09:00"
   },
   {
    "name": "K3리그",
@@ -126,7 +126,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-29T09:30:14+09:00"
+   "fetchedAt": "2026-10-30T09:29:38+09:00"
   },
   {
    "name": "K4리그",
@@ -146,7 +146,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-29T09:30:28+09:00"
+   "fetchedAt": "2026-10-30T09:29:51+09:00"
   },
   {
    "name": "KBO 리그",
@@ -166,7 +166,7 @@
    "count": 793,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-29T09:30:36+09:00"
+   "fetchedAt": "2026-10-30T09:29:59+09:00"
   },
   {
    "name": "KBL",
@@ -186,7 +186,7 @@
    "count": 369,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-29T09:30:37+09:00"
+   "fetchedAt": "2026-10-30T09:30:01+09:00"
   },
   {
    "name": "WKBL",
@@ -206,7 +206,7 @@
    "count": 105,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-29T09:30:42+09:00"
+   "fetchedAt": "2026-10-30T09:30:06+09:00"
   },
   {
    "name": "V리그 남자부",
@@ -226,7 +226,7 @@
    "count": 126,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-29T09:30:43+09:00"
+   "fetchedAt": "2026-10-30T09:30:07+09:00"
   },
   {
    "name": "V리그 여자부",
@@ -246,7 +246,7 @@
    "count": 126,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-29T09:30:44+09:00"
+   "fetchedAt": "2026-10-30T09:30:07+09:00"
   },
   {
    "name": "KOVO컵",
@@ -266,7 +266,7 @@
    "count": 24,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-10-29T09:30:44+09:00"
+   "fetchedAt": "2026-10-30T09:30:08+09:00"
   }
  ],
  "homepages": {
@@ -28586,24 +28586,6 @@
    "date": "2026-10-13",
    "time": "19:00",
    "round": null,
-   "home": "포항",
-   "away": "조호르",
-   "venue": "포항 스틸야드",
-   "finished": true,
-   "homeGoal": 0,
-   "awayGoal": 2,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "https://www.steelers.co.kr",
-   "ticketKind": "club"
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
-   "date": "2026-10-13",
-   "time": "19:00",
-   "round": null,
    "home": "상하이 포트 FC",
    "away": "대전",
    "venue": "푸둥아레나",
@@ -28615,6 +28597,24 @@
    "note": "",
    "ticketUrl": "",
    "ticketKind": ""
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
+   "date": "2026-10-13",
+   "time": "19:00",
+   "round": null,
+   "home": "포항",
+   "away": "조호르",
+   "venue": "포항 스틸야드",
+   "finished": true,
+   "homeGoal": 0,
+   "awayGoal": 2,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "https://www.steelers.co.kr",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
@@ -30137,9 +30137,9 @@
    "home": "울산 현대모비스",
    "away": "부산 KCC",
    "venue": "울산동천체육관",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 96,
+   "awayGoal": 89,
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
@@ -30683,8 +30683,8 @@
    "broadcast": "생활체육TV",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://www.suwonfc.com",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26003114",
+   "ticketKind": "shop"
   },
   {
    "sport": "축구",
@@ -30845,8 +30845,8 @@
    "broadcast": "더 라이프2",
    "attendance": 0,
    "note": "",
-   "ticketUrl": "https://gimhaefc2008.com/",
-   "ticketKind": "club"
+   "ticketUrl": "https://tickets.interpark.com/goods/26001815",
+   "ticketKind": "shop"
   },
   {
    "sport": "농구",
@@ -30890,24 +30890,6 @@
    "date": "2026-11-03",
    "time": "19:00",
    "round": null,
-   "home": "가시와 레이솔",
-   "away": "대전",
-   "venue": "가시와 싸커스타디움",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
-   "date": "2026-11-03",
-   "time": "19:00",
-   "round": null,
    "home": "전북",
    "away": "조호르",
    "venue": "전주 월드컵",
@@ -30919,6 +30901,24 @@
    "note": "",
    "ticketUrl": "https://www.hyundai-motorsfc.com",
    "ticketKind": "club"
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
+   "date": "2026-11-03",
+   "time": "19:00",
+   "round": null,
+   "home": "가시와 레이솔",
+   "away": "대전",
+   "venue": "가시와 싸커스타디움",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "",
+   "ticketKind": ""
   },
   {
    "sport": "농구",
