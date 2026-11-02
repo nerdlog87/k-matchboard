@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-11-01T08:50:58+09:00",
+ "generatedAt": "2026-11-02T09:00:39+09:00",
  "sports": [
   "축구",
   "야구",
@@ -26,7 +26,7 @@
    "count": 228,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-01T08:49:46+09:00"
+   "fetchedAt": "2026-11-02T08:59:31+09:00"
   },
   {
    "name": "K리그2",
@@ -46,7 +46,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-01T08:49:53+09:00"
+   "fetchedAt": "2026-11-02T08:59:38+09:00"
   },
   {
    "name": "코리아컵",
@@ -66,7 +66,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-11-01T08:50:01+09:00"
+   "fetchedAt": "2026-11-02T08:59:44+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -86,7 +86,7 @@
    "count": 35,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-01T08:50:06+09:00"
+   "fetchedAt": "2026-11-02T08:59:49+09:00"
   },
   {
    "name": "ACL 2",
@@ -106,7 +106,7 @@
    "count": 14,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-01T08:50:10+09:00"
+   "fetchedAt": "2026-11-02T08:59:53+09:00"
   },
   {
    "name": "K3리그",
@@ -126,7 +126,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-01T08:50:25+09:00"
+   "fetchedAt": "2026-11-02T09:00:07+09:00"
   },
   {
    "name": "K4리그",
@@ -146,7 +146,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-01T08:50:39+09:00"
+   "fetchedAt": "2026-11-02T09:00:21+09:00"
   },
   {
    "name": "KBO 리그",
@@ -166,7 +166,7 @@
    "count": 793,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-01T08:50:48+09:00"
+   "fetchedAt": "2026-11-02T09:00:29+09:00"
   },
   {
    "name": "KBL",
@@ -186,7 +186,7 @@
    "count": 369,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-01T08:50:50+09:00"
+   "fetchedAt": "2026-11-02T09:00:30+09:00"
   },
   {
    "name": "WKBL",
@@ -206,7 +206,7 @@
    "count": 105,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-01T08:50:56+09:00"
+   "fetchedAt": "2026-11-02T09:00:37+09:00"
   },
   {
    "name": "V리그 남자부",
@@ -226,7 +226,7 @@
    "count": 126,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-01T08:50:57+09:00"
+   "fetchedAt": "2026-11-02T09:00:38+09:00"
   },
   {
    "name": "V리그 여자부",
@@ -246,7 +246,7 @@
    "count": 126,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-01T08:50:57+09:00"
+   "fetchedAt": "2026-11-02T09:00:38+09:00"
   },
   {
    "name": "KOVO컵",
@@ -266,7 +266,7 @@
    "count": 24,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-01T08:50:58+09:00"
+   "fetchedAt": "2026-11-02T09:00:39+09:00"
   }
  ],
  "homepages": {
@@ -30515,9 +30515,9 @@
    "home": "FC목포",
    "away": "대전코레일FC",
    "venue": "목포국제축구센터",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 3,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -30533,9 +30533,9 @@
    "home": "울산시민축구단",
    "away": "창원FC",
    "venue": "울산종합운동장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 0,
+   "awayGoal": 0,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -30551,9 +30551,9 @@
    "home": "전북현대모터스",
    "away": "포천시민축구단",
    "venue": "완주군공설운동장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 2,
+   "awayGoal": 2,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -30569,9 +30569,9 @@
    "home": "제천시민축구단",
    "away": "서울중랑축구단",
    "venue": "제천종합운동장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 0,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -30587,9 +30587,9 @@
    "home": "함안군민축구단",
    "away": "서산에프씨",
    "venue": "함안공설운동장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 2,
+   "awayGoal": 0,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -30605,9 +30605,9 @@
    "home": "고양 소노",
    "away": "수원 KT",
    "venue": "고양소노아레나",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 96,
+   "awayGoal": 103,
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
@@ -30623,9 +30623,9 @@
    "home": "창원 LG",
    "away": "원주 DB",
    "venue": "창원체육관",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 98,
+   "awayGoal": 104,
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "",
@@ -30641,11 +30641,11 @@
    "home": "포항",
    "away": "제주",
    "venue": "포항 스틸야드",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 1,
    "broadcast": "MAXPORTS",
-   "attendance": 0,
+   "attendance": 3911,
    "note": "",
    "ticketUrl": "https://www.steelers.co.kr",
    "ticketKind": "club"
@@ -30659,11 +30659,11 @@
    "home": "울산",
    "away": "강원",
    "venue": "울산 문수 축구경기장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 2,
+   "awayGoal": 1,
    "broadcast": "JTBC SPORTS",
-   "attendance": 0,
+   "attendance": 7038,
    "note": "",
    "ticketUrl": "https://www.uhdfc.com/fc/greetings.php",
    "ticketKind": "club"
@@ -30677,14 +30677,14 @@
    "home": "수원FC",
    "away": "안산",
    "venue": "수원 종합 운동장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 0,
    "broadcast": "생활체육TV",
-   "attendance": 0,
+   "attendance": 1682,
    "note": "",
-   "ticketUrl": "https://tickets.interpark.com/goods/26003114",
-   "ticketKind": "shop"
+   "ticketUrl": "https://www.suwonfc.com",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -30695,14 +30695,14 @@
    "home": "전남",
    "away": "성남",
    "venue": "광양 전용 구장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 2,
+   "awayGoal": 2,
    "broadcast": "BALL TV",
-   "attendance": 0,
+   "attendance": 2981,
    "note": "",
-   "ticketUrl": "https://tickets.interpark.com/goods/26006648",
-   "ticketKind": "shop"
+   "ticketUrl": "https://www.dragons.co.kr",
+   "ticketKind": "club"
   },
   {
    "sport": "배구",
@@ -30713,9 +30713,9 @@
    "home": "KB손해보험",
    "away": "삼성화재",
    "venue": "평택이충문화체육관",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 3,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -30731,9 +30731,9 @@
    "home": "흥국생명",
    "away": "SOOP",
    "venue": "인천삼산월드체육관",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 3,
+   "awayGoal": 0,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -30744,14 +30744,14 @@
    "sport": "농구",
    "league": "WKBL",
    "date": "2026-11-01",
-   "time": "16:00",
+   "time": "16:02",
    "round": null,
    "home": "BNK 썸",
    "away": "KB스타즈",
    "venue": "청주체육관",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 82,
+   "awayGoal": 53,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -30767,9 +30767,9 @@
    "home": "서울 삼성",
    "away": "서울 SK",
    "venue": "잠실학생체육관",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 76,
+   "awayGoal": 90,
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
@@ -30785,11 +30785,11 @@
    "home": "서울",
    "away": "인천",
    "venue": "서울 월드컵 경기장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 0,
+   "awayGoal": 1,
    "broadcast": "JTBC SPORTS",
-   "attendance": 0,
+   "attendance": 12050,
    "note": "",
    "ticketUrl": "https://www.fcseoul.com/",
    "ticketKind": "club"
@@ -30803,11 +30803,11 @@
    "home": "안양",
    "away": "부천",
    "venue": "안양 종합 운동장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 2,
+   "awayGoal": 1,
    "broadcast": "ENA SPORTS",
-   "attendance": 0,
+   "attendance": 4464,
    "note": "",
    "ticketUrl": "https://www.fc-anyang.com",
    "ticketKind": "club"
@@ -30821,14 +30821,14 @@
    "home": "충북청주",
    "away": "파주",
    "venue": "청주 종합 경기장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 2,
    "broadcast": "IB SPORTS",
-   "attendance": 0,
+   "attendance": 2734,
    "note": "",
-   "ticketUrl": "https://tickets.interpark.com/goods/26001844",
-   "ticketKind": "shop"
+   "ticketUrl": "https://chfc.kr/",
+   "ticketKind": "club"
   },
   {
    "sport": "축구",
@@ -30839,14 +30839,14 @@
    "home": "김해",
    "away": "천안",
    "venue": "김해 종합 운동장",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 3,
+   "awayGoal": 3,
    "broadcast": "더 라이프2",
-   "attendance": 0,
+   "attendance": 3582,
    "note": "",
-   "ticketUrl": "https://tickets.interpark.com/goods/26001815",
-   "ticketKind": "shop"
+   "ticketUrl": "https://gimhaefc2008.com/",
+   "ticketKind": "club"
   },
   {
    "sport": "농구",
