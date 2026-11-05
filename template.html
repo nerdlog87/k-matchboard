@@ -571,7 +571,7 @@ const RG = DATA.regions || { list: [], groups: {} };
 const DAYS = ["월","화","수","목","금","토","일"];
 const CATS = [["s","종목"],["l","리그"],["t","팀"],["g","지역"],["d","요일"]];
 
-const AL = { rules: [], cur: 0, open: "s", tg: null };
+const AL = { rules: [], cur: 0, open: "s", tg: null, urlAt: 0 };
 
 // ?s= 로 넘어온 '지금 저장된 조건'을 읽는다 (봇이 버튼 주소에 실어 보낸다)
 function b64uDecode(s){
@@ -582,6 +582,7 @@ function b64uDecode(s){
   const q = new URLSearchParams(location.search);
   if (q.get("view") === "alert") state.view = "alert";
   try { const r = JSON.parse(b64uDecode(q.get("s") || "")); if (Array.isArray(r)) AL.rules = r; } catch(e){}
+  AL.urlAt = +q.get("t") || 0;
   AL.rules = AL.rules.filter(r => r && typeof r === "object").slice(0, 10);
   for (const r of AL.rules){
     if (r.c){ r.g = [...new Set([...(r.g||[]), ...(RG.groups["수도권"]||[])])]; delete r.c; }
@@ -604,6 +605,14 @@ function b64uDecode(s){
       document.documentElement.dataset.theme = tg.colorScheme === "dark" ? "dark" : "light";
       tg.MainButton.onClick(alertSave);
       state.view = "alert"; render();
+      // 봇은 하루 세 번만 깨므로, 저장 직후 다시 열면 버튼 주소에는 아직 옛 조건이 실려 있다.
+      // 그래서 저장할 때 텔레그램 CloudStorage 에도 적어두고, 그쪽이 더 새것이면 그걸 보여준다.
+      // (반대로 채팅에서 /해지 하면 봇이 버튼 주소의 t 를 갱신하므로 그쪽이 이긴다)
+      loadSaved(saved => {
+        if (saved && saved.at > AL.urlAt && Array.isArray(saved.r)){
+          AL.rules = saved.r.length ? saved.r : [{}]; AL.cur = 0; AL.pending = saved.at; render();
+        }
+      });
     };
     document.head.appendChild(sc);
   }
@@ -739,7 +748,8 @@ function viewAlert(){
     }).join("")}
 
     <div class="asave">${inTg
-      ? `조건 ${AL.rules.length}개 · 앞으로 맞는 경기 <b>${anyHit.length}</b>개<br>
+      ? `${AL.pending ? `<b>📮 마지막으로 저장한 조건이에요.</b> 봇이 다음 확인 시각에 등록하고 답장을 보내요.<br><br>` : ""}
+         조건 ${AL.rules.length}개 · 앞으로 맞는 경기 <b>${anyHit.length}</b>개<br>
          아래 <b>[저장하기]</b>를 누르면 봇에게 바로 전달돼요. 등록 확인 답장은 다음 확인 시각(06:00 · 09:00 · 23:30)에 와요.
          <div class="row"><button class="abtn solid" id="aSave">저장하기</button></div>`
       : `여기서는 <b>미리보기</b>만 돼요. 저장은 텔레그램 봇의 <b>[⚙️ 알림 설정]</b> 버튼으로 이 화면을 열어서 해주세요.
@@ -766,7 +776,36 @@ function alertSave(){
   if (new TextEncoder().encode(payload).length > 4000){
     AL.tg.showAlert("조건이 너무 많아요. 팀이나 카드를 조금 줄여주세요."); return;
   }
-  AL.tg.sendData(payload);          // 보내고 나면 텔레그램이 창을 닫는다
+  const at = Math.floor(Date.now() / 1000);
+  const body = JSON.stringify({ v: 1, at, r: rules });
+  let sent = false;
+  const go = () => { if (!sent){ sent = true; AL.tg.sendData(body); } };   // 보내고 나면 텔레그램이 창을 닫는다
+  storeSaved({ at, r: rules }, go);
+  setTimeout(go, 1200);             // 저장소가 대답이 없어도 전송은 한다
+}
+
+// 마지막 저장값 보관 — 텔레그램 CloudStorage(기기 간 공유), 안 되면 이 기기의 localStorage
+function storeSaved(obj, done){
+  const val = JSON.stringify(obj);
+  try { localStorage.setItem("jikgwan_saved", val); } catch(e){}
+  const cs = AL.tg && AL.tg.isVersionAtLeast && AL.tg.isVersionAtLeast("6.9") && AL.tg.CloudStorage;
+  if (cs) { try { cs.setItem("saved", val, () => done()); return; } catch(e){} }
+  done();
+}
+function loadSaved(cb){
+  let local = null;
+  try { local = JSON.parse(localStorage.getItem("jikgwan_saved") || "null"); } catch(e){}
+  const cs = AL.tg && AL.tg.isVersionAtLeast && AL.tg.isVersionAtLeast("6.9") && AL.tg.CloudStorage;
+  if (!cs) return cb(local);
+  let done = false;
+  const finish = v => { if (!done){ done = true; cb(v); } };
+  setTimeout(() => finish(local), 800);          // 저장소가 대답이 없으면 이 기기 기록으로
+  try {
+    cs.getItem("saved", (err, v) => {
+      let cloud = null; try { cloud = JSON.parse(v || "null"); } catch(e){}
+      finish([cloud, local].filter(Boolean).sort((a, b) => b.at - a.at)[0] || null);
+    });
+  } catch(e){ finish(local); }
 }
 
 function alertClick(e){

@@ -29,6 +29,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -210,7 +211,7 @@ def rule_matches(rule, m):
     return True
 
 
-def settings_url(subs):
+def settings_url(subs, updated_at=0):
     """미니앱 주소. 지금 저장된 조건을 ?s= 에 실어 보내 화면이 그 상태로 열리게 한다.
     (# 뒤는 텔레그램이 자기 값을 덧붙이는 자리라 쓰지 않는다)"""
     short = []
@@ -225,13 +226,13 @@ def settings_url(subs):
         short.append(c)
     raw = json.dumps(short, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
     enc = base64.urlsafe_b64encode(raw).decode().rstrip("=")
-    return f"{SITE}?view=alert&s={enc}"
+    return f"{SITE}?view=alert&s={enc}&t={int(updated_at or 0)}"
 
 
-def setup_keyboard(subs):
+def setup_keyboard(subs, updated_at=0):
     """봇 채팅 아래에 늘 떠 있는 [⚙️ 알림 설정] 버튼.
     텔레그램은 '이 버튼으로 연 화면'에서만 저장 데이터를 봇에게 넘겨준다."""
-    return {"keyboard": [[{"text": "⚙️ 알림 설정", "web_app": {"url": settings_url(subs)}}]],
+    return {"keyboard": [[{"text": "⚙️ 알림 설정", "web_app": {"url": settings_url(subs, updated_at)}}]],
             "resize_keyboard": True, "is_persistent": True}
 
 
@@ -262,10 +263,11 @@ def handle_commands(tg, state):
                 tg.send("저장 데이터를 읽지 못했습니다. 설정 화면을 다시 열어 저장해주세요.")
                 continue
             state["subs"] = rules
+            state["updated"] = int(payload.get("at") or time.time())
             changed = True
             tg.send(f"✅ 알림 조건 {len(rules)}개를 저장했습니다\n{subs_summary(rules)}\n\n"
                     "경기 14일 전, 그리고 예매가 열릴 때 알려드릴게요.",
-                    keyboard=setup_keyboard(rules))
+                    keyboard=setup_keyboard(rules, state["updated"]))
             continue
 
         if not text:
@@ -274,25 +276,27 @@ def handle_commands(tg, state):
             tg.send("안녕하세요, 직관 알리미입니다! 🏟\n"
                     "아래 [⚙️ 알림 설정] 버튼을 눌러 조건을 고르고 저장하세요.\n"
                     f"\n지금 저장된 조건\n{subs_summary(subs)}",
-                    keyboard=setup_keyboard(subs))
+                    keyboard=setup_keyboard(subs, state.get("updated", 0)))
         elif text.startswith("/목록"):
             tg.send(f"📋 저장된 조건\n{subs_summary(subs)}\n\n"
                     "바꾸려면 [⚙️ 알림 설정] · 하나만 지우려면 /해지 번호",
-                    keyboard=setup_keyboard(subs))
+                    keyboard=setup_keyboard(subs, state.get("updated", 0)))
         elif text.startswith("/해지"):
             mnum = re.search(r"\d+", text)
             if mnum and 1 <= int(mnum.group()) <= len(subs):
                 gone = subs.pop(int(mnum.group()) - 1)
+                state["updated"] = int(time.time())
                 changed = True
-                tg.send(f"🗑 지웠습니다: {rule_label(gone)}", keyboard=setup_keyboard(subs))
+                tg.send(f"🗑 지웠습니다: {rule_label(gone)}", keyboard=setup_keyboard(subs, state.get("updated", 0)))
             else:
                 tg.send("지울 번호를 못 찾았습니다. /목록 으로 번호를 확인해주세요.")
         elif text.startswith("/구독"):
             rule = parse_rule(text)
             if rule:
                 subs.append(rule)
+                state["updated"] = int(time.time())
                 changed = True
-                tg.send(f"✅ 조건 추가 {len(subs)}번\n{rule_label(rule)}", keyboard=setup_keyboard(subs))
+                tg.send(f"✅ 조건 추가 {len(subs)}번\n{rule_label(rule)}", keyboard=setup_keyboard(subs, state.get("updated", 0)))
             else:
                 tg.send("조건을 읽지 못했습니다. [⚙️ 알림 설정] 버튼으로 고르는 게 가장 쉬워요.")
     return changed
