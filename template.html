@@ -117,19 +117,48 @@ input[type=date].ghost{padding:5px 8px}
 .tab.on{background:var(--ink);color:var(--bg)}
 
 /* ─────────── 알림 탭 ─────────── */
-.alertbox{max-width:760px}
-.alertform{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
-.alertform select{padding:8px 10px;border:1px solid var(--line-strong);border-radius:8px;
-  background:var(--surface);color:var(--ink);max-width:180px}
-.achk{display:flex;align-items:center;gap:5px;font-size:13.5px;color:var(--ink-2);
-  border:1px solid var(--line-strong);border-radius:999px;padding:7px 12px;background:var(--surface);cursor:pointer}
-.alertcmd{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:4px 0}
-.alertcmd code{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;
-  padding:9px 12px;font-size:13px;font-family:"JetBrains Mono",monospace;word-break:break-all}
-.abtn{border:1px solid var(--line-strong);border-radius:8px;padding:8px 14px;font-size:13px;
-  font-weight:700;color:var(--ink-2);background:var(--surface);text-decoration:none}
+.alertbox{max-width:780px}
+.alertbox h2.at{margin:18px 0 4px;font-size:21px}
+.alertbox .lead{color:var(--muted);margin:0 0 16px;font-size:13.5px;line-height:1.6}
+/* 조건 카드 */
+.arules{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.arule{display:flex;align-items:center;gap:6px;max-width:100%;border:1.5px solid var(--line-strong);
+  border-radius:12px;padding:8px 8px 8px 12px;background:var(--surface);font-size:13px;color:var(--ink-2);cursor:pointer}
+.arule b{color:var(--ink);font-weight:800;white-space:nowrap}
+.arule span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:300px}
+.arule.on{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink) inset}
+.arule .x{border:0;background:none;color:var(--muted);font-size:16px;line-height:1;padding:2px 4px;cursor:pointer}
+.arule .x:hover{color:var(--live)}
+.aadd{border:1.5px dashed var(--line-strong);border-radius:12px;padding:8px 14px;font-size:13px;
+  font-weight:700;color:var(--ink-2);background:none;cursor:pointer}
+/* 카테고리 */
+.acat{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:8px;overflow:hidden}
+.acat-h{display:flex;align-items:center;gap:10px;width:100%;padding:13px 14px;border:0;background:none;
+  font:inherit;color:var(--ink);cursor:pointer;text-align:left}
+.acat-h .k{font-weight:800;font-size:14.5px;min-width:38px}
+.acat-h .v{flex:1;color:var(--muted);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.acat-h .v.set{color:var(--ink-2);font-weight:700}
+.acat-h .chev{color:var(--muted);transition:transform .15s}
+.acat.open .acat-h .chev{transform:rotate(180deg)}
+.acat-b{padding:2px 14px 14px;border-top:1px solid var(--line)}
+.agrp{font-size:11.5px;font-weight:800;letter-spacing:.06em;color:var(--muted);margin:12px 0 6px}
+.aopts{display:flex;flex-wrap:wrap;gap:6px}
+.aopt{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-strong);border-radius:999px;
+  padding:6px 12px 6px 9px;font-size:13.5px;color:var(--ink-2);background:var(--surface);cursor:pointer;user-select:none}
+.aopt input{margin:0;accent-color:var(--ink);width:15px;height:15px}
+.aopt.on{border-color:var(--ink);color:var(--ink);font-weight:700;background:var(--surface-2)}
+.aquick{display:flex;gap:6px;margin-top:10px}
+.aquick button{border:1px solid var(--line);border-radius:8px;padding:5px 10px;font-size:12.5px;
+  color:var(--ink-2);background:var(--surface-2);cursor:pointer}
+.aclear{border:0;background:none;color:var(--muted);font-size:12.5px;text-decoration:underline;cursor:pointer;margin-top:10px;padding:0}
+/* 저장 */
+.asave{border-radius:12px;padding:14px 16px;margin:14px 0 18px;background:var(--surface-2);border:1px solid var(--line);font-size:13.5px;line-height:1.6}
+.asave .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.abtn{border:1px solid var(--line-strong);border-radius:9px;padding:9px 16px;font-size:13.5px;
+  font-weight:800;color:var(--ink-2);background:var(--surface);text-decoration:none;cursor:pointer}
 .abtn.solid{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .abtn:hover{border-color:var(--ink)}
+@media (max-width:640px){ .arule span{max-width:190px} }
 
 /* ─────────── 경기 리스트 ─────────── */
 main{padding:8px 0 64px}
@@ -533,97 +562,219 @@ function viewTeam(){
 }
 
 /* ─────────── 알림 탭 ─────────── */
-const BOT = "gyeonggi_day_bot";               // 텔레그램 봇 아이디
-// notify.py 의 수도권 판별과 같은 기준을 쓴다 (목록은 축약판 + 지명 키워드)
+// 직관 알리미 설정 화면. 텔레그램 봇의 [⚙️ 알림 설정] 버튼으로 열면 미니앱이 되어
+// [저장] 시 조건을 봇에게 바로 넘긴다(Telegram.WebApp.sendData). 일반 브라우저에선 미리보기용.
+const BOT = "jikgwan_bot";
+// notify.py 의 수도권 판별과 같은 기준
 const CAP_KEY = ["서울","인천","잠실","고척","목동","상암","장충","수원","고양","성남","부천",
   "안양","안산","용인","김포","의정부","파주","화성","평택","광명","시흥","하남","이천","여주",
   "양평","구리","남양주","포천","동두천","가평","과천","군포","의왕","오산","안성","탄천","계양",
   "청라","송도","미추홀","일산","위례","경희대 선승관","중랑","정왕","소사벌"];
 const isCap = v => CAP_KEY.some(k => (v||"").includes(k));
-const alertSel = { sport:"", league:"", team:"", region:false, weekend:false, homeOnly:false };
+const DAYS = ["월","화","수","목","금","토","일"];
+const CATS = [["s","종목"],["l","리그"],["t","팀"],["c","지역"],["d","요일"]];
 
-function alertCmd(){
-  const p = ["/구독"];
-  if (alertSel.sport)  p.push("종목=" + alertSel.sport);
-  if (alertSel.league) p.push("리그=" + alertSel.league);
-  if (alertSel.team)   p.push("팀=" + alertSel.team.replace(/\s+/g, ""));   // 공백이 있으면 봇이 명령을 쪼개 읽는다
-  if (alertSel.homeOnly && alertSel.team) p.push("홈만");
-  if (alertSel.region) p.push("지역=수도권");
-  if (alertSel.weekend) p.push("요일=토,일");
-  return p.length > 1 ? p.join(" ") : "";
+const AL = { rules: [], cur: 0, open: "s", tg: null };
+
+// ?s= 로 넘어온 '지금 저장된 조건'을 읽는다 (봇이 버튼 주소에 실어 보낸다)
+function b64uDecode(s){
+  s = s.replace(/-/g,"+").replace(/_/g,"/"); while (s.length % 4) s += "=";
+  return new TextDecoder().decode(Uint8Array.from(atob(s), c => c.charCodeAt(0)));
+}
+(function initAlert(){
+  const q = new URLSearchParams(location.search);
+  if (q.get("view") === "alert") state.view = "alert";
+  try { const r = JSON.parse(b64uDecode(q.get("s") || "")); if (Array.isArray(r)) AL.rules = r; } catch(e){}
+  AL.rules = AL.rules.filter(r => r && typeof r === "object").slice(0, 10);
+  if (!AL.rules.length) AL.rules = [{}];
+
+  // 텔레그램 안에서 열렸을 때만 텔레그램 스크립트를 불러온다
+  if (/tgWebApp/.test(location.hash)){
+    const sc = document.createElement("script");
+    sc.src = "https://telegram.org/js/telegram-web-app.js";
+    sc.onload = () => {
+      const tg = window.Telegram && window.Telegram.WebApp;
+      if (!tg || !tg.initData) return;
+      AL.tg = tg; tg.ready(); tg.expand();
+      document.documentElement.dataset.theme = tg.colorScheme === "dark" ? "dark" : "light";
+      tg.MainButton.onClick(alertSave);
+      state.view = "alert"; render();
+    };
+    document.head.appendChild(sc);
+  }
+})();
+
+const normT = s => (s||"").replace(/\s+/g,"").toLowerCase();
+function teamHit(t, side){
+  t = normT(t); side = normT(side);
+  if (t === side) return true;
+  const has = (big, small) => {
+    const i = big.indexOf(small); if (i < 0) return false;
+    return !/[a-z0-9]/.test(big[i+small.length] || "") && !/[a-z0-9]/.test(i > 0 ? big[i-1] : "");
+  };
+  return has(side, t) || has(t, side);
+}
+function ruleHit(r, m){
+  if (r.s && r.s.length && !r.s.includes(m.sport)) return false;
+  if (r.l && r.l.length && !r.l.includes(m.league)) return false;
+  if (r.c && !isCap(m.venue)) return false;
+  if (r.d && r.d.length && !r.d.includes(DAYS[(toDate(m.date).getDay()+6) % 7])) return false;
+  if (r.t && r.t.length){
+    const sides = r.h ? [m.home] : [m.home, m.away];
+    if (!r.t.some(t => sides.some(s => teamHit(t, s)))) return false;
+  }
+  return true;
+}
+function ruleLabel(r){
+  const p = [];
+  if (r.s && r.s.length) p.push(r.s.join("·"));
+  if (r.l && r.l.length) p.push(r.l.join("·"));
+  if (r.t && r.t.length) p.push(r.t.join("·") + (r.h ? " 홈만" : ""));
+  if (r.c) p.push("수도권");
+  if (r.d && r.d.length) p.push(r.d.join(""));
+  return p.join(" · ") || "모든 경기";
 }
 
-function alertPreview(){
-  const today = TODAY;
-  const hit = DATA.matches.filter(m => {
-    if (m.finished || m.date < today) return false;
-    if (alertSel.sport && m.sport !== alertSel.sport) return false;
-    if (alertSel.league && m.league !== alertSel.league) return false;
-    if (alertSel.region && !isCap(m.venue)) return false;
-    if (alertSel.weekend){
-      const w = toDate(m.date).getDay();
-      if (w !== 0 && w !== 6) return false;
+// 고를 수 있는 항목 — 위 칸의 선택에 맞춰 좁혀진다
+function optLeagues(r){ return LIVE.filter(l => !(r.s && r.s.length) || r.s.includes(l.sport)); }
+function optTeams(r){
+  const lgs = (r.l && r.l.length) ? r.l : optLeagues(r).map(l => l.name);
+  const groups = [];
+  for (const lg of lgs){
+    const cnt = {}, spell = {};
+    for (const m of DATA.matches) if (m.league === lg) for (const t of [m.home, m.away]){
+      const k = normT(t); cnt[k] = (cnt[k]||0) + 1;
+      if (!spell[k] || t.length > spell[k].length) spell[k] = t;   // 가장 긴 표기를 대표로
     }
-    if (alertSel.team){
-      const t = alertSel.team.replace(/\s+/g,"");
-      const sides = alertSel.homeOnly ? [m.home] : [m.home, m.away];
-      if (!sides.some(s => {
-        const n = s.replace(/\s+/g,"");
-        if (n === t) return true;
-        const i = n.indexOf(t);
-        if (i < 0) return false;
-        const ad = n[i+t.length] || "", bf = i>0 ? n[i-1] : "";
-        return !/[A-Za-z0-9]/.test(ad) && !/[A-Za-z0-9]/.test(bf);
-      })) return false;
-    }
-    return true;
-  });
-  return hit;
+    // 4경기 미만은 초청팀·일회성 상대라 뺀다 (예: 컵대회 해외팀)
+    const teams = Object.keys(cnt).filter(k => cnt[k] >= 4).map(k => spell[k]).sort((a,b) => a.localeCompare(b,"ko"));
+    if (teams.length) groups.push([lg, teams]);
+  }
+  return groups;
+}
+// 위 칸을 바꾸면 더는 고를 수 없게 된 아래 칸 선택을 정리한다
+function prune(r){
+  if (r.l) r.l = r.l.filter(x => optLeagues(r).some(l => l.name === x));
+  if (r.t){ const ok = new Set(optTeams(r).flatMap(g => g[1]).map(normT)); r.t = r.t.filter(x => ok.has(normT(x))); }
+  if (!(r.t && r.t.length)) delete r.h;
+  for (const k of ["s","l","t","d"]) if (r[k] && !r[k].length) delete r[k];
+}
+
+function catSummary(r, k){
+  if (k === "c") return r.c ? "수도권만" : "전국";
+  if (k === "t" && r.t && r.t.length) return r.t.join(", ") + (r.h ? " (홈경기만)" : "");
+  if (k === "d" && r.d && r.d.length) return r.d.join(" ");
+  return (r[k] && r[k].length) ? r[k].join(", ") : "전체";
+}
+const pill = (k, v, on, label) =>
+  `<label class="aopt${on?" on":""}"><input type="checkbox" data-aopt="${k}" value="${esc(v)}"${on?" checked":""}>${esc(label||v)}</label>`;
+
+function catBody(r, k){
+  const has = v => !!(r[k] && r[k].includes(v));
+  if (k === "s") return `<div class="aopts">${SPORTS.map(s => pill("s", s, has(s))).join("")}</div>`;
+  if (k === "l") return `<div class="aopts">${optLeagues(r).map(l => pill("l", l.name, has(l.name))).join("")}</div>`;
+  if (k === "t"){
+    const g = optTeams(r);
+    return g.map(([lg, ts]) => `<div class="agrp">${esc(lg)}</div><div class="aopts">${ts.map(t => pill("t", t, has(t))).join("")}</div>`).join("")
+      + (r.t && r.t.length ? `<div class="aopts" style="margin-top:12px">${pill("h", "1", !!r.h, "고른 팀의 홈경기만")}</div>` : "");
+  }
+  if (k === "c") return `<div class="aopts">${pill("c", "1", !!r.c, "수도권 경기장만 (서울·인천·경기)")}</div>`;
+  if (k === "d") return `<div class="aopts">${DAYS.map(d => pill("d", d, has(d))).join("")}</div>
+    <div class="aquick"><button data-aquick="we">주말만</button><button data-aquick="wd">평일만</button><button data-aquick="all">요일 무관</button></div>`;
+  return "";
 }
 
 function viewAlert(){
-  const teams = [...new Set(DATA.matches
-    .filter(m => (!alertSel.sport || m.sport === alertSel.sport) &&
-                 (!alertSel.league || m.league === alertSel.league))
-    .flatMap(m => [m.home, m.away]))].sort((a,b) => a.localeCompare(b,"ko"));
-  const leagues = LIVE.filter(l => !alertSel.sport || l.sport === alertSel.sport);
-  const cmd = alertCmd();
-  const hit = cmd ? alertPreview() : [];
-  const opt = (v, cur, label) =>
-    `<option value="${esc(v)}"${v===cur?" selected":""}>${esc(label||v)}</option>`;
+  const r = AL.rules[AL.cur];
+  const upcoming = DATA.matches.filter(m => !m.finished && m.date >= TODAY);
+  const hit = upcoming.filter(m => ruleHit(r, m));
+  const anyHit = upcoming.filter(m => AL.rules.some(x => ruleHit(x, m)));
+  const inTg = !!AL.tg;
+  if (inTg){
+    AL.tg.MainButton.setText(`저장하기 · 조건 ${AL.rules.length}개`);
+    AL.tg.MainButton.show();
+  }
 
   return `<div class="alertbox">
-    <h2 style="margin:18px 0 4px;font-size:20px">🔔 직관 알리미</h2>
-    <p style="color:var(--muted);margin:0 0 14px;font-size:13.5px">
-      조건을 고르면 맞는 경기를 아래에서 미리 보여드립니다. [구독] 을 누르면 텔레그램 봇에게
-      명령이 전달되고, 그 뒤로는 <b>경기 14일 전</b>과 <b>예매가 열릴 때</b> 알림이 옵니다.</p>
-    <div class="alertform">
-      <select id="aSport"><option value="">종목 전체</option>${SPORTS.map(s=>opt(s,alertSel.sport)).join("")}</select>
-      <select id="aLeague"><option value="">리그 전체</option>${leagues.map(l=>opt(l.name,alertSel.league)).join("")}</select>
-      <select id="aTeam"><option value="">팀 전체</option>${teams.map(t=>opt(t,alertSel.team)).join("")}</select>
-      <label class="achk"><input type="checkbox" id="aRegion"${alertSel.region?" checked":""}> 수도권만</label>
-      <label class="achk"><input type="checkbox" id="aWeekend"${alertSel.weekend?" checked":""}> 주말만</label>
-      <label class="achk"${alertSel.team?"":' style="opacity:.4"'}><input type="checkbox" id="aHome"${alertSel.homeOnly?" checked":""}${alertSel.team?"":" disabled"}> 홈경기만</label>
+    <h2 class="at">🔔 직관 알리미</h2>
+    <p class="lead">칸을 눌러 펼치고 체크하세요. <b>같은 칸 안은 "또는"</b>, <b>칸끼리는 "그리고"</b>예요.
+      조합이 여러 개면 [+ 조건 추가]로 카드를 하나 더 만드세요. 카드끼리는 "또는"이에요.</p>
+
+    <div class="arules">
+      ${AL.rules.map((x, i) => `<div class="arule${i===AL.cur?" on":""}" data-arule="${i}">
+        <b>조건 ${i+1}</b><span>${esc(ruleLabel(x))}</span>
+        ${AL.rules.length > 1 ? `<button class="x" data-adel="${i}" aria-label="조건 ${i+1} 지우기">×</button>` : ""}</div>`).join("")}
+      ${AL.rules.length < 10 ? `<button class="aadd" id="aAdd">+ 조건 추가</button>` : ""}
     </div>
-    ${cmd ? `
-    <div class="alertcmd">
-      <code id="aCmd">${esc(cmd)}</code>
-      <button class="abtn" id="aCopy">복사</button>
-      <a class="abtn solid" href="https://t.me/${BOT}" target="_blank" rel="noopener">텔레그램 봇 열기</a>
+
+    ${CATS.map(([k, name]) => {
+      const set = k === "c" ? !!r.c : !!(r[k] && r[k].length);
+      const open = AL.open === k;
+      return `<div class="acat${open?" open":""}">
+        <button class="acat-h" data-acat="${k}" aria-expanded="${open}">
+          <span class="k">${name}</span><span class="v${set?" set":""}">${esc(catSummary(r, k))}</span>
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        ${open ? `<div class="acat-b">${catBody(r, k)}${set && k !== "c" ? `<button class="aclear" data-aclear="${k}">이 칸 선택 지우기</button>` : ""}</div>` : ""}
+      </div>`;
+    }).join("")}
+
+    <div class="asave">${inTg
+      ? `조건 ${AL.rules.length}개 · 앞으로 맞는 경기 <b>${anyHit.length}</b>개<br>
+         아래 <b>[저장하기]</b>를 누르면 봇에게 바로 전달돼요. 등록 확인 답장은 다음 확인 시각(06:00 · 09:00 · 23:30)에 와요.
+         <div class="row"><button class="abtn solid" id="aSave">저장하기</button></div>`
+      : `여기서는 <b>미리보기</b>만 돼요. 저장은 텔레그램 봇의 <b>[⚙️ 알림 설정]</b> 버튼으로 이 화면을 열어서 해주세요.
+         (텔레그램이 보안상 그 버튼으로 연 화면에서만 저장을 허락해요.)
+         <div class="row"><a class="abtn solid" href="https://t.me/${BOT}?start=setup" target="_blank" rel="noopener">텔레그램 @${BOT} 열기</a></div>`}
     </div>
-    <p style="color:var(--muted);font-size:12.5px;margin:6px 0 16px">
-      [복사] → 봇 채팅에 붙여넣어 보내면 등록됩니다. 등록 확인과 알림은 하루 세 번
-      (아침 6시·9시, 밤 11시 반) 처리 시점에 옵니다. 해지는 봇에게 /목록 → /해지 번호.</p>
+
     <div class="tierhead" style="--tier:var(--ink);--tier-soft:var(--surface-2)">
-      <h2 style="font-size:16px">이 조건에 맞는 다가오는 경기</h2><span class="n">${hit.length}경기</span></div>
-    ${hit.slice(0,15).map(m => `<div class="tline" style="${vars(m.league)}">
+      <h2 style="font-size:16px">조건 ${AL.cur+1}에 맞는 다가오는 경기</h2><span class="n">${hit.length}경기</span></div>
+    ${hit.slice(0, 10).map(m => `<div class="tline" style="${vars(m.league)}">
       <div><div class="dt">${m.date.slice(5).replace("-",".")} ${WD[toDate(m.date).getDay()]}</div>
         <div class="dt" style="opacity:.7">${esc(m.time)}</div></div>
       <div><div class="op">${esc(m.home)} vs ${esc(m.away)}<span class="lg">${esc(m.league)}</span></div>
         <div class="vn">${esc(m.venue)}</div></div></div>`).join("")}
-    ${hit.length > 15 ? `<p style="color:var(--muted);font-size:13px">…외 ${hit.length-15}경기</p>` : ""}`
-    : `<p style="color:var(--muted);margin-top:10px">조건을 하나 이상 골라주세요.</p>`}
+    ${hit.length > 10 ? `<p style="color:var(--muted);font-size:13px">…외 ${hit.length-10}경기</p>` : ""}
+    ${!hit.length ? `<p style="color:var(--muted);font-size:13.5px">지금 데이터에는 맞는 경기가 없어요. 일정이 나오면 그때 알려드려요.</p>` : ""}
   </div>`;
+}
+
+function alertSave(){
+  if (!AL.tg) return;
+  const rules = AL.rules.map(r => { const c = {...r}; prune(c); return c; }).filter(r => Object.keys(r).length);
+  const payload = JSON.stringify({ v: 1, r: rules.length ? rules : [] });
+  if (new TextEncoder().encode(payload).length > 4000){
+    AL.tg.showAlert("조건이 너무 많아요. 팀이나 카드를 조금 줄여주세요."); return;
+  }
+  AL.tg.sendData(payload);          // 보내고 나면 텔레그램이 창을 닫는다
+}
+
+function alertClick(e){
+  const r = AL.rules[AL.cur];
+  const t = e.target.closest("[data-acat],[data-arule],[data-adel],[data-aquick],[data-aclear],#aAdd,#aSave");
+  if (!t) return false;
+  if (t.dataset.adel !== undefined){ e.stopPropagation();
+    AL.rules.splice(+t.dataset.adel, 1); AL.cur = Math.min(AL.cur, AL.rules.length-1); render(); return true; }
+  if (t.dataset.acat){ AL.open = AL.open === t.dataset.acat ? null : t.dataset.acat; render(); return true; }
+  if (t.dataset.arule !== undefined){ AL.cur = +t.dataset.arule; render(); return true; }
+  if (t.dataset.aquick){ const q = t.dataset.aquick;
+    if (q === "all") delete r.d; else r.d = q === "we" ? ["토","일"] : ["월","화","수","목","금"];
+    render(); return true; }
+  if (t.dataset.aclear){ const k = t.dataset.aclear; delete r[k]; if (k === "t") delete r.h; prune(r); render(); return true; }
+  if (t.id === "aAdd"){ AL.rules.push({}); AL.cur = AL.rules.length-1; AL.open = "s"; render(); return true; }
+  if (t.id === "aSave"){ alertSave(); return true; }
+  return false;
+}
+function alertChange(e){
+  const k = e.target.dataset.aopt; if (!k) return false;
+  const r = AL.rules[AL.cur], v = e.target.value, on = e.target.checked;
+  if (k === "c") r.c = on ? 1 : 0;
+  else if (k === "h") r.h = on ? 1 : 0;
+  else { r[k] = r[k] || []; if (on){ if (!r[k].includes(v)) r[k].push(v); } else r[k] = r[k].filter(x => x !== v); }
+  if (!r.c) delete r.c;
+  if (!r.h) delete r.h;
+  prune(r); render(); return true;
 }
 
 /* ─────────── 렌더 ─────────── */
@@ -649,12 +800,7 @@ document.addEventListener("click", e => {
   }
   const tab = e.target.closest(".tab");
   if (tab){ state.view = tab.dataset.view; return render(); }
-  if (e.target.id === "aCopy"){
-    navigator.clipboard?.writeText($("#aCmd").textContent).then(()=>{
-      e.target.textContent = "복사됨!"; setTimeout(()=>{ e.target.textContent = "복사"; }, 1500);
-    });
-    return;
-  }
+  if (state.view === "alert" && alertClick(e)) return;
 
   const day = e.target.closest(".day");
   if (day){ state.date = day.dataset.d; return render(); }
@@ -690,18 +836,7 @@ document.addEventListener("keydown", e => {
 });
 
 renderHeader();
-document.addEventListener("change", e => {
-  const map = { aSport:"sport", aLeague:"league", aTeam:"team" };
-  if (map[e.target.id] !== undefined){
-    alertSel[map[e.target.id]] = e.target.value;
-    if (e.target.id === "aSport"){ alertSel.league = ""; alertSel.team = ""; }
-    if (e.target.id === "aLeague") alertSel.team = "";
-    if (!alertSel.team) alertSel.homeOnly = false;
-    return render();
-  }
-  const flag = { aRegion:"region", aWeekend:"weekend", aHome:"homeOnly" };
-  if (flag[e.target.id]){ alertSel[flag[e.target.id]] = e.target.checked; return render(); }
-});
+document.addEventListener("change", e => { if (state.view === "alert") alertChange(e); });
 
 render();
 </script>

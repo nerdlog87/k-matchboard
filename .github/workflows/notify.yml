@@ -1,0 +1,54 @@
+name: 직관 알림 (아침 9시)
+
+# 수집 없이 알림만 확인하는 가벼운 실행.
+# V리그 예매가 보통 오전 11시에 열리므로, 9시에 "오늘 11시 오픈" 리마인드가 나가게 한다.
+# (아침 6시·밤 11시 반 알림은 본 워크플로(update.yml)가 수집 직후에 보낸다)
+
+on:
+  schedule:
+    - cron: "0 0 * * *"       # 00:00 UTC = 09:00 KST
+  workflow_dispatch:
+
+concurrency:
+  group: notify
+  cancel-in-progress: false
+
+permissions:
+  contents: write              # alert_state.json 커밋용
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+
+      - name: 직관 알림 발송
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ]; then
+            echo "TELEGRAM_BOT_TOKEN 이 없어 알림을 건너뜁니다 (Settings → Secrets 에 등록하세요)"
+          else
+            python notify.py
+          fi
+
+      - name: 알림 상태 커밋
+        continue-on-error: true
+        run: |
+          BRANCH="${GITHUB_REF_NAME:-main}"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for i in 1 2 3; do
+            git add alert_state.json 2>/dev/null || true
+            if git diff --cached --quiet; then echo "변경 없음 — 커밋 생략"; exit 0; fi
+            git commit -q -m "알림 상태 갱신 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M') [skip ci]"
+            if git push origin "HEAD:${BRANCH}"; then echo "커밋 완료"; exit 0; fi
+            git fetch -q origin "${BRANCH}" || break
+            git reset -q --soft "origin/${BRANCH}"
+          done
+          echo "::warning::알림 상태를 커밋하지 못했습니다. 다음 실행에서 같은 알림이 중복될 수 있습니다."

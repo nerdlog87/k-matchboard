@@ -9,9 +9,10 @@
   TELEGRAM_CHAT_ID     알림 받을 채팅 ID (이 ID 가 보낸 명령만 믿는다)
 
 하는 일 (매 실행마다)
-  1) 봇이 받은 메시지를 읽어 구독 명령을 처리한다
-       /구독 종목=야구 팀=롯데 지역=수도권 요일=토,일   ← 사이트 알림 탭이 만들어 준다
-       /목록   /해지 3   /start
+  1) 봇이 받은 메시지를 읽어 구독을 처리한다
+       [⚙️ 알림 설정] 버튼 → 미니앱(사이트 알림 탭)에서 체크 → [저장]
+         → 텔레그램이 web_app_data 로 조건 목록(JSON)을 넘겨준다 → 통째로 교체
+       /start · /목록 · /해지 3 · /구독 종목=야구 팀=롯데 지역=수도권 (손으로 쓸 때)
   2) matches.json 의 경기를 구독 조건과 대조해 알림을 보낸다
        [D-14]   경기 14일 전 사전 알림 (전 종목)
        [오픈 임박] 예매 오픈 시각이 24시간 안 (V리그=API 정각 / KBO=구단 관행 추정)
@@ -23,6 +24,7 @@
 """
 
 import argparse
+import base64
 import json
 import os
 import re
@@ -98,27 +100,60 @@ class TG:
         r.raise_for_status()
         return r.json().get("result") or []
 
-    def send(self, text):
+    def send(self, text, keyboard=None):
         if self.dry:
             print("─" * 46)
             print(text)
+            if keyboard:
+                print(f"[버튼] {keyboard['keyboard'][0][0]['text']} → {keyboard['keyboard'][0][0]['web_app']['url'][:90]}…")
             return True
-        r = requests.post(f"{self.base}/sendMessage", timeout=30, json={
-            "chat_id": self.chat, "text": text,
-            "disable_web_page_preview": True,
-        })
+        body = {"chat_id": self.chat, "text": text, "disable_web_page_preview": True}
+        if keyboard:
+            body["reply_markup"] = keyboard
+        r = requests.post(f"{self.base}/sendMessage", timeout=30, json=body)
         if not r.ok:
             print(f"  ! 발송 실패 {r.status_code}: {r.text[:120]}", file=sys.stderr)
         return r.ok
 
 
-# ── 구독 명령 ─────────────────────────────────────────────────────────
-FIELDS = {"종목": "sport", "리그": "league", "팀": "teams",
+# ── 구독 규칙 ─────────────────────────────────────────────────────────
+# 규칙 하나 = 칸(종목·리그·팀·요일)마다 '목록'.
+#   같은 칸 안은 "또는", 칸끼리는 "그리고".  여러 규칙끼리는 "또는".
+# 예) {"sports": ["야구"], "teams": ["롯데"], "region": "수도권"}
+LIST_KEYS = ("sports", "leagues", "teams", "days")
+
+
+def normalize_rule(r):
+    """옛 형식(sport/league 문자열)과 미니앱의 짧은 키를 한 모양으로 맞춘다."""
+    if not isinstance(r, dict):
+        return None
+    alias = {"s": "sports", "l": "leagues", "t": "teams", "d": "days",
+             "sport": "sports", "league": "leagues"}
+    out = {}
+    for k, v in r.items():
+        k = alias.get(k, k)
+        if k in LIST_KEYS:
+            vals = v if isinstance(v, list) else [v]
+            vals = [str(x).strip() for x in vals if str(x).strip()][:40]
+            if vals:
+                out[k] = vals
+        elif k in ("region", "c"):
+            if v in ("수도권", 1, True):
+                out["region"] = "수도권"
+        elif k in ("home_only", "h"):
+            if v in (1, True):
+                out["home_only"] = True
+    if out.get("home_only") and not out.get("teams"):
+        out.pop("home_only")             # 팀을 안 골랐으면 '홈만'은 의미가 없다
+    return out or None
+
+
+FIELDS = {"종목": "sports", "리그": "leagues", "팀": "teams",
           "지역": "region", "요일": "days"}
 
 
 def parse_rule(text):
-    """'/구독 종목=야구 팀=롯데 지역=수도권 요일=토,일 홈만' → 조건 dict"""
+    """'/구독 종목=야구,축구 팀=롯데 지역=수도권 요일=토,일 홈만' → 규칙 (손으로 쓸 때용)"""
     rule = {}
     for tok in text.split()[1:]:
         if tok == "홈만":
@@ -127,29 +162,23 @@ def parse_rule(text):
         if "=" not in tok:
             continue
         k, v = tok.split("=", 1)
-        if k not in FIELDS or not v:
-            continue
-        key = FIELDS[k]
-        rule[key] = [x.strip() for x in v.split(",") if x.strip()] \
-            if key in ("teams", "days") else v.strip()
-    return rule or None
+        if k in FIELDS and v:
+            rule[FIELDS[k]] = v if FIELDS[k] == "region" else v.split(",")
+    return normalize_rule(rule)
 
 
 def rule_label(rule):
     out = []
-    if rule.get("sport"):
-        out.append(rule["sport"])
-    if rule.get("league"):
-        out.append(rule["league"])
+    for key in ("sports", "leagues"):
+        if rule.get(key):
+            out.append("·".join(rule[key]))
     if rule.get("teams"):
-        out.append("팀 " + "·".join(rule["teams"]))
-    if rule.get("home_only"):
-        out.append("홈만")
+        out.append("팀 " + "·".join(rule["teams"]) + (" (홈만)" if rule.get("home_only") else ""))
     if rule.get("region"):
         out.append(rule["region"])
     if rule.get("days"):
         out.append("/".join(rule["days"]))
-    return " · ".join(out) or "(조건 없음)"
+    return " · ".join(out) or "(조건 없음 — 모든 경기)"
 
 
 def norm(s):
@@ -179,9 +208,10 @@ def team_hit(t, side):
 
 
 def rule_matches(rule, m):
-    if rule.get("sport") and m["sport"] != rule["sport"]:
+    rule = normalize_rule(rule) or {}
+    if rule.get("sports") and m["sport"] not in rule["sports"]:
         return False
-    if rule.get("league") and m["league"] != rule["league"]:
+    if rule.get("leagues") and m["league"] not in rule["leagues"]:
         return False
     if rule.get("region") == "수도권" and not is_capital(m["venue"]):
         return False
@@ -196,45 +226,93 @@ def rule_matches(rule, m):
     return True
 
 
+def settings_url(subs):
+    """미니앱 주소. 지금 저장된 조건을 ?s= 에 실어 보내 화면이 그 상태로 열리게 한다.
+    (# 뒤는 텔레그램이 자기 값을 덧붙이는 자리라 쓰지 않는다)"""
+    short = []
+    for r in subs:
+        r = normalize_rule(r) or {}
+        c = {}
+        for k, a in (("sports", "s"), ("leagues", "l"), ("teams", "t"), ("days", "d")):
+            if r.get(k):
+                c[a] = r[k]
+        if r.get("region"):
+            c["c"] = 1
+        if r.get("home_only"):
+            c["h"] = 1
+        short.append(c)
+    raw = json.dumps(short, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    enc = base64.urlsafe_b64encode(raw).decode().rstrip("=")
+    return f"{SITE}?view=alert&s={enc}"
+
+
+def setup_keyboard(subs):
+    """봇 채팅 아래에 늘 떠 있는 [⚙️ 알림 설정] 버튼.
+    텔레그램은 '이 버튼으로 연 화면'에서만 저장 데이터를 봇에게 넘겨준다."""
+    return {"keyboard": [[{"text": "⚙️ 알림 설정", "web_app": {"url": settings_url(subs)}}]],
+            "resize_keyboard": True, "is_persistent": True}
+
+
+def subs_summary(subs):
+    return "\n".join(f"{i+1}. {rule_label(r)}" for i, r in enumerate(subs)) or "저장된 조건이 없습니다."
+
+
 def handle_commands(tg, state):
     """봇이 받은 메시지를 읽어 구독을 갱신한다. 주인의 chat_id 만 믿는다."""
     changed = False
     for u in tg.updates(state.get("offset", 0) + 1):
         state["offset"] = max(state.get("offset", 0), u["update_id"])
         msg = u.get("message") or {}
-        text = (msg.get("text") or "").strip()
         sender = str((msg.get("chat") or {}).get("id") or "")
-        if not text:
+        if sender != tg.chat:        # 모르는 사람 메시지는 무시한다
             continue
-        if sender != tg.chat:        # 모르는 사람 명령은 무시한다
+        text = (msg.get("text") or "").strip()
+        subs = state.setdefault("subs", [])
+
+        # ① 미니앱에서 [저장] → 조건 목록을 통째로 바꾼다
+        wad = (msg.get("web_app_data") or {}).get("data")
+        if wad:
+            try:
+                payload = json.loads(wad)
+                rules = [normalize_rule(r) for r in (payload.get("r") or [])]
+                rules = [r for r in rules if r][:20]
+            except Exception:
+                tg.send("저장 데이터를 읽지 못했습니다. 설정 화면을 다시 열어 저장해주세요.")
+                continue
+            state["subs"] = rules
+            changed = True
+            tg.send(f"✅ 알림 조건 {len(rules)}개를 저장했습니다\n{subs_summary(rules)}\n\n"
+                    "경기 14일 전, 그리고 예매가 열릴 때 알려드릴게요.",
+                    keyboard=setup_keyboard(rules))
             continue
 
-        if text.startswith("/구독"):
-            rule = parse_rule(text)
-            if rule:
-                state.setdefault("subs", []).append(rule)
-                changed = True
-                tg.send(f"✅ 구독 등록 {len(state['subs'])}번\n{rule_label(rule)}")
-            else:
-                tg.send("조건을 읽지 못했습니다. 사이트의 알림 탭에서 만든 명령을 그대로 보내주세요.")
+        if not text:
+            continue
+        if text.startswith(("/start", "/설정")):
+            tg.send("안녕하세요, 직관 알리미입니다! 🏟\n"
+                    "아래 [⚙️ 알림 설정] 버튼을 눌러 조건을 고르고 저장하세요.\n"
+                    f"\n지금 저장된 조건\n{subs_summary(subs)}",
+                    keyboard=setup_keyboard(subs))
         elif text.startswith("/목록"):
-            subs = state.get("subs", [])
-            body = "\n".join(f"{i+1}. {rule_label(r)}" for i, r in enumerate(subs)) \
-                or "등록된 구독이 없습니다."
-            tg.send(f"📋 구독 목록\n{body}\n\n해지: /해지 번호")
+            tg.send(f"📋 저장된 조건\n{subs_summary(subs)}\n\n"
+                    "바꾸려면 [⚙️ 알림 설정] · 하나만 지우려면 /해지 번호",
+                    keyboard=setup_keyboard(subs))
         elif text.startswith("/해지"):
             mnum = re.search(r"\d+", text)
-            subs = state.get("subs", [])
             if mnum and 1 <= int(mnum.group()) <= len(subs):
                 gone = subs.pop(int(mnum.group()) - 1)
                 changed = True
-                tg.send(f"🗑 해지했습니다: {rule_label(gone)}")
+                tg.send(f"🗑 지웠습니다: {rule_label(gone)}", keyboard=setup_keyboard(subs))
             else:
-                tg.send("해지할 번호를 못 찾았습니다. /목록 으로 번호를 확인해주세요.")
-        elif text.startswith("/start"):
-            tg.send("안녕하세요, 경기 있는 날 알리미입니다!\n"
-                    f"구독 조건은 사이트의 알림 탭에서 만들 수 있습니다.\n{SITE}#alert\n"
-                    "명령: /목록 · /해지 번호")
+                tg.send("지울 번호를 못 찾았습니다. /목록 으로 번호를 확인해주세요.")
+        elif text.startswith("/구독"):
+            rule = parse_rule(text)
+            if rule:
+                subs.append(rule)
+                changed = True
+                tg.send(f"✅ 조건 추가 {len(subs)}번\n{rule_label(rule)}", keyboard=setup_keyboard(subs))
+            else:
+                tg.send("조건을 읽지 못했습니다. [⚙️ 알림 설정] 버튼으로 고르는 게 가장 쉬워요.")
     return changed
 
 
