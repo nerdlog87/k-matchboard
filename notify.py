@@ -351,11 +351,19 @@ def find_open_time(m, kovo_rows):
 
 # ── 알림 만들기 ───────────────────────────────────────────────────────
 def fmt_match(m):
+    """알림 본문. 마스터가 정한 모양 그대로:
+         V리그 남자부 · KB손해보험 vs 대한항공
+         11/19(목) 19:00 · 평택이충문화체육관
+         🔗 링크                         (링크가 없으면 줄 자체를 뺀다)
+    컵대회 단계처럼 경기 메모가 있으면 리그 이름 옆 괄호에만 짧게 붙인다."""
     dt = datetime.strptime(m["date"], "%Y-%m-%d")
-    note = f"\n{m['note']}" if m.get("note") else ""
-    return (f"{m['home']} vs {m['away']}\n"
-            f"{m['date'][5:].replace('-', '/')}({WD[dt.weekday()]}) {m['time'] or '시간 미정'}"
-            f" · {m['venue'] or '장소 미정'} · {m['league']}{note}")
+    league = f"{m['league']}({m['note']})" if m.get("note") else m["league"]
+    lines = [f"{league} · {m['home']} vs {m['away']}",
+             f"{m['date'][5:].replace('-', '/')}({WD[dt.weekday()]}) {m['time'] or '시간 미정'}"
+             f" · {m['venue'] or '장소 미정'}"]
+    if m.get("ticketUrl"):
+        lines.append(f"🔗 {m['ticketUrl']}")
+    return "\n".join(lines)
 
 
 def build_alerts(state, data, now):
@@ -381,34 +389,28 @@ def build_alerts(state, data, now):
         hit = [r for r in subs if rule_matches(r, m)]
         if not hit:
             continue
-        why = " / ".join(dict.fromkeys(rule_label(r) for r in hit))
         key = f"{m['date']}|{m['league']}|{norm(m['home'])}|{norm(m['away'])}"
-        tkt = f"\n🔗 {m['ticketUrl']}" if m.get("ticketUrl") else ""
 
         # ① D-14 사전 알림 — 전 종목
         if left <= 14 and f"pre|{key}" not in sent:
             sent[f"pre|{key}"] = now.isoformat(timespec="seconds")
-            extra = ""
-            if m["league"] in ("KBL", "WKBL"):
-                extra = "\n(이 리그는 예매 오픈 시각을 공개하지 않아요. 구단 공지를 확인해두세요.)"
-            alerts.append(f"📅 D-{left} 사전 알림\n{fmt_match(m)}{tkt}{extra}\n조건: {why}")
+            alerts.append(f"📅 D-{left} 사전 알림\n{fmt_match(m)}")
 
         open_at, kind = find_open_time(m, kovo_rows)
 
         # ② 오픈 임박 — 오픈까지 24시간 이내
         if open_at and f"soon|{key}" not in sent and timedelta(0) <= (open_at - now) <= timedelta(hours=24):
             sent[f"soon|{key}"] = now.isoformat(timespec="seconds")
-            tag = "" if kind == "정확" else " (구단 관행 기준 추정)"
+            tag = "" if kind == "정확" else " (추정)"
             when = "오늘" if open_at.date() == today else "내일"
-            alerts.append(f"⏰ 예매 오픈 임박 — {when} {open_at.strftime('%H:%M')}{tag}\n"
-                          f"{fmt_match(m)}{tkt}\n조건: {why}")
+            alerts.append(f"⏰ 예매 오픈 임박 · {when} {open_at.strftime('%H:%M')}{tag}\n{fmt_match(m)}")
 
         # ③ 예매 열림 — V리그는 오픈 시각 경과, K리그는 예매 링크 등장
         opened = (open_at and now >= open_at and kind == "정확") or \
                  (m.get("ticketKind") == "shop" and m["sport"] == "축구")
         if opened and f"open|{key}" not in sent:
             sent[f"open|{key}"] = now.isoformat(timespec="seconds")
-            alerts.append(f"🎫 예매가 열렸습니다!\n{fmt_match(m)}{tkt}\n조건: {why}")
+            alerts.append(f"🎫 예매 오픈\n{fmt_match(m)}")
 
     return alerts
 
