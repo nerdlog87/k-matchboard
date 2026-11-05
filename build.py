@@ -9,6 +9,8 @@ import json
 import re
 from pathlib import Path
 
+from regions import GROUPS, REGIONS, region_of
+
 HERE = Path(__file__).resolve().parent
 DIST = HERE / "dist"
 DIST.mkdir(exist_ok=True)
@@ -27,9 +29,11 @@ slim = {
         {k: m.get(k, "") for k in
          ("sport", "league", "date", "time", "round", "home", "away", "venue",
           "finished", "homeGoal", "awayGoal", "broadcast", "note",
-          "ticketUrl", "ticketKind")}
+          "ticketUrl", "ticketKind")} | {"region": region_of(m.get("venue"))}
         for m in data["matches"]
     ],
+    # 알림 탭의 지역 칸에 쓴다 (regions.py 가 원본)
+    "regions": {"list": REGIONS, "groups": GROUPS},
 }
 payload = json.dumps(slim, ensure_ascii=False, separators=(",", ":"))
 

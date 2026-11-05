@@ -104,6 +104,11 @@ for l in REG:
     check(not odd, f"{l['name']} 라운드별 경기 수 불균일 (기준 {common}): {odd}", hard=False)
 
 # 6. 대회별 수집 상태
+# 경기장 → 지역 분류 (알림의 지역 조건이 여기에 기댄다)
+from regions import region_of
+unknown = sorted({m["venue"] for m in MS if m["venue"] and region_of(m["venue"]) == "미분류"})
+check(not unknown, f"지역을 모르는 경기장 {len(unknown)}곳 — regions.py 에 추가하세요: {unknown[:5]}", hard=False)
+
 for l in REG:
     check(l["status"] != "failed", f"{l['name']} 수집 실패 + 대체 데이터 없음: {l['error']}")
     check(l["status"] != "missing", f"{l['name']} 경기 0건 (예상 밖)")

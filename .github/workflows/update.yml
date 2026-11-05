@@ -34,6 +34,7 @@ jobs:
         run: |
           missing=0
           for f in scraper.py check.py build.py template.html requirements.txt \
+                   regions.py notify.py \
                    adapters/__init__.py adapters/common.py adapters/kleague.py adapters/kfa.py; do
             if [ ! -f "$f" ]; then
               echo "::error::저장소에 이 파일이 없습니다 → $f"

@@ -41,36 +41,8 @@ MATCHES = HERE / "matches.json"
 STATE = HERE / "alert_state.json"
 SITE = "https://nerdlog87.github.io/k-matchboard/"
 
-# ── 수도권 판별 ───────────────────────────────────────────────────────
-# 1차: 현재 데이터의 경기장 전수조사로 만든 명시 목록 (2026-11 기준 135곳 검토)
-CAPITAL_VENUES = {
-    "고양소노아레나", "고척스카이돔", "김포솔터축구장", "남양주체육문화센터 축구장",
-    "목동 종합 운동장", "물맑은양평종합운동장", "부천 종합 운동장", "부천체육관",
-    "서울 월드컵", "서울 월드컵 경기장", "서울장충체육관", "수원 KT 소닉붐 아레나",
-    "수원 월드컵 경기장", "수원 종합 운동장", "수원KT위즈파크", "수원체육관",
-    "안산 와~스타디움", "안양 정관장 아레나", "안양 종합 운동장", "여주종합운동장",
-    "용인 미르스타디움", "용인실내체육관", "인천 축구 전용경기장", "인천SSG랜더스필드",
-    "인천계양체육관", "인천도원체육관", "인천삼산월드체육관", "잠실야구장",
-    "잠실학생체육관", "탄천 종합 운동장", "파주 스타디움", "평택이충문화체육관",
-    "포천종합운동장", "화성종합경기타운", "화성종합실내체육관",
-    "경희대 선승관",        # 서울캠퍼스 체육관
-    "중랑구립운동장",        # 서울 중랑구
-    "정왕스타디움",          # 시흥
-    "소사벌레포츠타운",       # 평택
-}
-# 2차: 목록에 없는 새 경기장은 지명 키워드로 추정한다
-CAPITAL_KEYWORDS = (
-    "서울", "인천", "잠실", "고척", "목동", "상암", "장충",
-    "수원", "고양", "성남", "부천", "안양", "안산", "용인", "김포", "의정부",
-    "파주", "화성", "평택", "광명", "시흥", "하남", "이천", "여주", "양평",
-    "구리", "남양주", "포천", "동두천", "가평", "과천", "군포", "의왕",
-    "오산", "안성", "탄천", "계양", "청라", "송도", "미추홀", "일산", "위례",
-)
-
-
-def is_capital(venue):
-    v = (venue or "").strip()
-    return v in CAPITAL_VENUES or any(k in v for k in CAPITAL_KEYWORDS)
+# ── 지역 판별은 regions.py 한 곳에서 (화면과 같은 기준) ─────────────
+from regions import GROUPS, region_of
 
 
 # ── KBO 구단별 예매 오픈 관행 (일반예매 기준, 홈팀이 결정한다) ─────────
@@ -119,15 +91,15 @@ class TG:
 # ── 구독 규칙 ─────────────────────────────────────────────────────────
 # 규칙 하나 = 칸(종목·리그·팀·요일)마다 '목록'.
 #   같은 칸 안은 "또는", 칸끼리는 "그리고".  여러 규칙끼리는 "또는".
-# 예) {"sports": ["야구"], "teams": ["롯데"], "region": "수도권"}
-LIST_KEYS = ("sports", "leagues", "teams", "days")
+# 예) {"sports": ["야구"], "teams": ["롯데"], "regions": ["서울", "인천", "경기"]}
+LIST_KEYS = ("sports", "leagues", "teams", "days", "regions")
 
 
 def normalize_rule(r):
     """옛 형식(sport/league 문자열)과 미니앱의 짧은 키를 한 모양으로 맞춘다."""
     if not isinstance(r, dict):
         return None
-    alias = {"s": "sports", "l": "leagues", "t": "teams", "d": "days",
+    alias = {"s": "sports", "l": "leagues", "t": "teams", "d": "days", "g": "regions",
              "sport": "sports", "league": "leagues"}
     out = {}
     for k, v in r.items():
@@ -137,19 +109,26 @@ def normalize_rule(r):
             vals = [str(x).strip() for x in vals if str(x).strip()][:40]
             if vals:
                 out[k] = vals
-        elif k in ("region", "c"):
+        elif k in ("region", "c"):            # 옛 형식: 수도권 하나뿐이던 시절
             if v in ("수도권", 1, True):
-                out["region"] = "수도권"
+                out["regions"] = sorted(set(out.get("regions", [])) | set(GROUPS["수도권"]))
         elif k in ("home_only", "h"):
             if v in (1, True):
                 out["home_only"] = True
+    if out.get("regions"):
+        flat = []
+        for g in out["regions"]:
+            for x in GROUPS.get(g, [g]):
+                if x not in flat:
+                    flat.append(x)
+        out["regions"] = flat
     if out.get("home_only") and not out.get("teams"):
         out.pop("home_only")             # 팀을 안 골랐으면 '홈만'은 의미가 없다
     return out or None
 
 
 FIELDS = {"종목": "sports", "리그": "leagues", "팀": "teams",
-          "지역": "region", "요일": "days"}
+          "지역": "regions", "요일": "days"}
 
 
 def parse_rule(text):
@@ -163,7 +142,7 @@ def parse_rule(text):
             continue
         k, v = tok.split("=", 1)
         if k in FIELDS and v:
-            rule[FIELDS[k]] = v if FIELDS[k] == "region" else v.split(",")
+            rule[FIELDS[k]] = v.split(",")
     return normalize_rule(rule)
 
 
@@ -174,8 +153,13 @@ def rule_label(rule):
             out.append("·".join(rule[key]))
     if rule.get("teams"):
         out.append("팀 " + "·".join(rule["teams"]) + (" (홈만)" if rule.get("home_only") else ""))
-    if rule.get("region"):
-        out.append(rule["region"])
+    if rule.get("regions"):
+        left, parts = set(rule["regions"]), []
+        for g, xs in GROUPS.items():              # 통째로 들어간 권역은 이름으로 줄인다
+            if set(xs) <= left:
+                parts.append(g)
+                left -= set(xs)
+        out.append("·".join(parts + [x for x in rule["regions"] if x in left]))
     if rule.get("days"):
         out.append("/".join(rule["days"]))
     return " · ".join(out) or "(조건 없음 — 모든 경기)"
@@ -213,7 +197,7 @@ def rule_matches(rule, m):
         return False
     if rule.get("leagues") and m["league"] not in rule["leagues"]:
         return False
-    if rule.get("region") == "수도권" and not is_capital(m["venue"]):
+    if rule.get("regions") and region_of(m["venue"]) not in rule["regions"]:
         return False
     if rule.get("days"):
         wd = WD[datetime.strptime(m["date"], "%Y-%m-%d").weekday()]
@@ -233,11 +217,9 @@ def settings_url(subs):
     for r in subs:
         r = normalize_rule(r) or {}
         c = {}
-        for k, a in (("sports", "s"), ("leagues", "l"), ("teams", "t"), ("days", "d")):
+        for k, a in (("sports", "s"), ("leagues", "l"), ("teams", "t"), ("days", "d"), ("regions", "g")):
             if r.get(k):
                 c[a] = r[k]
-        if r.get("region"):
-            c["c"] = 1
         if r.get("home_only"):
             c["h"] = 1
         short.append(c)

@@ -146,7 +146,8 @@ input[type=date].ghost{padding:5px 8px}
 .aopt{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-strong);border-radius:999px;
   padding:6px 12px 6px 9px;font-size:13.5px;color:var(--ink-2);background:var(--surface);cursor:pointer;user-select:none}
 .aopt input{margin:0;accent-color:var(--ink);width:15px;height:15px}
-.aopt.on{border-color:var(--ink);color:var(--ink);font-weight:700;background:var(--surface-2)}
+.aopt.dim{opacity:.45}
+.aopt.on{opacity:1;border-color:var(--ink);color:var(--ink);font-weight:700;background:var(--surface-2)}
 .aquick{display:flex;gap:6px;margin-top:10px}
 .aquick button{border:1px solid var(--line);border-radius:8px;padding:5px 10px;font-size:12.5px;
   color:var(--ink-2);background:var(--surface-2);cursor:pointer}
@@ -565,14 +566,10 @@ function viewTeam(){
 // 직관 알리미 설정 화면. 텔레그램 봇의 [⚙️ 알림 설정] 버튼으로 열면 미니앱이 되어
 // [저장] 시 조건을 봇에게 바로 넘긴다(Telegram.WebApp.sendData). 일반 브라우저에선 미리보기용.
 const BOT = "jikgwan_bot";
-// notify.py 의 수도권 판별과 같은 기준
-const CAP_KEY = ["서울","인천","잠실","고척","목동","상암","장충","수원","고양","성남","부천",
-  "안양","안산","용인","김포","의정부","파주","화성","평택","광명","시흥","하남","이천","여주",
-  "양평","구리","남양주","포천","동두천","가평","과천","군포","의왕","오산","안성","탄천","계양",
-  "청라","송도","미추홀","일산","위례","경희대 선승관","중랑","정왕","소사벌"];
-const isCap = v => CAP_KEY.some(k => (v||"").includes(k));
+// 지역은 build.py 가 경기마다 붙여준 m.region 을 쓴다 (regions.py 가 원본 — notify.py 와 같은 기준)
+const RG = DATA.regions || { list: [], groups: {} };
 const DAYS = ["월","화","수","목","금","토","일"];
-const CATS = [["s","종목"],["l","리그"],["t","팀"],["c","지역"],["d","요일"]];
+const CATS = [["s","종목"],["l","리그"],["t","팀"],["g","지역"],["d","요일"]];
 
 const AL = { rules: [], cur: 0, open: "s", tg: null };
 
@@ -586,6 +583,10 @@ function b64uDecode(s){
   if (q.get("view") === "alert") state.view = "alert";
   try { const r = JSON.parse(b64uDecode(q.get("s") || "")); if (Array.isArray(r)) AL.rules = r; } catch(e){}
   AL.rules = AL.rules.filter(r => r && typeof r === "object").slice(0, 10);
+  for (const r of AL.rules){
+    if (r.c){ r.g = [...new Set([...(r.g||[]), ...(RG.groups["수도권"]||[])])]; delete r.c; }
+    if (r.g) r.g = [...new Set(r.g.flatMap(x => RG.groups[x] || [x]))];
+  }
   if (!AL.rules.length) AL.rules = [{}];
 
   // 텔레그램 안에서 열렸을 때만 텔레그램 스크립트를 불러온다
@@ -617,7 +618,7 @@ function teamHit(t, side){
 function ruleHit(r, m){
   if (r.s && r.s.length && !r.s.includes(m.sport)) return false;
   if (r.l && r.l.length && !r.l.includes(m.league)) return false;
-  if (r.c && !isCap(m.venue)) return false;
+  if (r.g && r.g.length && !r.g.includes(m.region)) return false;
   if (r.d && r.d.length && !r.d.includes(DAYS[(toDate(m.date).getDay()+6) % 7])) return false;
   if (r.t && r.t.length){
     const sides = r.h ? [m.home] : [m.home, m.away];
@@ -625,12 +626,17 @@ function ruleHit(r, m){
   }
   return true;
 }
+function groupName(list){
+  const left = new Set(list), parts = [];
+  for (const [g, xs] of Object.entries(RG.groups)) if (xs.every(x => left.has(x))){ parts.push(g); xs.forEach(x => left.delete(x)); }
+  return [...parts, ...RG.list.filter(x => left.has(x))].join("·");
+}
 function ruleLabel(r){
   const p = [];
   if (r.s && r.s.length) p.push(r.s.join("·"));
   if (r.l && r.l.length) p.push(r.l.join("·"));
   if (r.t && r.t.length) p.push(r.t.join("·") + (r.h ? " 홈만" : ""));
-  if (r.c) p.push("수도권");
+  if (r.g && r.g.length) p.push(groupName(r.g));
   if (r.d && r.d.length) p.push(r.d.join(""));
   return p.join(" · ") || "모든 경기";
 }
@@ -657,17 +663,17 @@ function prune(r){
   if (r.l) r.l = r.l.filter(x => optLeagues(r).some(l => l.name === x));
   if (r.t){ const ok = new Set(optTeams(r).flatMap(g => g[1]).map(normT)); r.t = r.t.filter(x => ok.has(normT(x))); }
   if (!(r.t && r.t.length)) delete r.h;
-  for (const k of ["s","l","t","d"]) if (r[k] && !r[k].length) delete r[k];
+  for (const k of ["s","l","t","d","g"]) if (r[k] && !r[k].length) delete r[k];
 }
 
 function catSummary(r, k){
-  if (k === "c") return r.c ? "수도권만" : "전국";
+  if (k === "g") return (r.g && r.g.length) ? groupName(r.g).replace(/·/g, ", ") : "전국 (해외 포함)";
   if (k === "t" && r.t && r.t.length) return r.t.join(", ") + (r.h ? " (홈경기만)" : "");
   if (k === "d" && r.d && r.d.length) return r.d.join(" ");
   return (r[k] && r[k].length) ? r[k].join(", ") : "전체";
 }
-const pill = (k, v, on, label) =>
-  `<label class="aopt${on?" on":""}"><input type="checkbox" data-aopt="${k}" value="${esc(v)}"${on?" checked":""}>${esc(label||v)}</label>`;
+const pill = (k, v, on, label, dim) =>
+  `<label class="aopt${on?" on":""}${dim?" dim":""}"${dim?' title="지금 남은 경기가 없어요"':""}><input type="checkbox" data-aopt="${k}" value="${esc(v)}"${on?" checked":""}>${esc(label||v)}</label>`;
 
 function catBody(r, k){
   const has = v => !!(r[k] && r[k].includes(v));
@@ -678,7 +684,16 @@ function catBody(r, k){
     return g.map(([lg, ts]) => `<div class="agrp">${esc(lg)}</div><div class="aopts">${ts.map(t => pill("t", t, has(t))).join("")}</div>`).join("")
       + (r.t && r.t.length ? `<div class="aopts" style="margin-top:12px">${pill("h", "1", !!r.h, "고른 팀의 홈경기만")}</div>` : "");
   }
-  if (k === "c") return `<div class="aopts">${pill("c", "1", !!r.c, "수도권 경기장만 (서울·인천·경기)")}</div>`;
+  if (k === "g"){
+    const live = new Set(DATA.matches.filter(m => !m.finished && m.date >= TODAY).map(m => m.region));
+    return `<div class="agrp">권역으로 한 번에</div>
+      <div class="aquick" style="margin-top:0">${Object.entries(RG.groups).map(([g, xs]) =>
+        `<button data-agroup="${esc(g)}" title="${esc(xs.join("·"))}">${esc(g)}</button>`).join("")}</div>
+      <div class="agrp">시·도</div>
+      <div class="aopts">${RG.list.map(x => pill("g", x, has(x), x, !live.has(x))).join("")}</div>
+      <p style="color:var(--muted);font-size:12px;margin:10px 0 0">흐린 지역은 지금 남은 경기가 없는 곳이에요 (골라두면 일정이 나올 때 알려드려요).
+        광주·전남은 2026년 통합특별시가 됐지만 경기장 사이가 멀어 따로 고를 수 있게 뒀어요.</p>`;
+  }
   if (k === "d") return `<div class="aopts">${DAYS.map(d => pill("d", d, has(d))).join("")}</div>
     <div class="aquick"><button data-aquick="we">주말만</button><button data-aquick="wd">평일만</button><button data-aquick="all">요일 무관</button></div>`;
   return "";
@@ -708,14 +723,14 @@ function viewAlert(){
     </div>
 
     ${CATS.map(([k, name]) => {
-      const set = k === "c" ? !!r.c : !!(r[k] && r[k].length);
+      const set = !!(r[k] && r[k].length);
       const open = AL.open === k;
       return `<div class="acat${open?" open":""}">
         <button class="acat-h" data-acat="${k}" aria-expanded="${open}">
           <span class="k">${name}</span><span class="v${set?" set":""}">${esc(catSummary(r, k))}</span>
           <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
         </button>
-        ${open ? `<div class="acat-b">${catBody(r, k)}${set && k !== "c" ? `<button class="aclear" data-aclear="${k}">이 칸 선택 지우기</button>` : ""}</div>` : ""}
+        ${open ? `<div class="acat-b">${catBody(r, k)}${set ? `<button class="aclear" data-aclear="${k}">이 칸 선택 지우기</button>` : ""}</div>` : ""}
       </div>`;
     }).join("")}
 
@@ -734,7 +749,7 @@ function viewAlert(){
       <div><div class="dt">${m.date.slice(5).replace("-",".")} ${WD[toDate(m.date).getDay()]}</div>
         <div class="dt" style="opacity:.7">${esc(m.time)}</div></div>
       <div><div class="op">${esc(m.home)} vs ${esc(m.away)}<span class="lg">${esc(m.league)}</span></div>
-        <div class="vn">${esc(m.venue)}</div></div></div>`).join("")}
+        <div class="vn">${esc(m.venue)} · ${esc(m.region)}</div></div></div>`).join("")}
     ${hit.length > 10 ? `<p style="color:var(--muted);font-size:13px">…외 ${hit.length-10}경기</p>` : ""}
     ${!hit.length ? `<p style="color:var(--muted);font-size:13.5px">지금 데이터에는 맞는 경기가 없어요. 일정이 나오면 그때 알려드려요.</p>` : ""}
   </div>`;
@@ -752,7 +767,7 @@ function alertSave(){
 
 function alertClick(e){
   const r = AL.rules[AL.cur];
-  const t = e.target.closest("[data-acat],[data-arule],[data-adel],[data-aquick],[data-aclear],#aAdd,#aSave");
+  const t = e.target.closest("[data-acat],[data-arule],[data-adel],[data-aquick],[data-agroup],[data-aclear],#aAdd,#aSave");
   if (!t) return false;
   if (t.dataset.adel !== undefined){ e.stopPropagation();
     AL.rules.splice(+t.dataset.adel, 1); AL.cur = Math.min(AL.cur, AL.rules.length-1); render(); return true; }
@@ -761,6 +776,12 @@ function alertClick(e){
   if (t.dataset.aquick){ const q = t.dataset.aquick;
     if (q === "all") delete r.d; else r.d = q === "we" ? ["토","일"] : ["월","화","수","목","금"];
     render(); return true; }
+  if (t.dataset.agroup){
+    const xs = RG.groups[t.dataset.agroup] || [], cur = new Set(r.g || []);
+    const allOn = xs.every(x => cur.has(x));
+    xs.forEach(x => allOn ? cur.delete(x) : cur.add(x));
+    r.g = RG.list.filter(x => cur.has(x)); prune(r); render(); return true;
+  }
   if (t.dataset.aclear){ const k = t.dataset.aclear; delete r[k]; if (k === "t") delete r.h; prune(r); render(); return true; }
   if (t.id === "aAdd"){ AL.rules.push({}); AL.cur = AL.rules.length-1; AL.open = "s"; render(); return true; }
   if (t.id === "aSave"){ alertSave(); return true; }
@@ -769,10 +790,8 @@ function alertClick(e){
 function alertChange(e){
   const k = e.target.dataset.aopt; if (!k) return false;
   const r = AL.rules[AL.cur], v = e.target.value, on = e.target.checked;
-  if (k === "c") r.c = on ? 1 : 0;
-  else if (k === "h") r.h = on ? 1 : 0;
+  if (k === "h") r.h = on ? 1 : 0;
   else { r[k] = r[k] || []; if (on){ if (!r[k].includes(v)) r[k].push(v); } else r[k] = r[k].filter(x => x !== v); }
-  if (!r.c) delete r.c;
   if (!r.h) delete r.h;
   prune(r); render(); return true;
 }
