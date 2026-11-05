@@ -116,6 +116,21 @@ input[type=date].ghost{padding:5px 8px}
 .tab{padding:5px 12px;border-radius:7px;font-size:13px;color:var(--muted);font-weight:700}
 .tab.on{background:var(--ink);color:var(--bg)}
 
+/* ─────────── 알림 탭 ─────────── */
+.alertbox{max-width:760px}
+.alertform{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.alertform select{padding:8px 10px;border:1px solid var(--line-strong);border-radius:8px;
+  background:var(--surface);color:var(--ink);max-width:180px}
+.achk{display:flex;align-items:center;gap:5px;font-size:13.5px;color:var(--ink-2);
+  border:1px solid var(--line-strong);border-radius:999px;padding:7px 12px;background:var(--surface);cursor:pointer}
+.alertcmd{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:4px 0}
+.alertcmd code{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;
+  padding:9px 12px;font-size:13px;font-family:"JetBrains Mono",monospace;word-break:break-all}
+.abtn{border:1px solid var(--line-strong);border-radius:8px;padding:8px 14px;font-size:13px;
+  font-weight:700;color:var(--ink-2);background:var(--surface);text-decoration:none}
+.abtn.solid{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.abtn:hover{border-color:var(--ink)}
+
 /* ─────────── 경기 리스트 ─────────── */
 main{padding:8px 0 64px}
 .tiergroup{margin-top:18px}
@@ -261,6 +276,7 @@ footer .pending b{color:var(--ink-2)}
       <button class="tab on" data-view="day">날짜</button>
       <button class="tab" data-view="month">달력</button>
       <button class="tab" data-view="team">팀별</button>
+      <button class="tab" data-view="alert">알림</button>
     </div>
   </div>
 </div>
@@ -364,7 +380,7 @@ function renderSports(){
 
 function renderChips(){
   const box = $("#chips");
-  if (state.view === "team"){ box.style.display = "none"; return; }
+  if (state.view === "team" || state.view === "alert"){ box.style.display = "none"; return; }
   box.style.display = "";
   let last = null, html = "";
   for (const l of shown()){
@@ -516,13 +532,107 @@ function viewTeam(){
       <h2>${esc(state.team)}</h2><span class="n">${ms.length}경기 · ${w}승 ${d}무 ${l}패 · 잔여 ${ms.length-res.length}</span></div>${lines}`;
 }
 
+/* ─────────── 알림 탭 ─────────── */
+const BOT = "gyeonggi_day_bot";               // 텔레그램 봇 아이디
+// notify.py 의 수도권 판별과 같은 기준을 쓴다 (목록은 축약판 + 지명 키워드)
+const CAP_KEY = ["서울","인천","잠실","고척","목동","상암","장충","수원","고양","성남","부천",
+  "안양","안산","용인","김포","의정부","파주","화성","평택","광명","시흥","하남","이천","여주",
+  "양평","구리","남양주","포천","동두천","가평","과천","군포","의왕","오산","안성","탄천","계양",
+  "청라","송도","미추홀","일산","위례","경희대 선승관","중랑","정왕","소사벌"];
+const isCap = v => CAP_KEY.some(k => (v||"").includes(k));
+const alertSel = { sport:"", league:"", team:"", region:false, weekend:false, homeOnly:false };
+
+function alertCmd(){
+  const p = ["/구독"];
+  if (alertSel.sport)  p.push("종목=" + alertSel.sport);
+  if (alertSel.league) p.push("리그=" + alertSel.league);
+  if (alertSel.team)   p.push("팀=" + alertSel.team.replace(/\s+/g, ""));   // 공백이 있으면 봇이 명령을 쪼개 읽는다
+  if (alertSel.homeOnly && alertSel.team) p.push("홈만");
+  if (alertSel.region) p.push("지역=수도권");
+  if (alertSel.weekend) p.push("요일=토,일");
+  return p.length > 1 ? p.join(" ") : "";
+}
+
+function alertPreview(){
+  const today = TODAY;
+  const hit = DATA.matches.filter(m => {
+    if (m.finished || m.date < today) return false;
+    if (alertSel.sport && m.sport !== alertSel.sport) return false;
+    if (alertSel.league && m.league !== alertSel.league) return false;
+    if (alertSel.region && !isCap(m.venue)) return false;
+    if (alertSel.weekend){
+      const w = toDate(m.date).getDay();
+      if (w !== 0 && w !== 6) return false;
+    }
+    if (alertSel.team){
+      const t = alertSel.team.replace(/\s+/g,"");
+      const sides = alertSel.homeOnly ? [m.home] : [m.home, m.away];
+      if (!sides.some(s => {
+        const n = s.replace(/\s+/g,"");
+        if (n === t) return true;
+        const i = n.indexOf(t);
+        if (i < 0) return false;
+        const ad = n[i+t.length] || "", bf = i>0 ? n[i-1] : "";
+        return !/[A-Za-z0-9]/.test(ad) && !/[A-Za-z0-9]/.test(bf);
+      })) return false;
+    }
+    return true;
+  });
+  return hit;
+}
+
+function viewAlert(){
+  const teams = [...new Set(DATA.matches
+    .filter(m => (!alertSel.sport || m.sport === alertSel.sport) &&
+                 (!alertSel.league || m.league === alertSel.league))
+    .flatMap(m => [m.home, m.away]))].sort((a,b) => a.localeCompare(b,"ko"));
+  const leagues = LIVE.filter(l => !alertSel.sport || l.sport === alertSel.sport);
+  const cmd = alertCmd();
+  const hit = cmd ? alertPreview() : [];
+  const opt = (v, cur, label) =>
+    `<option value="${esc(v)}"${v===cur?" selected":""}>${esc(label||v)}</option>`;
+
+  return `<div class="alertbox">
+    <h2 style="margin:18px 0 4px;font-size:20px">🔔 직관 알리미</h2>
+    <p style="color:var(--muted);margin:0 0 14px;font-size:13.5px">
+      조건을 고르면 맞는 경기를 아래에서 미리 보여드립니다. [구독] 을 누르면 텔레그램 봇에게
+      명령이 전달되고, 그 뒤로는 <b>경기 14일 전</b>과 <b>예매가 열릴 때</b> 알림이 옵니다.</p>
+    <div class="alertform">
+      <select id="aSport"><option value="">종목 전체</option>${SPORTS.map(s=>opt(s,alertSel.sport)).join("")}</select>
+      <select id="aLeague"><option value="">리그 전체</option>${leagues.map(l=>opt(l.name,alertSel.league)).join("")}</select>
+      <select id="aTeam"><option value="">팀 전체</option>${teams.map(t=>opt(t,alertSel.team)).join("")}</select>
+      <label class="achk"><input type="checkbox" id="aRegion"${alertSel.region?" checked":""}> 수도권만</label>
+      <label class="achk"><input type="checkbox" id="aWeekend"${alertSel.weekend?" checked":""}> 주말만</label>
+      <label class="achk"${alertSel.team?"":' style="opacity:.4"'}><input type="checkbox" id="aHome"${alertSel.homeOnly?" checked":""}${alertSel.team?"":" disabled"}> 홈경기만</label>
+    </div>
+    ${cmd ? `
+    <div class="alertcmd">
+      <code id="aCmd">${esc(cmd)}</code>
+      <button class="abtn" id="aCopy">복사</button>
+      <a class="abtn solid" href="https://t.me/${BOT}" target="_blank" rel="noopener">텔레그램 봇 열기</a>
+    </div>
+    <p style="color:var(--muted);font-size:12.5px;margin:6px 0 16px">
+      [복사] → 봇 채팅에 붙여넣어 보내면 등록됩니다. 등록 확인과 알림은 하루 세 번
+      (아침 6시·9시, 밤 11시 반) 처리 시점에 옵니다. 해지는 봇에게 /목록 → /해지 번호.</p>
+    <div class="tierhead" style="--tier:var(--ink);--tier-soft:var(--surface-2)">
+      <h2 style="font-size:16px">이 조건에 맞는 다가오는 경기</h2><span class="n">${hit.length}경기</span></div>
+    ${hit.slice(0,15).map(m => `<div class="tline" style="${vars(m.league)}">
+      <div><div class="dt">${m.date.slice(5).replace("-",".")} ${WD[toDate(m.date).getDay()]}</div>
+        <div class="dt" style="opacity:.7">${esc(m.time)}</div></div>
+      <div><div class="op">${esc(m.home)} vs ${esc(m.away)}<span class="lg">${esc(m.league)}</span></div>
+        <div class="vn">${esc(m.venue)}</div></div></div>`).join("")}
+    ${hit.length > 15 ? `<p style="color:var(--muted);font-size:13px">…외 ${hit.length-15}경기</p>` : ""}`
+    : `<p style="color:var(--muted);margin-top:10px">조건을 하나 이상 골라주세요.</p>`}
+  </div>`;
+}
+
 /* ─────────── 렌더 ─────────── */
 function render(){
   renderSports(); renderStrip(); renderChips();
-  $(".datebar").style.display = state.view === "team" ? "none" : "";
-  $("#sports").style.display = (MULTISPORT && state.view !== "team") ? "" : "none";
+  $(".datebar").style.display = (state.view === "team" || state.view === "alert") ? "none" : "";
+  $("#sports").style.display = (MULTISPORT && state.view !== "team" && state.view !== "alert") ? "" : "none";
   document.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", t.dataset.view === state.view));
-  $("#main").innerHTML = state.view === "day" ? viewDay() : state.view === "month" ? viewMonth() : viewTeam();
+  $("#main").innerHTML = state.view === "day" ? viewDay() : state.view === "month" ? viewMonth() : state.view === "alert" ? viewAlert() : viewTeam();
 }
 
 /* ─────────── 이벤트 ─────────── */
@@ -539,6 +649,12 @@ document.addEventListener("click", e => {
   }
   const tab = e.target.closest(".tab");
   if (tab){ state.view = tab.dataset.view; return render(); }
+  if (e.target.id === "aCopy"){
+    navigator.clipboard?.writeText($("#aCmd").textContent).then(()=>{
+      e.target.textContent = "복사됨!"; setTimeout(()=>{ e.target.textContent = "복사"; }, 1500);
+    });
+    return;
+  }
 
   const day = e.target.closest(".day");
   if (day){ state.date = day.dataset.d; return render(); }
@@ -574,6 +690,19 @@ document.addEventListener("keydown", e => {
 });
 
 renderHeader();
+document.addEventListener("change", e => {
+  const map = { aSport:"sport", aLeague:"league", aTeam:"team" };
+  if (map[e.target.id] !== undefined){
+    alertSel[map[e.target.id]] = e.target.value;
+    if (e.target.id === "aSport"){ alertSel.league = ""; alertSel.team = ""; }
+    if (e.target.id === "aLeague") alertSel.team = "";
+    if (!alertSel.team) alertSel.homeOnly = false;
+    return render();
+  }
+  const flag = { aRegion:"region", aWeekend:"weekend", aHome:"homeOnly" };
+  if (flag[e.target.id]){ alertSel[flag[e.target.id]] = e.target.checked; return render(); }
+});
+
 render();
 </script>
 <!--BODY_END-->
