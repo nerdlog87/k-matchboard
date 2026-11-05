@@ -589,13 +589,17 @@ function b64uDecode(s){
   }
   if (!AL.rules.length) AL.rules = [{}];
 
-  // 텔레그램 안에서 열렸을 때만 텔레그램 스크립트를 불러온다
-  if (/tgWebApp/.test(location.hash)){
+  // 텔레그램 안에서 열렸을 수 있을 때만 텔레그램 스크립트를 불러온다.
+  // (봇 버튼 주소는 늘 ?view=alert 로 열리므로 그것도 신호로 본다)
+  if (/tgWebApp/.test(location.hash) || q.get("view") === "alert"){
     const sc = document.createElement("script");
     sc.src = "https://telegram.org/js/telegram-web-app.js";
     sc.onload = () => {
       const tg = window.Telegram && window.Telegram.WebApp;
-      if (!tg || !tg.initData) return;
+      // 주의: 키보드 버튼으로 연 미니앱은 initData 가 '빈 문자열'이다 (그건 인라인 버튼 전용).
+      // 처음엔 initData 로 판별했다가 텔레그램 안에서도 미리보기로 떨어졌다.
+      // 텔레그램 밖에서는 platform 이 "unknown" 이므로 그걸로 가른다.
+      if (!tg || !tg.platform || tg.platform === "unknown") return;
       AL.tg = tg; tg.ready(); tg.expand();
       document.documentElement.dataset.theme = tg.colorScheme === "dark" ? "dark" : "light";
       tg.MainButton.onClick(alertSave);
