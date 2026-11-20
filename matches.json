@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generatedAt": "2026-11-19T11:06:58+09:00",
+ "generatedAt": "2026-11-20T10:57:03+09:00",
  "sports": [
   "축구",
   "야구",
@@ -26,7 +26,7 @@
    "count": 228,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-19T11:05:53+09:00"
+   "fetchedAt": "2026-11-20T10:55:47+09:00"
   },
   {
    "name": "K리그2",
@@ -46,7 +46,7 @@
    "count": 272,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-19T11:05:59+09:00"
+   "fetchedAt": "2026-11-20T10:55:56+09:00"
   },
   {
    "name": "코리아컵",
@@ -66,7 +66,7 @@
    "count": 0,
    "status": "empty",
    "error": "",
-   "fetchedAt": "2026-11-19T11:06:05+09:00"
+   "fetchedAt": "2026-11-20T10:56:04+09:00"
   },
   {
    "name": "ACL 엘리트",
@@ -86,7 +86,7 @@
    "count": 35,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-19T11:06:10+09:00"
+   "fetchedAt": "2026-11-20T10:56:09+09:00"
   },
   {
    "name": "ACL 2",
@@ -106,7 +106,7 @@
    "count": 14,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-19T11:06:14+09:00"
+   "fetchedAt": "2026-11-20T10:56:14+09:00"
   },
   {
    "name": "K3리그",
@@ -126,7 +126,7 @@
    "count": 182,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-19T11:06:29+09:00"
+   "fetchedAt": "2026-11-20T10:56:29+09:00"
   },
   {
    "name": "K4리그",
@@ -146,7 +146,7 @@
    "count": 156,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-19T11:06:42+09:00"
+   "fetchedAt": "2026-11-20T10:56:44+09:00"
   },
   {
    "name": "KBO 리그",
@@ -166,7 +166,7 @@
    "count": 793,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-19T11:06:50+09:00"
+   "fetchedAt": "2026-11-20T10:56:53+09:00"
   },
   {
    "name": "KBL",
@@ -186,7 +186,7 @@
    "count": 369,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-19T11:06:51+09:00"
+   "fetchedAt": "2026-11-20T10:56:55+09:00"
   },
   {
    "name": "WKBL",
@@ -206,7 +206,7 @@
    "count": 105,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-19T11:06:57+09:00"
+   "fetchedAt": "2026-11-20T10:57:01+09:00"
   },
   {
    "name": "V리그 남자부",
@@ -226,7 +226,7 @@
    "count": 126,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-19T11:06:58+09:00"
+   "fetchedAt": "2026-11-20T10:57:03+09:00"
   },
   {
    "name": "V리그 여자부",
@@ -246,7 +246,7 @@
    "count": 126,
    "status": "ok",
    "error": "",
-   "fetchedAt": "2026-11-19T11:06:58+09:00"
+   "fetchedAt": "2026-11-20T10:57:03+09:00"
   },
   {
    "name": "KOVO컵",
@@ -470,24 +470,6 @@
    "date": "2026-02-16",
    "time": "19:00",
    "round": null,
-   "home": "감바 오사카",
-   "away": "대전",
-   "venue": "수이타 시티 풋볼 스타디움",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
-   "date": "2026-02-16",
-   "time": "19:00",
-   "round": null,
    "home": "전북",
    "away": "상하이 포트 FC",
    "venue": "전주 월드컵",
@@ -521,6 +503,24 @@
   {
    "sport": "축구",
    "league": "ACL 엘리트",
+   "date": "2026-02-16",
+   "time": "19:00",
+   "round": null,
+   "home": "감바 오사카",
+   "away": "대전",
+   "venue": "수이타 시티 풋볼 스타디움",
+   "finished": false,
+   "homeGoal": null,
+   "awayGoal": null,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "",
+   "ticketKind": ""
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
    "date": "2026-02-17",
    "time": "19:00",
    "round": null,
@@ -542,9 +542,9 @@
    "date": "2026-02-18",
    "time": "19:00",
    "round": null,
-   "home": "멜버른 시티 FC",
-   "away": "강원",
-   "venue": "멜버른 스타디움",
+   "home": "상하이 포트 FC",
+   "away": "울산",
+   "venue": "푸둥 아레나",
    "finished": true,
    "homeGoal": 0,
    "awayGoal": 0,
@@ -560,9 +560,9 @@
    "date": "2026-02-18",
    "time": "19:00",
    "round": null,
-   "home": "상하이 포트 FC",
-   "away": "울산",
-   "venue": "푸둥 아레나",
+   "home": "멜버른 시티 FC",
+   "away": "강원",
+   "venue": "멜버른 스타디움",
    "finished": true,
    "homeGoal": 0,
    "awayGoal": 0,
@@ -28586,24 +28586,6 @@
    "date": "2026-10-13",
    "time": "19:00",
    "round": null,
-   "home": "상하이 포트 FC",
-   "away": "대전",
-   "venue": "푸둥아레나",
-   "finished": true,
-   "homeGoal": 1,
-   "awayGoal": 1,
-   "broadcast": "",
-   "attendance": 0,
-   "note": "",
-   "ticketUrl": "",
-   "ticketKind": ""
-  },
-  {
-   "sport": "축구",
-   "league": "ACL 엘리트",
-   "date": "2026-10-13",
-   "time": "19:00",
-   "round": null,
    "home": "포항",
    "away": "조호르",
    "venue": "포항 스틸야드",
@@ -28615,6 +28597,24 @@
    "note": "",
    "ticketUrl": "https://www.steelers.co.kr",
    "ticketKind": "club"
+  },
+  {
+   "sport": "축구",
+   "league": "ACL 엘리트",
+   "date": "2026-10-13",
+   "time": "19:00",
+   "round": null,
+   "home": "상하이 포트 FC",
+   "away": "대전",
+   "venue": "푸둥아레나",
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 1,
+   "broadcast": "",
+   "attendance": 0,
+   "note": "",
+   "ticketUrl": "",
+   "ticketKind": ""
   },
   {
    "sport": "농구",
@@ -32693,9 +32693,9 @@
    "home": "안양 정관장",
    "away": "부산 KCC",
    "venue": "안양 정관장 아레나",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 86,
+   "awayGoal": 82,
    "broadcast": "tvN SPORTS",
    "attendance": null,
    "note": "",
@@ -32711,9 +32711,9 @@
    "home": "수원 KT",
    "away": "서울 SK",
    "venue": "수원 KT 소닉붐 아레나",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 85,
+   "awayGoal": 75,
    "broadcast": "IB SPORTS",
    "attendance": null,
    "note": "",
@@ -32729,9 +32729,9 @@
    "home": "KB손해보험",
    "away": "대한항공",
    "venue": "평택이충문화체육관",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 3,
    "broadcast": "",
    "attendance": null,
    "note": "",
@@ -32747,9 +32747,9 @@
    "home": "흥국생명",
    "away": "GS칼텍스",
    "venue": "인천삼산월드체육관",
-   "finished": false,
-   "homeGoal": null,
-   "awayGoal": null,
+   "finished": true,
+   "homeGoal": 1,
+   "awayGoal": 3,
    "broadcast": "",
    "attendance": null,
    "note": "",
